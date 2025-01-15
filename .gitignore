@@ -1,15 +1,16 @@
 # Ignore everything
 *
-
-# Do not ignore
 !.gitignore
 !.gitattributes
-!wp-content/
-!wp-content/index.php
-!wp-content/themes
-!wp-content/themes/**/*
-!wp-content/mu-plugins
-!wp-content/mu-plugins/**/*
+
+# Ignore everything in wp-content
+wp-content/*
+
+# Do not ignore
+!wp-content/themes/
+!wp-content/themes/**
+!wp-content/mu-plugins/
+!wp-content/mu-plugins/**
 
 # Ignore
 **/.DS_Store
