@@ -1,0 +1,15 @@
+// Base
+@import '00_base/bootstrap';
+@import '00_base/base';
+
+// Template
+@import '01_template/your-template.scss';
+
+// Page
+@import '02_page/your-page.scss';
+
+// Section
+@import '03_section/your-section.scss';
+
+// Component
+@import '04_component/your-component.scss';
