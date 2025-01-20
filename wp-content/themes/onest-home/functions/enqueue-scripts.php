@@ -16,13 +16,27 @@ add_action('wp_enqueue_scripts', 'onest_home_styles');
 * Enqueue scripts
 */
 function onest_home_scripts() {
-	wp_register_script( 
+
+	// // Enqueue WordPress's bundled jQuery
+    // wp_enqueue_script('jquery');
+
+	wp_enqueue_script( 
 		'onest-home-script', 
 		get_template_directory_uri() . '/dist/index.js', 
-		false, 
+		// array('jquery'), // dependencies
+		false, // dependencies
 		'1.0', 
-		true 
+		true // loads in footer
 	);
+
+	// // Localize the script with new data
+    // wp_localize_script(
+	// 	'onest-home-scrip', 
+	// 	'clear_cart_ajax', 
+	// 	array(
+	// 		'ajaxUrl' => admin_url('admin-ajax.php'),
+	// 	)
+	// );
 }
 add_action( 'wp_enqueue_scripts', 'onest_home_scripts' );
 
@@ -31,26 +45,26 @@ add_action( 'wp_enqueue_scripts', 'onest_home_scripts' );
 /*
 * Enqueue swiperjs styles & scripts
 */
-// function enqueue_swiper_assets() {
-//     // Enqueue Swiper.js CSS
-//     wp_enqueue_style(
-//         'swiper-css',
-//         get_template_directory_uri() . '/assets/css/lib/swiperjs/swiper-bundle.min.css',
-//         array(), // Dependencies
-//         '11.1.15',
-//         'all' // Media type
-//     );
+function enqueue_swiper_assets() {
+    // Enqueue Swiper.js CSS
+    wp_enqueue_style(
+        'swiper-css',
+        get_template_directory_uri() . '/assets/css/lib/swiperjs/swiper-bundle.min.css',
+        array(), // Dependencies
+        '11.1.15',
+        'all' // Media type
+    );
 
-//     // Enqueue Swiper.js JavaScript
-//     wp_enqueue_script(
-//         'swiper-js',
-//         get_template_directory_uri() . '/assets/js/lib/swiperjs/swiper-bundle.min.js',
-//         array('jquery'), // Dependencies
-//         '11.1.15', 
-//         true // Load in footer
-//     );
-// }
-// add_action('wp_enqueue_scripts', 'enqueue_swiper_assets');
+    // Enqueue Swiper.js JavaScript
+    wp_enqueue_script(
+        'swiper-js',
+        get_template_directory_uri() . '/assets/js/lib/swiperjs/swiper-bundle.min.js',
+        array('jquery'), // Dependencies
+        '11.1.15', 
+        true // Load in footer
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_swiper_assets');
 
 
 

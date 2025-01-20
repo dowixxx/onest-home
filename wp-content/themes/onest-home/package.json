@@ -4,16 +4,16 @@
     "build": "vite build",
     "watch": "vite build --watch"
   },
-  "dependencies": {
-    "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.3"
-  },
-  "name": "gamtos-mokslai",
+  "name": "onest-home",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "sass": "^1.72.0",
-    "vite": "^5.1.6"
+    "sass-embedded": "^1.83.4",
+    "vite": "^6.0.7"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3"
   }
 }

@@ -5046,3 +5046,21 @@ class Toast extends BaseComponent {
 }
 enableDismissTrigger(Toast);
 defineJQueryPlugin(Toast);
+document.addEventListener("DOMContentLoaded", function() {
+  new Swiper(".swiper-reviews", {
+    slidesPerView: 1,
+    spaceBetween: 60,
+    pagination: {
+      el: ".swiper-reviews-pagination",
+      clickable: true
+    }
+  });
+  new Swiper(".swiper-gallery", {
+    slidesPerView: 1,
+    spaceBetween: 60,
+    pagination: {
+      el: ".swiper-gallery-pagination",
+      clickable: true
+    }
+  });
+});

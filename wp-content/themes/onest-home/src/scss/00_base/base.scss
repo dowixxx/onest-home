@@ -1,15 +1,186 @@
-// /* fonts latin_latin-ext */
-// @font-face {
-//     font-display: swap;
-//     font-family: 'Lexend';
-//     font-style: normal;
-//     font-weight: 400;
-//     src: url('../assets/fonts/lexend/lexend-regular.woff2') format('woff2');
-// }
-// @font-face {
-//     font-display: swap;
-//     font-family: 'Lexend';
-//     font-style: normal;
-//     font-weight: 500;
-//     src: url('../assets/fonts/lexend/lexend-500.woff2') format('woff2');
-// }
+/* jost-300 - latin-ext */
+@font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-300.woff2') format('woff2'),
+         url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-300.ttf') format('truetype');
+}
+/* jost-300italic - latin-ext */
+@font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: italic;
+    font-weight: 300;
+    src: url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-300italic.woff2') format('woff2'),
+            url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-300italic.ttf') format('truetype');
+}
+/* jost-regular - latin-ext */
+@font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-regular.woff2') format('woff2'),
+        url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-regular.ttf') format('truetype');
+}
+/* jost-italic - latin-ext */
+@font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-italic.woff2') format('woff2'),
+        url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-italic.ttf') format('truetype');
+}
+/* jost-500 - latin-ext */
+@font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-500.woff2') format('woff2'),
+        url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-500.ttf') format('truetype');
+}
+/* jost-500italic - latin-ext */
+@font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: italic;
+    font-weight: 500;
+    src: url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-500italic.woff2') format('woff2'),
+        url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-500italic.ttf') format('truetype');
+}
+/* jost-600 - latin-ext */
+@font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-600.woff2') format('woff2'),
+        url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-600.ttf') format('truetype');
+}
+/* jost-600italic - latin-ext */
+@font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: italic;
+    font-weight: 600;
+    src: url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-600italic.woff2') format('woff2'),
+        url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-600italic.ttf') format('truetype');
+}
+/* jost-700 - latin-ext */
+@font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-700.woff2') format('woff2'),
+        url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-700.ttf') format('truetype');
+}
+/* jost-700italic - latin-ext */
+@font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-700italic.woff2') format('woff2'),
+        url('../assets/fonts/jost-v18-latin-ext/jost-v18-latin-ext-700italic.ttf') format('truetype');
+}
+
+
+
+::selection {
+    background-color: $black;
+    color: $white;
+}
+
+/*
+* body
+*/
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+* headlings
+*/
+h1, .h1 {
+    font-size: $h1-font-size;
+    // line-height: $lh-42;
+}
+
+h2, .h2 {
+    font-size: $h2-font-size;
+    // line-height: $lh-36;
+}
+
+h3, .h3 {
+    font-size: $h3-font-size;
+    // line-height: $lh-30;
+}
+
+h4, .h4 {
+    font-size: $h4-font-size;
+    // line-height: $lh-20;
+}
+
+h5, .h5 {
+    font-size: $h5-font-size;
+    //  line-height: $line-height-base;
+}
+
+h6, .h6 {
+    font-size: $h6-font-size;
+    // line-height: $lh-14;
+}
+
+/*
+* form
+*/
+.label-input-wrapper {
+    margin-bottom: 1.625rem;
+}
+
+.form-label {
+    text-transform: uppercase;
+}
+
+/*
+* section
+*/
+section {
+    margin: 5rem 0;
+}
+
+/*
+* hover animation
+*/
+a,
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    transition: color .25s ease;
+}
+
+/*
+* hover color
+*/
+a {
+
+    &:hover {
+        color: $gray-dark-liver;
+
+        h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+            color: $gray-dark-liver;
+        }
+    }
+}
+
+/*
+* lead
+*/
+.lead {
+    margin-bottom: 1.25rem;
+    font-size: $fs-21;
+    line-height: $lh-28;
+}

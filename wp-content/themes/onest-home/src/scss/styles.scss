@@ -3,13 +3,20 @@
 @import '00_base/base';
 
 // Template
-@import '01_template/your-template.scss';
+@import '01_template/footer.scss';
+@import '01_template/page-about-us.scss';
 
 // Page
 @import '02_page/your-page.scss';
 
 // Section
-@import '03_section/your-section.scss';
+@import '03_section/form-lead.scss';
+@import '03_section/product-collection.scss';
+@import '03_section/gallery.scss';
 
 // Component
-@import '04_component/your-component.scss';
+@import '04_component/form.scss';
+@import '04_component/product-item.scss';
+@import '04_component/swiper.scss';
+@import '04_component/reviews-item.scss';
+@import '04_component/buttons.scss';

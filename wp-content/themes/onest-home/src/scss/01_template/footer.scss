@@ -1,0 +1,33 @@
+.site-footer {
+    margin: 5rem 0;
+    margin-bottom: 0;
+    padding-top: 3.75rem;
+
+    .footer-top-area {
+        padding-bottom: 6.25rem;
+
+        h6 {
+            margin-bottom: 1.25rem;
+        }
+
+        nav ul {
+            row-gap: 0.625rem;
+        }
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .footer-bottom-area {
+        padding: 1.25rem 0;
+
+        .date {
+            font-size: $fs-12;
+        }
+    }
+}
