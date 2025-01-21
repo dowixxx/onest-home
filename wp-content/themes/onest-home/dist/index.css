@@ -10204,6 +10204,12 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
   font-size: 1.3125rem;
   line-height: 1.75rem;
 }
+/*
+* divider
+*/
+.divider {
+  margin: 5rem 0;
+}
 .site-header a {
   text-decoration: unset;
 }
@@ -10462,6 +10468,18 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 }
 .page-template-page-about-us .about-us-content button {
   margin-top: 0.5rem;
+}
+.page-template-page-contacts .contacts h1, .page-template-page-contacts .contacts .h1 {
+  margin-bottom: 1.625rem;
+}
+.page-template-page-contacts .contacts-content button {
+  margin-top: 0.5rem;
+}
+.page-template-page-contacts .contact-info-content {
+  gap: 1.25rem;
+}
+.page-template-page-contacts .contact-info-content .title {
+  font-size: 1.25rem;
 }
 .form-lead {
   padding: 5rem 0;

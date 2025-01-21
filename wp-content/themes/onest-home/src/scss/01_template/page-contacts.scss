@@ -1,0 +1,27 @@
+.page-template-page-contacts {
+
+    .contacts {
+
+        h1 {
+            margin-bottom: 1.625rem;
+        }
+
+    }
+
+    .contacts-content {
+
+        button {
+            margin-top: 0.5rem;
+        }
+    }
+
+    .contact-info-content {
+        gap: 1.25rem;
+    }
+
+    .contact-info-content .title {
+        font-size: $fs-20;
+    }
+
+    
+}
