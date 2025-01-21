@@ -103,9 +103,9 @@
 
 				<div class="footer-bottom-area d-flex justify-content-between align-items-end">
 					<div class="">
-						<a href="">
+						<a href="<?php echo home_url(); ?>" title="<?php _e('Į pagrindinį', 'onest-home'); ?>">
 							<div class="img-wrapper">
-								<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="" decoding="async" loading="lazy">
+								<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php _e('Į pagrindinį', 'onest-home'); ?>" decoding="async" loading="lazy">
 							</div>
 						</a>
 						

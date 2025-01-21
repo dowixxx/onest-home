@@ -72,18 +72,18 @@ function custom_post_type() {
 	);
 	register_post_type( 'tema', $args );
 
-	register_taxonomy(
-		'klase',
-		'tema',
-		array(
-			'show_in_rest' => true,
-			'hierarchical' => true,
-			'label' => 'Klasės',
-			'query_var' => true,
-			'has_archive' => true,
-			'rewrite' => array('slug' => '/', 'with_front' => false, )
-		)
-	);
+	// register_taxonomy(
+	// 	'klase',
+	// 	'tema',
+	// 	array(
+	// 		'show_in_rest' => true,
+	// 		'hierarchical' => true,
+	// 		'label' => 'Klasės',
+	// 		'query_var' => true,
+	// 		'has_archive' => true,
+	// 		'rewrite' => array('slug' => '/', 'with_front' => false, )
+	// 	)
+	// );
 
 }
 add_action( 'init', 'custom_post_type', 0 );

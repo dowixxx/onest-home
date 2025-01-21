@@ -16,8 +16,14 @@ require_once( get_template_directory() . '/functions/cleanup.php' );
 // Register scripts and stylesheets
 require_once( get_template_directory() . '/functions/enqueue-scripts.php' ); 
 
+// Register custom navigation walker
+// require_once( get_template_directory() . '/functions/class-wp-bootstrap-navwalker.php' );
+
+// Register multi-level custom navigation walker
+require_once( get_template_directory() . '/functions/class-bs5_Walker.php' );
+
 // Register custom menus and menu walkers
-// require_once( get_template_directory() . '/functions/menu.php' ); 
+require_once( get_template_directory() . '/functions/menu.php' ); 
 
 // Makes WordPress comments better
 require_once( get_template_directory() . '/functions/comments.php' ); 

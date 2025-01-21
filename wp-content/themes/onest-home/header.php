@@ -37,34 +37,85 @@
 <div class="site">
 
 	<header class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$onest_home_description = get_bloginfo( 'description', 'display' );
-			if ( $onest_home_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $onest_home_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div>
+		<div class="container">
+			<div class="site-header-content">
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'onest-home' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav>
+				<div class="header-top-area d-flex justify-content-between align-items-center">
+
+					<p class="notice mb-0">10% discount for registered users</p>
+
+					<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'header-top-area', 
+								'menu_id'        => 'header-top-area-menu',
+								'menu_class'     => '', 
+							)
+						);
+					?>	
+
+				</div>
+
+				<div class="header-main-area d-flex align-items-center border-top border-bottom">
+
+					<a href="<?php echo home_url(); ?>" 
+						class="site-branding d-inline-block" 
+						title="<?php _e('Į pagrindinį', 'onest-home'); ?>">
+
+						<div class="img-wrapper">
+							<img class="img-fluid" 
+								src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" 
+								alt="<?php _e('Į pagrindinį', 'onest-home'); ?>"
+								fetchpriority="high">
+						</div>
+						
+					</a>
+
+					<nav class="navbar navbar-expand-lg p-0 w-100" role="navigation">
+
+						<button class="navbar-toggler border-0" 
+							type="button" 
+							data-bs-toggle="offcanvas"
+							data-bs-target="#primary-menu-offcanvas" 
+							aria-controls="primary-menu-offcanvas" 
+							aria-expanded="false" 
+							aria-label="Toggle navigation">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="45px" height="15px" viewBox="0 0 45 15" xml:space="preserve">
+								<line x1="0" y1="0.5" x2="45" y2="0.5"></line>
+								<line x1="0" y1="7.5" x2="45" y2="7.5"></line>
+								<line x1="0" y1="14.5" x2="45" y2="14.5"></line>
+							</svg>
+						</button>
+
+						<?php
+						wp_nav_menu(array(
+							'theme_location' 	=> 'header-primary-menu',
+							'container' 		=> 'div',
+							'container_class'   => 'w-100',
+							'fallback_cb' 		=> '__return_false',
+							'items_wrap' 		=> '
+
+							<div id="primary-menu-offcanvas" class="offcanvas offcanvas-end d-lg-none">
+								<div class="offcanvas-header p-0">
+									<button type="button" class="btn p-0 ms-auto border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+										<svg class="qodef-svg--close-menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16" height="16" viewBox="0 0 16 16" xml:space="preserve">
+											<line x1="0.5" y1="0.5" x2="15.5" y2="15.5"></line>
+											<line x1="15.5" y1="0.5" x2="0.5" y2="15.5"></line>
+										</svg>
+									</button>
+								</div>
+								<ul class="navbar-nav me-auto mb-2 mb-md-0 w-100 h-100 %2$s">%3$s</ul>
+							</div>
+							
+							<ul class="navbar-nav me-auto mb-2 mb-md-0 w-100 d-none d-lg-flex %2$s">%3$s</ul>
+							',
+							'depth' 			=> 3,
+							'walker' 			=> new bs5_Walker()
+						));
+						?>
+					</nav>
+				</div>
+
+			</div>
+		</div>
 	</header>
