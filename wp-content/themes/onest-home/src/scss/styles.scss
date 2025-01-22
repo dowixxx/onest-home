@@ -5,20 +5,17 @@
 // Template
 @import '01_template/header.scss';
 @import '01_template/footer.scss';
+@import '01_template/page.scss';
 @import '01_template/page-about-us.scss';
 @import '01_template/page-contacts.scss';
 
 // Page
-@import '02_page/your-page.scss';
+// @import '02_page/your-page.scss';
 
-// Section
-@import '03_section/form-lead.scss';
-@import '03_section/product-collection.scss';
-@import '03_section/gallery.scss';
+// Partial
+@import '03_partial/item-reviews.scss';
+@import '03_partial/item-product.scss';
+@import '03_partial/item-project.scss';
+@import '03_partial/swiper.scss';
 
 // Component
-@import '04_component/form.scss';
-@import '04_component/product-item.scss';
-@import '04_component/swiper.scss';
-@import '04_component/reviews-item.scss';
-@import '04_component/buttons.scss';

@@ -2496,7 +2496,7 @@ textarea.form-control-lg {
   --bs-btn-bg: transparent;
   --bs-btn-border-width: var(--bs-border-width);
   --bs-btn-border-color: transparent;
-  --bs-btn-border-radius: var(--bs-border-radius);
+  --bs-btn-border-radius: 1.4375rem;
   --bs-btn-hover-border-color: transparent;
   --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   --bs-btn-disabled-opacity: 0.65;
@@ -10174,11 +10174,22 @@ h6, .h6 {
 .form-label {
   text-transform: uppercase;
 }
+.form-lead {
+  padding: 5rem 0;
+}
 /*
 * section
 */
 section {
   margin: 5rem 0;
+}
+section h1, section .h1,
+section h2, section .h2,
+section h3, section .h3,
+section h4, section .h4,
+section h5, section .h5,
+section h6, section .h6 {
+  margin-bottom: 2.75rem;
 }
 /*
 * hover animation
@@ -10209,6 +10220,31 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 */
 .divider {
   margin: 5rem 0;
+}
+/*
+* buttons
+*/
+.btn {
+  transition: all 0.25s ease-out;
+}
+.btn:hover {
+  border-radius: 0.25rem;
+}
+.btn-primary:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.btn-secondary {
+  border: 1px solid #000;
+}
+.btn-secondary:hover {
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #000;
+}
+.btn-secondary:active {
+  border: 1px solid #000 !important;
+  color: #fff !important;
+  background-color: #000 !important;
 }
 .site-header a {
   text-decoration: unset;
@@ -10460,19 +10496,19 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 .site-footer .footer-bottom-area .date {
   font-size: 0.75rem;
 }
-.page-template-page-about-us .about-us {
+.page-template-page-about-us .intro {
   padding-bottom: 2.5rem;
 }
-.page-template-page-about-us .about-us h1, .page-template-page-about-us .about-us .h1 {
+.page-template-page-about-us .intro h1, .page-template-page-about-us .intro .h1 {
   margin-bottom: 1.625rem;
 }
-.page-template-page-about-us .about-us-content button {
+.page-template-page-about-us .page-content button {
   margin-top: 0.5rem;
 }
-.page-template-page-contacts .contacts h1, .page-template-page-contacts .contacts .h1 {
+.page-template-page-contacts .intro h1, .page-template-page-contacts .intro .h1 {
   margin-bottom: 1.625rem;
 }
-.page-template-page-contacts .contacts-content button {
+.page-template-page-contacts .page-content button {
   margin-top: 0.5rem;
 }
 .page-template-page-contacts .contact-info-content {
@@ -10480,42 +10516,6 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 }
 .page-template-page-contacts .contact-info-content .title {
   font-size: 1.25rem;
-}
-.form-lead {
-  padding: 5rem 0;
-}
-.product-collection {
-  margin: 5rem 0;
-}
-form {
-  margin-top: 2.75rem;
-}
-.product-item .product-title {
-  margin-top: 0.75rem;
-  margin-bottom: 0.625rem;
-}
-.product-item a {
-  text-decoration: none;
-}
-.product-item a:hover {
-  text-decoration: underline;
-}
-.product-item .product-price {
-  font-size: 0.875rem;
-}
-.my-swiper-wrapper .swiper-pagination {
-  margin-top: 2rem;
-}
-.my-swiper-wrapper .swiper-pagination-bullet {
-  width: 0.625rem;
-  height: 0.625rem;
-  background: #fff;
-  border: 1px solid #000;
-  opacity: 1;
-  transition: background-color 0.25s ease;
-}
-.my-swiper-wrapper .swiper-pagination-bullet-active {
-  background: #000;
 }
 .reviews-item {
   background-color: #FAFAFA;
@@ -10539,19 +10539,124 @@ form {
 .reviews-item .title {
   margin-bottom: 1.125rem;
 }
-.btn-primary:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.product-item .product-title {
+  margin-top: 0.75rem;
+  margin-bottom: 0.625rem;
 }
-.btn-secondary {
+.product-item a {
+  text-decoration: none;
+}
+.product-item a:hover {
+  text-decoration: underline;
+}
+.product-item .product-price {
+  font-size: 0.875rem;
+}
+.project-item a {
+  text-decoration: none;
+}
+.project-item a:hover .project-image img {
+  transform: scale(1.1) translateX(2%);
+}
+.project-item .project-image {
+  margin: 0 0 1.5rem 0;
+  height: 14rem;
+  overflow: hidden;
+}
+@media (max-width: 1399.98px) {
+  .project-item .project-image {
+    height: 12rem;
+  }
+}
+@media (max-width: 1199.98px) {
+  .project-item .project-image {
+    height: 10rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .project-item .project-image {
+    height: 16rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .project-item .project-image {
+    height: 12rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .project-item .project-image {
+    height: 26rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .project-item .project-image {
+    height: 22rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .project-item .project-image {
+    height: 17rem;
+  }
+}
+.project-item .project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.1);
+  transition: transform 0.25s ease-in-out;
+}
+.project-item .project-categories {
+  font-size: 0.875rem;
+  margin: 0 0 0.125rem 0;
+}
+.project-item .project-title {
+  font-size: 1.25rem;
+  margin: 0 0 0.875rem 0;
+  text-transform: uppercase;
+}
+.my-swiper-wrapper .my-swiper-btn-wrapper {
+  gap: 1.5rem;
+  margin-top: 2.75rem;
+}
+.my-swiper-wrapper .my-swiper-btn {
+  margin-top: 0;
   border: 1px solid #000;
+  border-radius: 1.25rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.875rem;
+  transition: all 0.25s ease-out;
 }
-.btn-secondary:hover {
+.my-swiper-wrapper .my-swiper-btn:hover {
+  border-radius: 0.25rem;
+}
+.my-swiper-wrapper .my-swiper-btn::after {
+  content: "";
+}
+.my-swiper-wrapper .my-swiper-btn svg {
+  width: 19px;
+  height: 14px;
+}
+.my-swiper-wrapper .swiper-button-prev svg {
+  transform: rotate(-90deg);
+}
+.my-swiper-wrapper .swiper-button-next svg {
+  transform: rotate(90deg);
+}
+.my-swiper-wrapper .swiper-pagination {
+  margin-top: 2rem;
+}
+.my-swiper-wrapper .swiper-pagination-bullet {
+  width: 0.625rem;
+  height: 0.625rem;
+  background: #fff;
   border: 1px solid #000;
-  color: #fff;
-  background-color: #000;
+  opacity: 1;
+  transition: background-color 0.25s ease;
 }
-.btn-secondary:active {
-  border: 1px solid #000 !important;
-  color: #fff !important;
-  background-color: #000 !important;
+.my-swiper-wrapper .swiper-pagination-bullet-active {
+  background: #000;
 }

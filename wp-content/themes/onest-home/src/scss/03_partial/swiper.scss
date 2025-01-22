@@ -1,0 +1,69 @@
+// swiper
+.my-swiper-wrapper {
+
+    .my-swiper-btn-wrapper {
+        gap: 1.5rem;
+        margin-top: 2.75rem;
+    }
+
+    .my-swiper-btn {
+        margin-top: 0;
+        border: 1px solid $black;
+        border-radius: 1.25rem;
+        width: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1.875rem;
+        transition: all 0.25s ease-out;
+
+        &:hover {
+            border-radius: 0.25rem;
+        }
+    }
+    
+    .my-swiper-btn::after {
+        content: '';
+    }
+
+    .my-swiper-btn svg {
+        width: 19px;
+        height: 14px;
+    }
+
+    .swiper-button-prev svg {
+        transform: rotate(-90deg);
+    }
+    .swiper-button-next svg {
+        transform: rotate(90deg);
+    }
+
+    .swiper-pagination {
+        margin-top: 2rem;
+    }
+
+    .swiper-pagination-bullet {
+        width: 0.625rem;
+        height: 0.625rem;
+        background: $white;
+        border: 1px solid $primary;
+        opacity: 1;
+        transition: background-color .25s ease;
+    }
+    
+    .swiper-pagination-bullet-active {
+        background: $primary;
+    }
+
+    // .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    //     margin: 0 0.6875rem;
+
+    //     @include media-breakpoint-down(md) {
+    //         margin: 0 0.4rem;
+    //     }
+    // }
+}
+
+
+
+

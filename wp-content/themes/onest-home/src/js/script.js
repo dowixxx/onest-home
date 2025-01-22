@@ -10,10 +10,10 @@ import './00_base/base.js';
 import './01_template/page-about-us.js';
 
 // Page
-import './02_page/your-page.js';
+// import './02_page/your-page.js';
 
-// Section
-import './03_section/your-section.js';
+// Partial
+import './03_partial/swiper.js';
 
 // Component
-import './04_component/your-component.js';
+// import './04_component/your-component.js';

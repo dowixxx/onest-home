@@ -96,6 +96,7 @@
     color: $white;
 }
 
+
 /*
 * body
 */
@@ -106,6 +107,7 @@ body {
 // body.dropdown-hovered {
 //     background-color: $white-lotion; 
 // }
+
 
 /*
 * headlings
@@ -140,9 +142,14 @@ h6, .h6 {
     // line-height: $lh-14;
 }
 
+
 /*
 * form
 */
+// form {
+//     margin-top: 2.75rem;
+// }
+
 .label-input-wrapper {
     margin-bottom: 1.625rem;
 }
@@ -151,12 +158,28 @@ h6, .h6 {
     text-transform: uppercase;
 }
 
+.form-lead {
+    padding: 5rem 0;
+}
+
+
 /*
 * section
 */
 section {
     margin: 5rem 0;
+
+    h1, .h1,
+    h2, .h2, 
+    h3, .h3, 
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
+        margin-bottom: 2.75rem;
+    }
+ 
 }
+
 
 /*
 * hover animation
@@ -165,6 +188,7 @@ a,
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     transition: color .25s ease;
 }
+
 
 /*
 * hover color
@@ -180,6 +204,7 @@ a {
     }
 }
 
+
 /*
 * lead
 */
@@ -189,9 +214,54 @@ a {
     line-height: $lh-28;
 }
 
+
 /*
 * divider
 */
 .divider {
     margin: 5rem 0;
 }
+
+
+/*
+* buttons
+*/
+.btn {
+    transition: all 0.25s ease-out;
+    
+    &:hover {
+        border-radius: 0.25rem;
+    }
+}
+
+.btn-primary {
+
+    &:hover {
+        background-color: rgba($color: $primary, $alpha: 0.8);
+        // background-color: $gray-dark-liver;
+    }
+}
+
+.btn-secondary {
+    border: 1px solid $primary;
+
+    &:hover {
+        border: 1px solid $primary;
+        color: $white;
+        background-color: $primary;       
+    }
+
+    &:active {
+        border: 1px solid $primary!important;
+        color: $white!important;
+        background-color: $primary!important;
+    }
+
+    // &:focus {
+    //     border: 1px solid $primary!important;
+    //     color: $white!important;
+    //     background-color: $primary!important;
+    //     box-shadow: unset!important;
+    // }
+}
+
