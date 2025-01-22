@@ -10474,6 +10474,7 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
   margin: 5rem 0;
   margin-bottom: 0;
   padding-top: 3.75rem;
+  border-top: 1px solid #CCCCCC;
 }
 .site-footer .footer-top-area {
   padding-bottom: 6.25rem;
@@ -10495,6 +10496,10 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 }
 .site-footer .footer-bottom-area .date {
   font-size: 0.75rem;
+}
+.page-template-page-interior .site-footer {
+  margin-top: 0;
+  border-top: 0;
 }
 .page-template-page-about-us .intro {
   padding-bottom: 2.5rem;

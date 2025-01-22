@@ -2,6 +2,7 @@
     margin: 5rem 0;
     margin-bottom: 0;
     padding-top: 3.75rem;
+    border-top: 1px solid $silver-chinese;
 
     .footer-top-area {
         padding-bottom: 6.25rem;
@@ -29,5 +30,16 @@
         .date {
             font-size: $fs-12;
         }
+    }
+}
+
+
+
+// page-interior.php
+.page-template-page-interior {
+
+    .site-footer {
+        margin-top: 0;
+        border-top: 0;
     }
 }

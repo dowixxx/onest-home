@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Custom furniture
+Template Name: Interior solutions
 Template Post Type: page
 */
 
@@ -92,34 +92,13 @@ get_header();
 
 
 		<!-- lead form -->
-		<section class="form-lead bg-white-lotion">
+		<section class="form-lead bg-white-lotion mb-0">
 			<div class="container">
 				<div class="form-lead-content">
 
 					<h3 class="fw-normal">Lead form</h3>
 
 					<?php include locate_template('partials/form/form-subscribe.php'); ?>
-
-				</div>
-			</div>
-		</section>
-
-
-		<!-- product collection -->
-		<section class="product-collection">
-			<div class="container">
-				<div class="product-collection-content">
-
-					<h3 class="fw-normal">Title h3</h3>
-
-					<div class="row g-4 g-lg-5">
-						<?php include locate_template('partials/item/item-product.php'); ?>
-						<?php include locate_template('partials/item/item-product.php'); ?>
-						<?php include locate_template('partials/item/item-product.php'); ?>
-						<?php include locate_template('partials/item/item-product.php'); ?>
-						<?php include locate_template('partials/item/item-product.php'); ?>
-						<?php include locate_template('partials/item/item-product.php'); ?>
-					</div>
 
 				</div>
 			</div>
