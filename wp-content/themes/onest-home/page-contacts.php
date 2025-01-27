@@ -6,6 +6,12 @@ Template Post Type: page
 
 
 
+$phone_number = carbon_get_theme_option( 'crb_phone_number' );
+$email_address = carbon_get_theme_option( 'crb_email_address' );
+$working_hours = carbon_get_theme_option( 'crb_working_hours' );
+
+
+
 get_header();
 
 ?>
@@ -52,17 +58,17 @@ get_header();
 
 							<div>
 								<p class="mb-0 text-uppercase"><?php _e('Telefonas', 'onest-home'); ?></p>
-								<a href="tel:+37069538586" title="+370 695 385 86">+370 695 385 86</a>
+								<a href="tel:<?php echo esc_html( $phone_number ) ?>" title="<?php echo esc_html( $phone_number ) ?>"><?php echo esc_html( $phone_number ) ?></a>
 							</div>
 
 							<div>
 								<p class="mb-0 text-uppercase"><?php _e('El. paštas', 'onest-home'); ?></p>
-								<a href="mailto:info@onesthome.lt" title="info@onesthome.lt">info@onesthome.lt</a>
+								<a href="mailto:<?php echo esc_html( $email_address ) ?>" title="<?php echo esc_html( $email_address ) ?>"><?php echo esc_html( $email_address ) ?></a>
 							</div>
 
 							<div>
 								<p class="mb-0 text-uppercase"><?php _e('Darbo valandos', 'onest-home'); ?></p>
-								<p>I - IV 07:30 - 16:30; V 07:30 - 15:15</p>
+								<p><?php echo esc_html( $working_hours ) ?></p>
 							</div>
 
 						</div>

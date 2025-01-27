@@ -12,17 +12,7 @@ get_header();
 
 	<main class="site-main">
 
-		<section class="">
-			<div class="container">
-				<div class="">
-
-					<h2><?php the_title() ?></h2>
-
-					<?php the_content() ?>
-
-				</div>
-			</div>
-		</section>
+		labas
 
 	</main>
 

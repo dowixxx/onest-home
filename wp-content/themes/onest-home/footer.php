@@ -9,6 +9,14 @@
  * @package onest-home
  */
 
+
+
+$logo_image = carbon_get_theme_option('crb_logo');
+if ( $logo_image ) :
+	$logo_image_url = wp_get_attachment_image_url( $logo_image, 'full' );
+	$logo_image_alt = get_post_meta( $logo_image, '_wp_attachment_image_alt', true ) ?: '';
+endif;
+
 ?>
 
 
@@ -103,9 +111,16 @@
 
 				<div class="footer-bottom-area d-flex justify-content-between align-items-end">
 					<div class="">
+
 						<a href="<?php echo home_url(); ?>" title="<?php _e('Į pagrindinį', 'onest-home'); ?>">
 							<div class="img-wrapper">
-								<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php _e('Į pagrindinį', 'onest-home'); ?>" decoding="async" loading="lazy">
+								<?php if ( $logo_image ) : ?>
+									<img class="img-fluid" 
+										src="<?php echo esc_url( $logo_image_url ); ?>" 
+										alt="<?php echo esc_attr( $logo_image_alt ); ?>" 
+										decoding="async" 
+										loading="lazy">
+								<?php endif; ?>
 							</div>
 						</a>
 						

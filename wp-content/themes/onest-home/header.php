@@ -1,3 +1,22 @@
+<?php
+
+$instagram_profile_url = carbon_get_theme_option( 'crb_instagram_url' );
+$facebook_profile_url = carbon_get_theme_option( 'crb_facebook_url' );
+
+$notice_lt = carbon_get_theme_option( 'crb_notice_lt' );
+$notice_en = carbon_get_theme_option( 'crb_notice_en' );
+
+$logo_image = carbon_get_theme_option('crb_logo');
+if ( $logo_image ) :
+	$logo_image_url = wp_get_attachment_image_url( $logo_image, 'full' );
+	$logo_image_alt = get_post_meta( $logo_image, '_wp_attachment_image_alt', true ) ?: '';
+endif;
+
+
+?>
+
+
+
 <!doctype html>
 
 <html <?php language_attributes(); ?>>
@@ -18,7 +37,7 @@
 	<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
 		<!-- Icons & Favicons -->
 		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-		<link href="<?php echo get_template_directory_uri(); ?>/assets/images/apple-icon-touch.png" rel="apple-touch-icon" />	
+		<link href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" rel="apple-touch-icon" />	
 	<?php } ?>
 
 	<title>
@@ -42,17 +61,57 @@
 
 				<div class="header-top-area d-flex justify-content-between align-items-center">
 
-					<p class="notice mb-0">10% discount for registered users</p>
+					<?php if ( get_locale() == 'en_GB' && ! empty( $notice_en ) ) : ?>
+						<div class="notice d-flex align-items-center">
+							<div class="svg-wrapper me-1">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22.741" height="25.407" viewBox="0 0 22.741 25.407">
+									<path id="Path_273" data-name="Path 273" d="M1501.221,1035.407v-8.44a3.834,3.834,0,0,0-3.59-4.038H1490v-.337h7.63a3.834,3.834,0,0,0,3.59-4.038V1010h.3v8.554a3.834,3.834,0,0,0,3.591,4.038h7.63v.337h-7.63a3.834,3.834,0,0,0-3.591,4.038v8.44Z" transform="translate(-1490 -1010)"></path>
+								</svg>
+							</div>
+							<p class="mb-0">
+								<?php echo esc_html( $notice_en ) ?>
+							</p>
+						</div>
+					<?php endif; ?>
 
-					<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'header-top-area', 
-								'menu_id'        => 'header-top-area-menu',
-								'menu_class'     => '', 
-							)
-						);
-					?>	
+					<?php if ( get_locale() == 'lt_LT' && ! empty( $notice_lt ) ) : ?>
+						<div class="notice d-flex align-items-center">
+							<div class="svg-wrapper me-1">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22.741" height="25.407" viewBox="0 0 22.741 25.407">
+									<path id="Path_273" data-name="Path 273" d="M1501.221,1035.407v-8.44a3.834,3.834,0,0,0-3.59-4.038H1490v-.337h7.63a3.834,3.834,0,0,0,3.59-4.038V1010h.3v8.554a3.834,3.834,0,0,0,3.591,4.038h7.63v.337h-7.63a3.834,3.834,0,0,0-3.591,4.038v8.44Z" transform="translate(-1490 -1010)"></path>
+								</svg>
+							</div>
+							<p class="mb-0">
+								<?php echo esc_html( $notice_lt ) ?>
+							</p>
+						</div>
+					<?php endif; ?>
+
+					<div class="header-top-area-menu ms-auto">
+						<li>
+							<a href="<?php echo esc_url($instagram_profile_url) ?>" title="Instagram profile">IG</a>
+						</li>
+						<li>
+							<a href="<?php echo esc_url($facebook_profile_url) ?>" title="Facebook profile">FB</a>
+						</li>
+						<?php
+						$languages = pll_the_languages(array('raw' => 1));
+						if (!empty($languages)) :
+							foreach ($languages as $lang) :
+								if (!$lang['current_lang']) : // Only display non-current language ?>
+
+									<li>
+										<a href="<?php echo esc_url( $lang[ 'url' ] ) ?>"
+											id="pll-switcher"
+											title="<?php echo esc_attr( $lang[ 'name' ] ) ?>">
+											<?php echo esc_html( $lang[ 'name' ] ) ?>
+										</a>
+									</li>
+
+								<?php endif; ?>
+							<?php endforeach; ?>
+						<?php endif; ?>
+					</div>
 
 				</div>
 
@@ -63,12 +122,13 @@
 						title="<?php _e('Į pagrindinį', 'onest-home'); ?>">
 
 						<div class="img-wrapper">
-							<img class="img-fluid" 
-								src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" 
-								alt="<?php _e('Į pagrindinį', 'onest-home'); ?>"
-								fetchpriority="high">
+							<?php if ( $logo_image ) : ?>
+								<img class="img-fluid" 
+									src="<?php echo esc_url( $logo_image_url ); ?>" 
+									alt="<?php echo esc_attr( $logo_image_alt ); ?>" 
+									fetchpriority="high">
+							<?php endif; ?>
 						</div>
-						
 					</a>
 
 					<nav class="navbar navbar-expand-lg p-0 w-100" role="navigation">

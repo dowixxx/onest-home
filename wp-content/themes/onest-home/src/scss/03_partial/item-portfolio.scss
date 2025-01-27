@@ -1,0 +1,106 @@
+.portfolio-item {
+
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+
+    img {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        transition: transform 0.3s ease;
+    }
+    &:hover img {
+        transform: translate(-20%, 0%) matrix(1, 0, 0, 1, 0, 0);
+
+        @include media-breakpoint-down(lg) {
+            transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+    }
+
+    .entry-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 auto;
+        background-color: $white;
+        width: 60%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1.5rem;
+        z-index: 0;
+        transform: translate(100%, 0%) matrix(1, 0, 0, 1, 0, 0);
+        transition: transform 0.3s ease;
+    }
+    &:hover .entry-content {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+
+        @include media-breakpoint-down(lg) {
+            transform: translate(100%, 0%) matrix(1, 0, 0, 1, 0, 0);
+        }
+    }
+
+    .entry-title {
+        font-size: $fs-30;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+
+    .entry-title.-mobile {
+        font-size: $fs-21;
+        text-align: center;
+        margin-top: 1.25rem;
+        margin-bottom: 0;
+    }
+
+    .entry-excerpt {
+        margin-bottom: 1.25rem;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 8;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include media-breakpoint-down(xl) {
+            -webkit-line-clamp: 5;
+        }
+    }
+
+    .btn {
+        font-size: $font-size-base;
+        width: fit-content;
+        display: inline-flex;
+        align-items: center;
+        // padding: 4.5px 16.5px 4.5px 16.5px;
+        padding: 0.28125rem 1.03125rem;
+    }
+
+    .btn span {
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: width .3s ease;
+        line-height: 1.2;
+        text-align: start;
+    }
+
+    .btn svg {
+        transform: rotate(90deg);
+    }
+
+    .btn svg path {
+        fill: $black;
+    }
+
+    .btn:hover {
+
+        span {
+            width: 94px;
+        }
+
+        svg path {
+            fill: $white;
+        }
+    }
+    
+}
