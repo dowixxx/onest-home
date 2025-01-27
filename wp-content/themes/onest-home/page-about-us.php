@@ -6,6 +6,10 @@ Template Post Type: page
 
 
 
+$media_gallery = carbon_get_post_meta( get_the_ID(), 'crb_media_gallery' );
+
+
+
 get_header();
 
 ?>
@@ -22,9 +26,26 @@ get_header();
 					<?php include locate_template('partials/content/content-page.php'); ?>
 
 					<div class="reviews-content col-12 col-lg-6">
-						<?php include locate_template('partials/item/item-reviews.php'); ?>
-						<?php include locate_template('partials/item/item-reviews.php'); ?>
-						<?php include locate_template('partials/item/item-reviews.php'); ?>
+
+						<?php
+						$loop = new WP_Query( array(
+							'post_type'      => 'review', 
+							'posts_per_page' => -1,       
+							'order'          => 'DESC',    
+							'orderby'        => 'date',   
+						));
+
+						if ( $loop->have_posts() ) : 
+							while ( $loop->have_posts() ) : 
+
+								$loop->the_post();
+								include locate_template('partials/item/item-reviews.php');
+
+							endwhile; 
+						endif; 
+						wp_reset_postdata(); 
+						?>
+						
 					</div>
 
 				</div>
@@ -33,13 +54,56 @@ get_header();
 
 
 		<!-- gallery section -->
+		<?php if ( ! empty( $media_gallery ) ) : ?>
 		<section class="gallery">
 			<div class="gallery-content">
+				<div class="my-swiper-wrapper">
+					<!--swiper -->
+					<div class="swiper swiper-gallery">
+						<div class="swiper-wrapper">
 
-				<?php include locate_template('partials/swiper/swiper-gallery.php'); ?>
+						<?php 
+						foreach ( $media_gallery as $media_id ) : 
 
+							$mime_type = get_post_mime_type( $media_id );
+							$image_url = wp_get_attachment_image_url( $media_id, 'full' );
+							$image_alt = get_post_meta( $media_id, '_wp_attachment_image_alt', true ) ?: '';
+
+							if ( strpos( $mime_type, 'image' ) !== false ) :
+						?>
+
+								<div class="swiper-slide">
+									<div class="swiper-item">
+										<div class="img-wrapper">
+											<img class="img-fluid" 
+												src="<?php echo esc_url( $image_url ); ?>" 
+												alt="<?php echo esc_attr( $image_alt ) ?>" 
+												decoding="async" loading="lazy">
+										</div>
+									</div>
+								</div>
+
+						<?php 
+							endif;
+						endforeach; 
+						?>
+
+							<!-- <div class="gallery-item video">
+								<video controls>
+									<source src="" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</div> -->
+							
+						</div>
+					</div>
+
+					<div class="swiper-pagination swiper-gallery-pagination position-static"></div>
+					
+				</div>
 			</div>
 		</section>
+		<?php endif; ?>
 
 
 		<!-- additional content -->

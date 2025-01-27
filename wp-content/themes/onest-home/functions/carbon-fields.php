@@ -54,14 +54,17 @@ function crb_attach_theme_options() {
 */
 add_action( 'carbon_fields_register_fields', function() {
 
-    Container::make( 'post_meta', 'Additional content')
+    Container::make( 'post_meta', ' ')
         ->where( 'post_type', '=', 'page' )
         ->show_on_template( array(
             'page-about-us.php'
         ) )
         ->add_fields( array(
 
-            Field::make('rich_text', 'crb_additional_content', '')
+            Field::make( 'media_gallery', 'crb_media_gallery', 'Media Gallery' )
+                ->set_type( array( 'image', 'video' ) ),
+
+            Field::make('rich_text', 'crb_additional_content', 'Additional content')
                 ->set_settings([
                     'media_buttons' => false,
                     'textarea_rows' => 5,
@@ -72,5 +75,25 @@ add_action( 'carbon_fields_register_fields', function() {
                         'paste_as_text' => true,
                     ],
                 ]),
+        ) );
+});
+
+
+
+/*
+* cpt page, template page-contacts
+*/
+add_action( 'carbon_fields_register_fields', function() {
+
+    Container::make( 'post_meta', ' ')
+        ->where( 'post_type', '=', 'page' )
+        ->show_on_template( array(
+            'page-contacts.php'
+        ) )
+        ->add_fields( array(
+
+            Field::make( 'media_gallery', 'crb_media_gallery', 'Media Gallery' )
+                ->set_type( array( 'image', 'video' ) ),
+
         ) );
 });

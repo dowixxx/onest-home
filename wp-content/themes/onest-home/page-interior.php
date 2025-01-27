@@ -22,9 +22,26 @@ get_header();
 					<?php include locate_template('partials/content/content-page.php'); ?>
 
 					<div class="reviews-content col-12 col-lg-6">
-						<?php include locate_template('partials/item/item-reviews.php'); ?>
-						<?php include locate_template('partials/item/item-reviews.php'); ?>
-						<?php include locate_template('partials/item/item-reviews.php'); ?>
+
+						<?php
+						$loop = new WP_Query( array(
+							'post_type'      => 'review', 
+							'posts_per_page' => -1,       
+							'order'          => 'DESC',    
+							'orderby'        => 'date',   
+						));
+
+						if ( $loop->have_posts() ) : 
+							while ( $loop->have_posts() ) : 
+
+								$loop->the_post();
+								include locate_template('partials/item/item-reviews.php');
+
+							endwhile; 
+						endif; 
+						wp_reset_postdata(); 
+						?>
+						
 					</div>
 
 				</div>

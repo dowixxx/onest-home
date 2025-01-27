@@ -1,8 +1,8 @@
 <div class="page-content col-12 col-lg-6">
 
-    <h1 class="fw-normal text-uppercase">
+    <!-- <h1 class="fw-normal text-uppercase">
         <?php the_title(); ?>
-    </h1>
+    </h1> -->
 
     <?php the_content(); ?>
 
