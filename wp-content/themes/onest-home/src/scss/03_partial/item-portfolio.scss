@@ -66,40 +66,14 @@
         }
     }
 
-    .btn {
-        font-size: $font-size-base;
-        width: fit-content;
-        display: inline-flex;
-        align-items: center;
-        // padding: 4.5px 16.5px 4.5px 16.5px;
-        padding: 0.28125rem 1.03125rem;
-    }
-
-    .btn span {
-        width: 0;
-        overflow: hidden;
-        white-space: nowrap;
-        transition: width .3s ease;
-        line-height: 1.2;
-        text-align: start;
-    }
-
-    .btn svg {
+    .btn-icon svg {
         transform: rotate(90deg);
     }
 
-    .btn svg path {
-        fill: $black;
-    }
-
-    .btn:hover {
+    .btn-icon:hover {
 
         span {
-            width: 94px;
-        }
-
-        svg path {
-            fill: $white;
+            width: 5.875rem;
         }
     }
     

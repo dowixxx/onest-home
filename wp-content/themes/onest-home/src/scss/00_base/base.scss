@@ -236,10 +236,6 @@ a {
 */
 .btn {
     transition: all 0.25s ease-out;
-    
-    &:hover {
-        border-radius: 0.25rem;
-    }
 }
 
 .btn-primary {
@@ -273,3 +269,39 @@ a {
     // }
 }
 
+.btn-sm {
+
+    &:hover {
+        border-radius: 0.25rem;
+    }
+}
+
+.btn-icon {
+    min-width: 3rem;
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: width .3s ease;
+        text-align: start;
+    }
+
+    &.btn-secondary svg path {
+        fill: $black;
+    }
+    &.btn-primary svg path {
+        fill: $white;
+    }
+
+    &.btn-secondary:hover {
+        svg path {
+            fill: $white;
+        }
+    }
+
+}
