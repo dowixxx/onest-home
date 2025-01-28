@@ -257,7 +257,8 @@
         }
 
         .dropdown-item.active,
-        .dropdown-item:hover {
+        .dropdown-item:hover,
+        .dropdown-item:focus {
             background-color: transparent;
         }
 

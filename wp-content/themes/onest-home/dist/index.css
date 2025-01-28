@@ -10445,7 +10445,8 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
   padding: 0;
 }
 .site-header .offcanvas .dropdown-item.active,
-.site-header .offcanvas .dropdown-item:hover {
+.site-header .offcanvas .dropdown-item:hover,
+.site-header .offcanvas .dropdown-item:focus {
   background-color: transparent;
 }
 .site-header .offcanvas-header {
