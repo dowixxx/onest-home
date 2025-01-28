@@ -10722,6 +10722,9 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 .portfolio-item .btn:hover svg path {
   fill: #fff;
 }
+/*
+* swiper
+*/
 .my-swiper-wrapper .my-swiper-btn-wrapper {
   gap: 1.5rem;
   margin-top: 2.75rem;
@@ -10747,6 +10750,10 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
   width: 19px;
   height: 14px;
 }
+.my-swiper-wrapper .my-swiper-btn svg path {
+  fill: #000;
+  transition: all 0.25s ease-out;
+}
 .my-swiper-wrapper .swiper-button-prev svg {
   transform: rotate(-90deg);
 }
@@ -10766,4 +10773,22 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 }
 .my-swiper-wrapper .swiper-pagination-bullet-active {
   background: #000;
+}
+/*
+* page-about-us.php swiper
+*/
+.page-template-page-about-us .my-swiper-wrapper .my-swiper-btn:hover {
+  background-color: #000;
+}
+.page-template-page-about-us .my-swiper-wrapper .my-swiper-btn:hover svg path {
+  fill: #fff;
+}
+/*
+* page-contacts.php swiper
+*/
+.page-template-page-contacts .my-swiper-wrapper .my-swiper-btn:hover {
+  background-color: #000;
+}
+.page-template-page-contacts .my-swiper-wrapper .my-swiper-btn:hover svg path {
+  fill: #fff;
 }

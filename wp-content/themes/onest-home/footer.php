@@ -21,7 +21,7 @@ endif;
 
 
 
-	<footer class="site-footer">
+	<footer class="site-footer <?php echo is_page_template('page-contacts.php') ? 'mt-0' : ''; ?>">
 		<div class="container">
 			<div class="footer-content">
 

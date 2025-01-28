@@ -122,9 +122,9 @@ get_header();
 
 		<!-- gallery section -->
 		<?php if ( ! empty( $media_gallery ) ) : ?>
-		<section class="gallery mt-0">
+		<section class="gallery mt-0 mb-0">
 			<div class="gallery-content">
-				<div class="my-swiper-wrapper">
+				<div class="my-swiper-wrapper position-relative">
 					<!--swiper -->
 					<div class="swiper swiper-gallery">
 						<div class="swiper-wrapper">
@@ -165,7 +165,24 @@ get_header();
 						</div>
 					</div>
 
-					<div class="swiper-pagination swiper-gallery-pagination position-static"></div>
+					<!-- navigation -->
+					<div class="my-swiper-btn-wrapper d-flex position-absolute top-0 bottom-0 m-0 justify-content-between w-100 align-items-center">
+
+						<div class="swiper-button-prev my-swiper-btn position-static ms-4">
+							<svg width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6.354 0.707L6 0.353L6.354 0L6.708 0.353L6.354 0.707ZM6.854 15.707C6.854 15.8396 6.80132 15.9668 6.70755 16.0606C6.61379 16.1543 6.48661 16.207 6.354 16.207C6.22139 16.207 6.09421 16.1543 6.00045 16.0606C5.90668 15.9668 5.854 15.8396 5.854 15.707H6.854ZM0 6.353L6 0.353L6.708 1.061L0.708 7.061L0 6.353ZM6.708 0.353L12.708 6.353L12 7.061L6 1.061L6.708 0.353ZM6.854 0.707V15.707H5.854V0.707H6.854Z" fill="black"/>
+							</svg>
+						</div>
+
+						<div class="swiper-button-next my-swiper-btn position-static me-4">
+							<svg width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6.354 0.707L6 0.353L6.354 0L6.708 0.353L6.354 0.707ZM6.854 15.707C6.854 15.8396 6.80132 15.9668 6.70755 16.0606C6.61379 16.1543 6.48661 16.207 6.354 16.207C6.22139 16.207 6.09421 16.1543 6.00045 16.0606C5.90668 15.9668 5.854 15.8396 5.854 15.707H6.854ZM0 6.353L6 0.353L6.708 1.061L0.708 7.061L0 6.353ZM6.708 0.353L12.708 6.353L12 7.061L6 1.061L6.708 0.353ZM6.854 0.707V15.707H5.854V0.707H6.854Z" fill="black"/>
+							</svg>
+						</div>
+
+					</div>
+
+					<!-- <div class="swiper-pagination swiper-gallery-pagination position-static"></div> -->
 					
 				</div>
 			</div>

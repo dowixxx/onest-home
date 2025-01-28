@@ -1,4 +1,6 @@
-// swiper
+/*
+* swiper
+*/
 .my-swiper-wrapper {
 
     .my-swiper-btn-wrapper {
@@ -19,6 +21,11 @@
 
         &:hover {
             border-radius: 0.25rem;
+            // background-color: $black;
+
+            // svg path {
+            //     fill: $white;
+            // }
         }
     }
     
@@ -29,6 +36,11 @@
     .my-swiper-btn svg {
         width: 19px;
         height: 14px;
+    }
+
+    .my-swiper-btn svg path {
+        fill: $black;
+        transition: all 0.25s ease-out;
     }
 
     .swiper-button-prev svg {
@@ -66,4 +78,40 @@
 
 
 
+/*
+* page-about-us.php swiper
+*/
+.page-template-page-about-us .my-swiper-wrapper {
 
+    .my-swiper-btn {
+
+        &:hover {
+            background-color: $black;
+
+            svg path {
+                fill: $white;
+            }
+        }
+    }
+
+}
+
+
+
+/*
+* page-contacts.php swiper
+*/
+.page-template-page-contacts .my-swiper-wrapper {
+
+    .my-swiper-btn {
+
+        &:hover {
+            background-color: $black;
+
+            svg path {
+                fill: $white;
+            }
+        }
+    }
+
+}
