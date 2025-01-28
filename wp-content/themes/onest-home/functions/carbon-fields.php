@@ -50,7 +50,7 @@ function crb_attach_theme_options() {
 
 
 /*
-* cpt page, template page-about-us
+* cpt page, page-about-us.php
 */
 add_action( 'carbon_fields_register_fields', function() {
 
@@ -81,7 +81,7 @@ add_action( 'carbon_fields_register_fields', function() {
 
 
 /*
-* cpt page, template page-contacts
+* cpt page, page-contacts.php
 */
 add_action( 'carbon_fields_register_fields', function() {
 

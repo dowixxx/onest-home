@@ -10745,6 +10745,9 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 .my-swiper-wrapper .my-swiper-btn:hover {
   border-radius: 0.25rem;
 }
+.my-swiper-wrapper .swiper-button-lock {
+  display: none;
+}
 .my-swiper-wrapper .my-swiper-btn::after {
   content: "";
 }

@@ -1,10 +1,16 @@
 <article class="portfolio-item col-12 col-lg-6">
+    
     <a href="<?php the_permalink() ?>" title="<?php the_title() ?>">
-        <div class="img-wrapper overflow-hidden">
-            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/project-img.webp" alt="" loading="lazy" decoding="async">
-        </div>
+    
+        <?php if ( has_post_thumbnail() ) : ?>
+            <div class="img-wrapper overflow-hidden">
+                <?php the_post_thumbnail( 'full-size', array( 'class' => 'img-fluid' ) ); ?>
+            </div>
+        <?php endif; ?>
+        
     </a>
-    <div class="entry-content">
+
+    <div class="entry-content"> 
         <h2 class="entry-title">
             <?php the_title() ?>
         </h2>
@@ -16,7 +22,9 @@
             </svg>
         </a>    
     </div>
+
     <h2 class="entry-title -mobile d-lg-none">
         <?php the_title() ?>
     </h2>
+
 </article>

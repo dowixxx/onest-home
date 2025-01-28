@@ -28,6 +28,10 @@
             // }
         }
     }
+
+    .swiper-button-lock {
+        display: none;
+    }
     
     .my-swiper-btn::after {
         content: '';

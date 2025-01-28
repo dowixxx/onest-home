@@ -43,7 +43,7 @@ get_header();
 						?>
 						
 					</div>
-					
+
 				</div>
 
 			</div>
@@ -55,7 +55,7 @@ get_header();
 			<div class="container">
 				<div class="project-collection-content">
 
-					<h3 class="fw-normal">Ttile h3</h3>
+					<h3 class="fw-normal"><?php _e( 'Įgyvendinti projektai', 'onest-home' ) ?></h3>
 
 					<div class="my-swiper-wrapper">
 
@@ -63,21 +63,30 @@ get_header();
 						<div class="swiper swiper-project overflow-visible">
 							<div class="swiper-wrapper">
 
-								<div class="swiper-slide">
-									<?php include locate_template('partials/item/item-project.php'); ?>
-								</div>
-								<div class="swiper-slide">
-									<?php include locate_template('partials/item/item-project.php'); ?>
-								</div>
-								<div class="swiper-slide">
-									<?php include locate_template('partials/item/item-project.php'); ?>
-								</div>
-								<div class="swiper-slide">
-									<?php include locate_template('partials/item/item-project.php'); ?>
-								</div>
-								<div class="swiper-slide">
-									<?php include locate_template('partials/item/item-project.php'); ?>
-								</div>
+								<?php
+								$loop = new WP_Query( array(
+									'post_type'      => 'project', 
+									'posts_per_page' => -1,       
+									'order'          => 'DESC',    
+									'orderby'        => 'date',   
+								));
+
+								if ( $loop->have_posts() ) : 
+									while ( $loop->have_posts() ) : 
+
+										$loop->the_post();
+								?>
+										<div class="swiper-slide">
+								<?php
+											include locate_template('partials/item/item-project.php');
+								?>
+										</div>
+								<?php
+
+									endwhile; 
+								endif; 
+								wp_reset_postdata(); 
+								?>
 
 							</div>
 						</div>
