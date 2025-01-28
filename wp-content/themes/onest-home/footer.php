@@ -17,6 +17,12 @@ if ( $logo_image ) :
 	$logo_image_alt = get_post_meta( $logo_image, '_wp_attachment_image_alt', true ) ?: '';
 endif;
 
+$instagram_profile_url = carbon_get_theme_option( 'crb_instagram_url' );
+$facebook_profile_url = carbon_get_theme_option( 'crb_facebook_url' );
+
+$menu_locations = get_nav_menu_locations();
+
+
 ?>
 
 
@@ -26,86 +32,83 @@ endif;
 			<div class="footer-content">
 
 				<div class="footer-top-area row g-4 g-lg-5">
+
+					<!-- footer_menu_1 -->
+					<?php if ( isset( $menu_locations[ 'footer_menu_1' ] ) ) : 
+
+						$menu_name = wp_get_nav_menu_object( $menu_locations[ 'footer_menu_1' ] )->name;
+					?>
 					
-					<div class="col-6 col-sm-4 col-lg-3">
-						<h6 class="text-uppercase fw-normal">Title h6</h6>
-						<nav>
-							<ul class="mb-0 list-unstyled d-flex flex-column">
-								<li>
-									<a href="">Puslapis</a>
-								</li>
-								<li>
-									<a href="">Puslapis</a>
-								</li>
-								<li>
-									<a href="">Puslapis</a>
-								</li>
-								<li>
-									<a href="">Puslapis</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
+						<div class="col-6 col-sm-4 col-lg-3">
+							<h6 class="text-uppercase fw-normal"><?php echo $menu_name ?></h6>
+							<nav>
+								<?php
+								wp_nav_menu([
+									'theme_location' => 'footer_menu_1',
+									'menu_class' => 'mb-0 list-unstyled d-flex flex-column',
+									'container' => false,
+								]);
+								?>
+							</nav>
+						</div>
+					<?php endif; ?>
 
-					<div class="col-6 col-sm-4 col-lg-3">
-						<h6 class="text-uppercase fw-normal">Title h6</h6>
-						<nav>
-							<ul class="mb-0 list-unstyled d-flex flex-column">
-								<li>
-									<a href="">Puslapis</a>
-								</li>
-								<li>
-									<a href="">Puslapis</a>
-								</li>
-								<li>
-									<a href="">Puslapis</a>
-								</li>
-								<li>
-									<a href="">Puslapis</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
+					<!-- footer_menu_2 -->
+					<?php if ( isset( $menu_locations[ 'footer_menu_2' ] ) ) : 
 
-					<div class="col-6 col-sm-4 col-lg-3">
-						<h6 class="text-uppercase fw-normal">Title h6</h6>
-						<nav>
-							<ul class="mb-0 list-unstyled d-flex flex-column">
-								<li>
-									<a href="">Puslapis</a>
-								</li>
-								<li>
-									<a href="">Puslapis</a>
-								</li>
-								<li>
-									<a href="">Puslapis</a>
-								</li>
-								<li>
-									<a href="">Puslapis</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
+						$menu_name = wp_get_nav_menu_object( $menu_locations[ 'footer_menu_2' ] )->name;
+					?>
+						<div class="col-6 col-sm-4 col-lg-3">
+							<h6 class="text-uppercase fw-normal"><?php echo $menu_name ?></h6>
+							<nav>
+								<?php
+								wp_nav_menu([
+									'theme_location' => 'footer_menu_2',
+									'menu_class' => 'mb-0 list-unstyled d-flex flex-column',
+									'container' => false,
+								]);
+								?>
+							</nav>
+						</div>
+					<?php endif; ?>	
 
-					<div class="col-6 col-sm-4 col-lg-3">
-						<h6 class="text-uppercase fw-normal">Title h6</h6>
-						<nav>
-							<ul class="mb-0 list-unstyled d-flex flex-column">
-								<li>
-									<a href="">Puslapis</a>
-								</li>
-								<li>
-									<a href="">Puslapis</a>
-								</li>
-								<li>
-									<a href="">Puslapis</a>
-								</li>
-								<li>
-									<a href="">Puslapis</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
+					<!-- footer_menu_3 -->
+					<?php if ( isset( $menu_locations[ 'footer_menu_3' ] ) ) : 
+
+						$menu_name = wp_get_nav_menu_object( $menu_locations[ 'footer_menu_3' ] )->name;
+					?>
+						<div class="col-6 col-sm-4 col-lg-3">
+							<h6 class="text-uppercase fw-normal"><?php echo $menu_name ?></h6>
+							<nav>
+								<?php
+								wp_nav_menu([
+									'theme_location' => 'footer_menu_3',
+									'menu_class' => 'mb-0 list-unstyled d-flex flex-column',
+									'container' => false,
+								]);
+								?>
+							</nav>
+						</div>
+					<?php endif; ?>	
+
+					<!-- footer_menu_4 -->
+					<?php if ( isset( $menu_locations[ 'footer_menu_4' ] ) ) : 
+
+						$menu_name = wp_get_nav_menu_object( $menu_locations[ 'footer_menu_4' ] )->name;
+					?>
+						<div class="col-6 col-sm-4 col-lg-3">
+							<h6 class="text-uppercase fw-normal"><?php echo $menu_name ?></h6>
+							<nav>
+								<?php
+								wp_nav_menu([
+									'theme_location' => 'footer_menu_4',
+									'menu_class' => 'mb-0 list-unstyled d-flex flex-column',
+									'container' => false,
+								]);
+								?>
+							</nav>
+						</div>
+					<?php endif; ?>
 
 				</div>
 
