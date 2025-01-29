@@ -10556,6 +10556,9 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 .page-template-page-construction .pitch p {
   font-size: 1.3125rem;
 }
+.page-template-page-home .product-collection-content {
+  padding: 0rem 0 5rem 0;
+}
 .reviews-item {
   background-color: #FAFAFA;
   padding: 1.375rem 2.25rem 1.125rem 1.25rem;
@@ -10797,4 +10800,17 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 }
 .page-template-page-contacts .my-swiper-wrapper .my-swiper-btn:hover svg path {
   fill: #fff;
+}
+/*
+* page-home.php swiper
+*/
+.page-template-page-home .my-swiper-wrapper .swiper-hero {
+  height: 38.5rem;
+  max-height: 38.5rem;
+}
+.page-template-page-home .my-swiper-wrapper .swiper-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }

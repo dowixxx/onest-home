@@ -5126,4 +5126,30 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
   });
+  new Swiper(".page-template-page-home .swiper-hero", {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    //   pagination: {
+    //     el: ".swiper-gallery-pagination",
+    //     clickable: true,
+    //   },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 1,
+        spaceBetween: 24
+      },
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 24
+      },
+      992: {
+        slidesPerView: 1,
+        spaceBetween: 48
+      }
+    }
+  });
 });

@@ -119,3 +119,24 @@
     }
 
 }
+
+
+
+/*
+* page-home.php swiper
+*/
+.page-template-page-home .my-swiper-wrapper {
+
+    .swiper-hero {
+        height: 38.5rem;
+        max-height: 38.5rem;
+    }
+
+    .swiper-hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+}
