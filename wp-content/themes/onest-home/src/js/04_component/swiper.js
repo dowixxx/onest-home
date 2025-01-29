@@ -104,27 +104,34 @@ document.addEventListener('DOMContentLoaded', function () {
   */
   const swiper_hero = new Swiper(".page-template-page-home .swiper-hero", {
     slidesPerView: 1,
-    spaceBetween: 24,
-  //   pagination: {
-  //     el: ".swiper-gallery-pagination",
-  //     clickable: true,
-  //   },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+    spaceBetween: 0,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+      formatFractionCurrent: function (number) {
+        return number < 10 ? "0" + number : number; // Add leading zero
+      },
+      formatFractionTotal: function (number) {
+          return number < 10 ? "0" + number : number; // Add leading zero
+      },
     },
+    loop: true,
+    // navigation: {
+    //   nextEl: ".swiper-button-next",
+    //   prevEl: ".swiper-button-prev",
+    // },
     breakpoints: {
       576: {
         slidesPerView: 1,
-        spaceBetween: 24,
+        spaceBetween: 0,
       },
       768: {
         slidesPerView: 1,
-        spaceBetween: 24,
+        spaceBetween: 0,
       },
       992: {
         slidesPerView: 1,
-        spaceBetween: 48,
+        spaceBetween: 0,
       },
     }
   });

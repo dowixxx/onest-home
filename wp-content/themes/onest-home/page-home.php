@@ -6,6 +6,10 @@ Template Post Type: page
 
 
 
+$hero_slides = carbon_get_the_post_meta('crb_hero_slider');
+
+
+
 get_header();
 ?>
 
@@ -22,26 +26,48 @@ get_header();
 					<div class="swiper swiper-hero">
 						<div class="swiper-wrapper">
 
+						<?php 
+						foreach ($hero_slides as $slide) : 
+
+							$slide_image_url = wp_get_attachment_image_url( $slide['slide_image'], 'full' );
+							$slide_title = $slide['slide_title'];
+							$button_text = $slide['button_text'];
+							$button_url = $slide['button_url'];
+						?>
+
 							<div class="swiper-slide">
 								<div class="swiper-item h-100">
 
-									<div class="container position-relative">
-										<div class="position-absolute top-0 bottom-0 my-auto">
-											<h1 class="text-white">labas</h1>
-											<p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro molestias ratione, unde quaerat nobis animi repudiandae eos. Similique nobis, exercitationem dolorum, veniam recusandae numquam, dolore reiciendis consectetur assumenda fugit eos.</p>
-											<button class="btn btn-primary mt-2 text-uppercase">primary</button>
+									<div class="container d-flex h-100">
+										<div class="my-auto">
+
+											<h1 class="text-white">
+												<?php echo esc_html( $slide_title ) ?>
+											</h1>
+
+											<a href="<?php echo esc_html( $button_url ) ?>" 
+												class="btn btn-primary bg-transparent border-white text-uppercase" 
+												title="<?php echo esc_html( $button_text ) ?>">
+												<?php echo esc_html( $button_text ) ?>
+											</a>
+
 										</div>
 									</div>
 									
-									<div class="img-wrapper h-100">
+									<div class="img-wrapper h-100 position-absolute top-0 bottom-0 start-0 end-0 m-auto w-100 z-n1">
+										<div class="bg-black position-absolute w-100 h-100 opacity-25"></div>
 										<img class="" 
-											src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-img.jpg" 
+											src="<?php echo esc_url( $slide_image_url ); ?>" 
 											alt="" 
-											decoding="async" loading="lazy">
+											fetchpriority="high">
 									</div>
 
 								</div>
 							</div>
+
+						<?php 
+						endforeach; 
+						?>
 
 							<!-- <div class="gallery-item video">
 								<video controls>
@@ -54,7 +80,7 @@ get_header();
 					</div>
 
 					<!-- navigation -->
-					<div class="my-swiper-btn-wrapper d-flex position-absolute top-0 bottom-0 m-0 justify-content-between w-100 align-items-center">
+					<!-- <div class="my-swiper-btn-wrapper d-flex position-absolute top-0 bottom-0 m-0 justify-content-between w-100 align-items-center">
 
 						<div class="swiper-button-prev my-swiper-btn position-static ms-4">
 							<svg width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,9 +94,13 @@ get_header();
 							</svg>
 						</div>
 
-					</div>
+					</div> -->
 
-					<!-- <div class="swiper-pagination swiper-hero-pagination position-static"></div> -->
+					<div class="container">
+						<div class="position-relative">
+							<div class="swiper-pagination swiper-hero-pagination"></div>
+						</div>
+					</div>
 					
 				</div>
 

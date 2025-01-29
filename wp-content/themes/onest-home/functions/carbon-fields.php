@@ -97,3 +97,28 @@ add_action( 'carbon_fields_register_fields', function() {
 
         ) );
 });
+
+
+
+/*
+* cpt page, page-home.php
+*/
+add_action( 'carbon_fields_register_fields', function() {
+
+    Container::make( 'post_meta', ' ')
+        ->where( 'post_type', '=', 'page' )
+        ->show_on_template( array(
+            'page-home.php'
+        ) )
+        ->add_fields( array(
+
+            Field::make( 'complex', 'crb_hero_slider', 'Hero slider' )
+                ->add_fields( array(
+                    Field::make( 'image', 'slide_image', 'Slide image' ),
+                    Field::make( 'text', 'slide_title', 'Slide title' ),
+                    Field::make( 'text', 'button_text', 'Button text' ),
+                    Field::make( 'text', 'button_url', 'Button URL' ),
+                ) )
+
+        ) );
+});

@@ -10802,15 +10802,33 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
   fill: #fff;
 }
 /*
-* page-home.php swiper
+* page-home.php hero swiper
 */
-.page-template-page-home .my-swiper-wrapper .swiper-hero {
-  height: 38.5rem;
-  max-height: 38.5rem;
+.page-template-page-home .hero .my-swiper-wrapper .swiper-hero {
+  height: 30rem;
+  max-height: 30rem;
 }
-.page-template-page-home .my-swiper-wrapper .swiper-hero img {
+.page-template-page-home .hero .my-swiper-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+.page-template-page-home .hero .my-swiper-wrapper h1, .page-template-page-home .hero .my-swiper-wrapper .h1 {
+  margin-bottom: 1.8rem;
+}
+.page-template-page-home .hero .my-swiper-wrapper .swiper-pagination {
+  display: flex;
+  font-size: 1rem;
+  margin-top: 0;
+  bottom: 2.5rem;
+  border-radius: 50rem;
+  border: 1px solid #fff;
+  width: fit-content;
+  padding: 0.4rem 0.8rem;
+  line-height: 1;
+  color: #fff;
+}
+.page-template-page-home .hero .my-swiper-wrapper .btn {
+  min-width: 8.125rem;
 }
