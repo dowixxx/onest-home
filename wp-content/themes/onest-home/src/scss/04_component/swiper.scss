@@ -17,7 +17,7 @@
         align-items: center;
         justify-content: center;
         height: 1.875rem;
-        transition: all 0.25s ease-out;
+        transition: all 0.3s ease-out;
 
         &:hover {
             border-radius: 0.25rem;
@@ -44,7 +44,7 @@
 
     .my-swiper-btn svg path {
         fill: $black;
-        transition: all 0.25s ease-out;
+        transition: all 0.3s ease-out;
     }
 
     .swiper-button-prev svg {
@@ -64,7 +64,7 @@
         background: $white;
         border: 1px solid $primary;
         opacity: 1;
-        transition: background-color .25s ease;
+        transition: background-color .3s ease;
     }
     
     .swiper-pagination-bullet-active {

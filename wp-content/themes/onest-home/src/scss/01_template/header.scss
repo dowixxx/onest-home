@@ -9,12 +9,20 @@
         }
     }
 
+    .nav-item {
+        width: fit-content;
+    }
+
     .nav-link {
         padding: 1.5rem 0;
     }
 
     .site-branding {
-        margin-right: 2.75rem;
+        margin-right: 1rem;
+
+        @media only screen and (min-width: 1010px) {
+            margin-right: 2.75rem;
+        }
 
         .img-wrapper {
             width: 5.875rem;
@@ -25,6 +33,54 @@
     .menu .cart.menu-item {
         margin-left: auto;
     }
+
+    // dropdown animation start
+    // inside class-bs5_Walker.php to <ul> added classes 'animate' and 'slideIn'
+    @include media-breakpoint-up(lg) {
+        .animate {
+            animation-duration: 0.3s;
+            -webkit-animation-duration: 0.3s;
+            animation-fill-mode: both;
+            -webkit-animation-fill-mode: both;
+        }
+    }
+    @keyframes slideIn {
+        0% {
+            transform: translateY(-1rem);
+            opacity: 0;
+        }
+        
+        100% {
+            transform: translateY(0rem);
+            opacity: 1;
+        }
+        
+        0% {
+            transform: translateY(-1rem);
+            opacity: 0;
+        }
+    }
+    @-webkit-keyframes slideIn {
+        0% {
+            -webkit-transform: transform;
+            -webkit-opacity: 0;
+        }
+        
+        100% {
+            -webkit-transform: translateY(0);
+            -webkit-opacity: 1;
+        }
+        
+        0% {
+            -webkit-transform: translateY(-1rem);
+            -webkit-opacity: 0;
+        }
+    }
+    .slideIn {
+        -webkit-animation-name: slideIn;
+        animation-name: slideIn;
+    }
+    // dropdown animation end
 
 }
 
@@ -67,6 +123,10 @@
             padding: 0.75rem 0;
         }
 
+        .text-decoration-none a {
+            text-decoration: unset;
+        }
+
         // NOT inside offcanvas
         .dropdown-toggle:not(.offcanvas .dropdown-toggle) { 
             
@@ -81,7 +141,7 @@
                 width: 0.625rem;
                 aspect-ratio: 10 / 5.5;
                 vertical-align: middle;
-                transition: all 0.25s ease;
+                transition: all 0.3s ease;
             }
             &.show::after {
                 transform: rotate(0deg);
@@ -104,6 +164,7 @@
 
         // NOT inside offcanvas
         .dropdown:not(.offcanvas .dropdown) {
+            position: static;  // for megamenu to work
 
             // hover dropdown at level 0
             &:hover {
@@ -125,29 +186,37 @@
                 }
             }
 
+            &.at_depth_1 {
+                position: relative;
+            }
+
             .dropdown-menu.depth_0,
             .dropdown-menu.depth_1 {
-                // width: 936px;
                 border-radius: 0;
-                // left: -8.625rem;
                 border: 0;
                 // background: $white;
                 background: $white-lotion;
             }
 
             .dropdown-menu.depth_0 {
-                top: calc(100% + 1px);
+                // top: calc(100% + 1px);
                 // border-top: 0;
+                // top: 121px;
+                left: 0;
+                width: 100%;
             }
 
             .dropdown-menu.depth_1 {
                 top: 0;
-                left: 100%;
+                left: 0;
+                width: 100%;
+                position: static;
             }
 
             .dropdown-menu[data-bs-popper] {
                 margin-top: 0;
             }
+
         }
         // NOT inside offcanvas end
 
@@ -213,7 +282,7 @@
             position: absolute;
             left: 0.5rem;
             background-color: $black;
-            transition: transform .25s ease-out;
+            transition: transform .3s ease-out;
         }
         .at_depth_1 .dropdown-toggle::after,
         .at_depth_1 .dropdown-toggle::before {

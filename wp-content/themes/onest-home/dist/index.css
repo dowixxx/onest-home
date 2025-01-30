@@ -1810,7 +1810,7 @@ progress {
   border-width: 0;
   border-inline-end-width: var(--bs-border-width);
   border-radius: 0;
-  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .form-control::file-selector-button {
@@ -2516,7 +2516,7 @@ textarea.form-control-lg {
   border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
   border-radius: var(--bs-btn-border-radius);
   background-color: var(--bs-btn-bg);
-  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .btn {
@@ -4033,7 +4033,7 @@ textarea.form-control-lg {
 .accordion {
   --bs-accordion-color: var(--bs-body-color);
   --bs-accordion-bg: var(--bs-body-bg);
-  --bs-accordion-transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, border-radius 0.15s ease;
+  --bs-accordion-transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, border-radius 0.15s ease;
   --bs-accordion-border-color: var(--bs-border-color);
   --bs-accordion-border-width: var(--bs-border-width);
   --bs-accordion-border-radius: var(--bs-border-radius);
@@ -10203,6 +10203,13 @@ section h6, section .h6 {
   margin-bottom: 2.75rem;
 }
 /*
+* container
+*/
+.container-full {
+  max-width: 100%;
+  padding: 0 0.75rem;
+}
+/*
 * article
 */
 .single article {
@@ -10213,7 +10220,7 @@ section h6, section .h6 {
 */
 a,
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  transition: color 0.25s ease;
+  transition: color 0.3s ease;
 }
 /*
 * hover color
@@ -10242,7 +10249,7 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 * buttons
 */
 .btn {
-  transition: all 0.25s ease-out;
+  transition: all 0.3s ease-out;
 }
 .btn-primary:hover {
   background-color: rgba(0, 0, 0, 0.8);
@@ -10293,11 +10300,19 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
   text-decoration: underline;
   color: #000;
 }
+.site-header .nav-item {
+  width: fit-content;
+}
 .site-header .nav-link {
   padding: 1.5rem 0;
 }
 .site-header .site-branding {
-  margin-right: 2.75rem;
+  margin-right: 1rem;
+}
+@media only screen and (min-width: 1010px) {
+  .site-header .site-branding {
+    margin-right: 2.75rem;
+  }
 }
 .site-header .site-branding .img-wrapper {
   width: 5.875rem;
@@ -10305,6 +10320,46 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 }
 .site-header .menu .cart.menu-item {
   margin-left: auto;
+}
+@media (min-width: 992px) {
+  .site-header .animate {
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+  0% {
+    -webkit-transform: translateY(-1rem);
+    -webkit-opacity: 0;
+  }
+}
+.site-header .slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
 }
 .site-header .header-top-area {
   padding: 0.75rem 0;
@@ -10327,6 +10382,9 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
     padding: 0.75rem 0;
   }
 }
+.site-header .header-main-area .text-decoration-none a {
+  text-decoration: unset;
+}
 .site-header .header-main-area .dropdown-toggle:not(.offcanvas .dropdown-toggle)::after {
   border: none;
   background-image: url("../assets/images/arrow-dropdown1.svg");
@@ -10336,7 +10394,7 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
   width: 0.625rem;
   aspect-ratio: 10/5.5;
   vertical-align: middle;
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
 }
 .site-header .header-main-area .dropdown-toggle:not(.offcanvas .dropdown-toggle).show::after {
   transform: rotate(0deg);
@@ -10348,6 +10406,9 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 }
 .site-header .header-main-area .dropdown-menu .dropdown-item:not(.offcanvas .dropdown-menu .dropdown-item).show::after {
   transform: rotate(180deg);
+}
+.site-header .header-main-area .dropdown:not(.offcanvas .dropdown) {
+  position: static;
 }
 .site-header .header-main-area .dropdown:not(.offcanvas .dropdown):hover > .dropdown-toggle::after {
   transform: rotate(0deg);
@@ -10361,6 +10422,9 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 .site-header .header-main-area .dropdown:not(.offcanvas .dropdown).at_depth_1:hover .dropdown-menu.depth_1 {
   display: block;
 }
+.site-header .header-main-area .dropdown:not(.offcanvas .dropdown).at_depth_1 {
+  position: relative;
+}
 .site-header .header-main-area .dropdown:not(.offcanvas .dropdown) .dropdown-menu.depth_0,
 .site-header .header-main-area .dropdown:not(.offcanvas .dropdown) .dropdown-menu.depth_1 {
   border-radius: 0;
@@ -10368,11 +10432,14 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
   background: #FAFAFA;
 }
 .site-header .header-main-area .dropdown:not(.offcanvas .dropdown) .dropdown-menu.depth_0 {
-  top: calc(100% + 1px);
+  left: 0;
+  width: 100%;
 }
 .site-header .header-main-area .dropdown:not(.offcanvas .dropdown) .dropdown-menu.depth_1 {
   top: 0;
-  left: 100%;
+  left: 0;
+  width: 100%;
+  position: static;
 }
 .site-header .header-main-area .dropdown:not(.offcanvas .dropdown) .dropdown-menu[data-bs-popper] {
   margin-top: 0;
@@ -10421,7 +10488,7 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
   position: absolute;
   left: 0.5rem;
   background-color: #000;
-  transition: transform 0.25s ease-out;
+  transition: transform 0.3s ease-out;
 }
 .site-header .offcanvas .at_depth_1 .dropdown-toggle::after,
 .site-header .offcanvas .at_depth_1 .dropdown-toggle::before {
@@ -10666,7 +10733,7 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
   object-fit: cover;
   object-position: center;
   transform: scale(1.1);
-  transition: transform 0.25s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 .project-item .project-categories {
   font-size: 0.875rem;
@@ -10784,7 +10851,7 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
   align-items: center;
   justify-content: center;
   height: 1.875rem;
-  transition: all 0.25s ease-out;
+  transition: all 0.3s ease-out;
 }
 .my-swiper-wrapper .my-swiper-btn:hover {
   border-radius: 0.25rem;
@@ -10801,7 +10868,7 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 }
 .my-swiper-wrapper .my-swiper-btn svg path {
   fill: #000;
-  transition: all 0.25s ease-out;
+  transition: all 0.3s ease-out;
 }
 .my-swiper-wrapper .swiper-button-prev svg {
   transform: rotate(-90deg);
@@ -10818,7 +10885,7 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
   background: #fff;
   border: 1px solid #000;
   opacity: 1;
-  transition: background-color 0.25s ease;
+  transition: background-color 0.3s ease;
 }
 .my-swiper-wrapper .swiper-pagination-bullet-active {
   background: #000;

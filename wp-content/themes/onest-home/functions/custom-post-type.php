@@ -40,7 +40,7 @@ function cpt_project() {
 			'add_new' => __('Add New', 'onest-home'), /* The add new menu item */
 			'add_new_item' => __('Add New Project', 'onest-home'), /* Add New Display Title */
 			'edit' => __( 'Edit', 'onest-home' ), /* Edit Dialog */
-			'edit_item' => __('Edit Projects', 'onest-home'), /* Edit Display Title */
+			'edit_item' => __('Edit Project', 'onest-home'), /* Edit Display Title */
 			'new_item' => __('New Project', 'onest-home'), /* New Display Title */
 			'view_item' => __('View Project', 'onest-home'), /* View Display Title */
 			'search_items' => __('Search Project', 'onest-home'), /* Search Custom Type Title */ 

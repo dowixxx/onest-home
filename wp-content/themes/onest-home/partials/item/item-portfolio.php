@@ -11,7 +11,7 @@
     </a>
 
     <div class="entry-content"> 
-        <h2 class="entry-title">
+        <h2 class="entry-title text-uppercase">
             <?php the_title() ?>
         </h2>
         <p class="entry-excerpt"><?php the_excerpt() ?></p>
@@ -23,7 +23,7 @@
         </a>    
     </div>
 
-    <h2 class="entry-title -mobile d-lg-none">
+    <h2 class="entry-title text-uppercase -mobile d-lg-none">
         <?php the_title() ?>
     </h2>
 

@@ -39,7 +39,7 @@ class bs5_Walker extends Walker_Nav_menu
     $indent = str_repeat("\t", $depth);
     // CSDEV changed sub-menu  for dropdown-submenu
     $submenu = ($depth > 0) ? ' dropdown-submenu' : '';
-    $output .= "\n$indent<ul class=\"dropdown-menu$submenu " . esc_attr(implode(" ", $dropdown_menu_class)) . " depth_$depth\">\n";
+    $output .= "\n$indent<ul class=\"animate slideIn dropdown-menu$submenu " . esc_attr(implode(" ", $dropdown_menu_class)) . " depth_$depth\">\n";
   }
 
   /**

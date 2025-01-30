@@ -194,6 +194,15 @@ section {
 
 
 /*
+* container
+*/
+.container-full {
+    max-width: 100%;
+    padding: 0 0.75rem;
+}
+
+
+/*
 * article
 */
 .single article {
@@ -206,7 +215,7 @@ section {
 */
 a,
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-    transition: color .25s ease;
+    transition: color .3s ease;
 }
 
 
@@ -247,7 +256,7 @@ a {
 * buttons
 */
 .btn {
-    transition: all 0.25s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .btn-primary {
