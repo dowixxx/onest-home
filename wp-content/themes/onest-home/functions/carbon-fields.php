@@ -122,3 +122,23 @@ add_action( 'carbon_fields_register_fields', function() {
 
         ) );
 });
+
+
+
+/*
+* cpt projects, single-projects.php
+*/
+add_action( 'carbon_fields_register_fields', function() {
+
+    Container::make( 'post_meta', 'Project info')
+        ->where( 'post_type', '=', 'project' )
+        ->show_on_template( array(
+            'single-projects.php'
+        ) )
+        ->add_fields( array(
+
+            Field::make( 'text', 'project_client', 'Client' ),
+            Field::make( 'text', 'project_location', 'Location' ),
+
+        ) );
+});

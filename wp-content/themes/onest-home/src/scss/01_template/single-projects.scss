@@ -1,0 +1,14 @@
+.project-template-single-projects {
+
+    .img-featured {
+        margin-bottom: 5.625rem;
+    }
+
+    .project-info-item:not(:last-child) {
+        margin-bottom: 0.625rem;
+    }
+
+    .project-info-item h5 {
+        font-size: $fs-15;
+    }
+}

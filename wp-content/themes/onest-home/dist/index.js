@@ -5049,7 +5049,7 @@ defineJQueryPlugin(Toast);
 document.addEventListener("DOMContentLoaded", function() {
   new Swiper(".page-template-page-about-us .swiper-gallery", {
     slidesPerView: 1,
-    spaceBetween: 24,
+    spaceBetween: 0,
     pagination: {
       el: ".swiper-gallery-pagination",
       clickable: true
@@ -5061,21 +5061,21 @@ document.addEventListener("DOMContentLoaded", function() {
     breakpoints: {
       576: {
         slidesPerView: 1,
-        spaceBetween: 24
+        spaceBetween: 0
       },
       768: {
         slidesPerView: 1,
-        spaceBetween: 24
+        spaceBetween: 0
       },
       992: {
         slidesPerView: 1,
-        spaceBetween: 48
+        spaceBetween: 0
       }
     }
   });
   new Swiper(".page-template-page-contacts .swiper-gallery", {
     slidesPerView: 1,
-    spaceBetween: 24,
+    spaceBetween: 0,
     //   pagination: {
     //     el: ".swiper-gallery-pagination",
     //     clickable: true,
@@ -5087,15 +5087,15 @@ document.addEventListener("DOMContentLoaded", function() {
     breakpoints: {
       576: {
         slidesPerView: 1,
-        spaceBetween: 24
+        spaceBetween: 0
       },
       768: {
         slidesPerView: 1,
-        spaceBetween: 24
+        spaceBetween: 0
       },
       992: {
         slidesPerView: 1,
-        spaceBetween: 48
+        spaceBetween: 0
       }
     }
   });
