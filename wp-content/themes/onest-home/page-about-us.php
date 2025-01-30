@@ -75,7 +75,7 @@ get_header();
 								<div class="swiper-slide">
 									<div class="swiper-item">
 										<div class="img-wrapper">
-											<img class="img-fluid" 
+											<img class="img-fluid w-100" 
 												src="<?php echo esc_url( $image_url ); ?>" 
 												alt="<?php echo esc_attr( $image_alt ) ?>" 
 												decoding="async" loading="lazy">
