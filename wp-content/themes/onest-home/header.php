@@ -55,7 +55,7 @@ endif;
 
 <div class="site">
 
-	<header class="site-header">
+	<header class="site-header position-relative">
 		<!-- <div class="container"> -->
 			<div class="site-header-content">
 
@@ -139,7 +139,7 @@ endif;
 
 							<nav class="navbar navbar-expand-lg p-0 w-100 position-static" role="navigation">
 
-								<button class="navbar-toggler border-0" 
+								<!-- <button class="navbar-toggler border-0" 
 									type="button" 
 									data-bs-toggle="offcanvas"
 									data-bs-target="#primary-menu-offcanvas" 
@@ -151,9 +151,16 @@ endif;
 										<line x1="0" y1="7.5" x2="45" y2="7.5"></line>
 										<line x1="0" y1="14.5" x2="45" y2="14.5"></line>
 									</svg>
-								</button>
+								</button> -->
 
 								<?php
+								wp_nav_menu(array(
+									'theme_location' 	=> 'header-primary-menu',
+								));
+								?>
+
+								<?php
+								/*
 								wp_nav_menu(array(
 									'theme_location' 	=> 'header-primary-menu',
 									'container' 		=> 'div',
@@ -178,6 +185,7 @@ endif;
 									'depth' 			=> 3,
 									'walker' 			=> new bs5_Walker()
 								));
+								*/
 								?>
 							</nav>
 

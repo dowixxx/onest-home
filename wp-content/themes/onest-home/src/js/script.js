@@ -14,3 +14,4 @@ import './00_base/base.js';
 
 // Component
 import './04_component/swiper.js';
+import './04_component/max-mega-menu.js';

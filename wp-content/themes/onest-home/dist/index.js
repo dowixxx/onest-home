@@ -5050,6 +5050,7 @@ document.addEventListener("DOMContentLoaded", function() {
   new Swiper(".page-template-page-about-us .swiper-gallery", {
     slidesPerView: 1,
     spaceBetween: 0,
+    loop: true,
     pagination: {
       el: ".swiper-gallery-pagination",
       clickable: true
@@ -5076,6 +5077,7 @@ document.addEventListener("DOMContentLoaded", function() {
   new Swiper(".page-template-page-contacts .swiper-gallery", {
     slidesPerView: 1,
     spaceBetween: 0,
+    loop: true,
     //   pagination: {
     //     el: ".swiper-gallery-pagination",
     //     clickable: true,
@@ -5159,4 +5161,65 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
   });
+});
+document.addEventListener("DOMContentLoaded", function() {
+  const megaClose = document.querySelector(".mega-close");
+  const megaMenuToggle = document.querySelector(".mega-menu-toggle");
+  const newParent = document.querySelector("#mega-menu-header-primary-menu");
+  if (megaMenuToggle) {
+    megaMenuToggle.innerHTML = "";
+    let svgNS = "http://www.w3.org/2000/svg";
+    let svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("xmlns", svgNS);
+    svg.setAttribute("x", "0px");
+    svg.setAttribute("y", "0px");
+    svg.setAttribute("width", "45px");
+    svg.setAttribute("height", "15px");
+    svg.setAttribute("viewBox", "0 0 45 15");
+    svg.setAttribute("xml:space", "preserve");
+    for (let y of [0.5, 7.5, 14.5]) {
+      let line = document.createElementNS(svgNS, "line");
+      line.setAttribute("x1", "0");
+      line.setAttribute("y1", y);
+      line.setAttribute("x2", "45");
+      line.setAttribute("y2", y);
+      line.setAttribute("stroke", "black");
+      line.setAttribute("stroke-width", "1");
+      svg.appendChild(line);
+    }
+    megaMenuToggle.appendChild(svg);
+  }
+  if (megaClose) {
+    let svgNS = "http://www.w3.org/2000/svg";
+    let svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("xmlns", svgNS);
+    svg.setAttribute("x", "0px");
+    svg.setAttribute("y", "0px");
+    svg.setAttribute("width", "16");
+    svg.setAttribute("height", "16");
+    svg.setAttribute("viewBox", "0 0 16 16");
+    svg.setAttribute("xml:space", "preserve");
+    let line1 = document.createElementNS(svgNS, "line");
+    line1.setAttribute("x1", "0.5");
+    line1.setAttribute("y1", "0.5");
+    line1.setAttribute("x2", "15.5");
+    line1.setAttribute("y2", "15.5");
+    line1.setAttribute("stroke", "black");
+    line1.setAttribute("stroke-width", "1");
+    let line2 = document.createElementNS(svgNS, "line");
+    line2.setAttribute("x1", "15.5");
+    line2.setAttribute("y1", "0.5");
+    line2.setAttribute("x2", "0.5");
+    line2.setAttribute("y2", "15.5");
+    line2.setAttribute("stroke", "black");
+    line2.setAttribute("stroke-width", "1");
+    svg.appendChild(line1);
+    svg.appendChild(line2);
+    megaClose.innerHTML = "";
+    megaClose.appendChild(svg);
+  }
+  if (megaClose && newParent) {
+    megaClose.remove();
+    newParent.appendChild(megaClose);
+  }
 });

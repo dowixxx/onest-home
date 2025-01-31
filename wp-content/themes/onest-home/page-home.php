@@ -21,7 +21,7 @@ get_header();
 		<section class="hero m-0">
 			<div class="hero-content">
 
-				<div class="my-swiper-wrapper position-relative">
+				<div class="my-swiper-wrapper position-relative z-0">
 					<!--swiper -->
 					<div class="swiper swiper-hero">
 						<div class="swiper-wrapper">

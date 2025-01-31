@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const swiper_gallery_about_us = new Swiper(".page-template-page-about-us .swiper-gallery", {
     slidesPerView: 1,
     spaceBetween: 0,
+    loop: true,
     pagination: {
       el: ".swiper-gallery-pagination",
       clickable: true,
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const swiper_gallery_contacts = new Swiper(".page-template-page-contacts .swiper-gallery", {
     slidesPerView: 1,
     spaceBetween: 0,
+    loop: true,
   //   pagination: {
   //     el: ".swiper-gallery-pagination",
   //     clickable: true,
