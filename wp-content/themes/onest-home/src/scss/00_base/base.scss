@@ -249,6 +249,9 @@ a {
 */
 .divider {
     margin: 5rem 0;
+    width: 100%;
+    height: 1px;
+    background-color: $silver-chinese;
 }
 
 
@@ -325,4 +328,168 @@ a {
         }
     }
 
+}
+
+
+
+/*
+* animejs
+*/
+
+// page-home.php
+.page-template-page-home {
+
+    .hero h1,
+    .hero .btn,
+    .hero .swiper-pagination {
+        opacity: 0;
+    }
+
+    .product-item,
+    .reviews-item {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+// page-contacts.php
+.page-template-page-contacts {
+
+    .intro .img-wrapper,
+    .intro .page-content p,
+    .contact-info-content div,
+    .form-lead,
+    .gallery
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    
+    .intro .page-content .btn {
+        opacity: 0;
+    }
+
+    .reviews-item {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+// page-projects.php
+.page-template-page-projects {
+    
+    .title,
+    .portfolio-item
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+// page-about-us.php
+.page-template-page-about-us {
+
+    .intro .page-content p,
+    .gallery,
+    .additional-content p,
+    .form-lead,
+    .product-collection h3,
+    .product-item
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    
+    .intro .page-content .btn {
+        opacity: 0;
+    }
+
+    .intro .reviews-item {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+// page-custom-furniture.php
+.page-template-page-custom-furniture {
+
+    .intro .page-content p,
+    .form-lead,
+    .project-collection h3,
+    .project-item,
+    .product-collection h3,
+    .product-item
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    
+    .intro .page-content .btn {
+        opacity: 0;
+    }
+
+    .intro .reviews-item {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+// page-interior.php
+.page-template-page-interior {
+
+    .intro .page-content p,
+    .form-lead,
+    .project-collection h3,
+    .project-item
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    
+    .intro .page-content .btn {
+        opacity: 0;
+    }
+
+    .intro .reviews-item {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+// page-construction.php
+.page-template-page-construction {
+
+    .intro .page-content p,
+    .form-lead,
+    .pitch p,
+    .project-collection h3,
+    .project-item
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    
+    .intro .page-content .btn {
+        opacity: 0;
+    }
+
+    .intro .reviews-item {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+// single-projects.php
+.single-project {
+
+    .img-featured,
+    .title,
+    .project-info-item,
+    .wp-block-image,
+    article p:not(.project-info p)
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    
 }

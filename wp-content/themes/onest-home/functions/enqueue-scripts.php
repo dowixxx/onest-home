@@ -68,6 +68,22 @@ add_action('wp_enqueue_scripts', 'enqueue_swiper_assets');
 
 
 
+/*
+* Enqueue animejs scripts
+*/
+function enqueue_animejs_assets() {
+
+    // Enqueue animejs JavaScript
+    wp_enqueue_script(
+        'anime-js',
+        get_template_directory_uri() . '/assets/js/lib/animejs/anime.min.js',
+        array(), // Dependencies
+        '3.2.2', 
+        true // Load in footer
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_animejs_assets');
+
 
 
 // function site_scripts() {

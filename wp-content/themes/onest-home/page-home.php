@@ -111,7 +111,7 @@ get_header();
 		<!-- product collection -->
 		<section class="product-collection">
 			<div class="container">
-				<div class="product-collection-content border-bottom">
+				<div class="product-collection-content">
 
 					<div class="row g-4 g-lg-5">
 						<?php include locate_template('partials/item/item-product.php'); ?>
@@ -125,6 +125,12 @@ get_header();
 				</div>
 			</div>
 		</section>
+
+
+		<!-- divider -->
+		<div class="container">
+			<div class="divider"></div>
+		</div>
 
 
 		<!-- reviews section -->

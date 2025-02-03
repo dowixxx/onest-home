@@ -10244,6 +10244,9 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 */
 .divider {
   margin: 5rem 0;
+  width: 100%;
+  height: 1px;
+  background-color: #CCCCCC;
 }
 /*
 * buttons
@@ -10292,6 +10295,113 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 }
 .btn-icon.btn-secondary:hover svg path {
   fill: #fff;
+}
+/*
+* animejs
+*/
+.page-template-page-home .hero h1, .page-template-page-home .hero .h1,
+.page-template-page-home .hero .btn,
+.page-template-page-home .hero .swiper-pagination {
+  opacity: 0;
+}
+.page-template-page-home .product-item,
+.page-template-page-home .reviews-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.page-template-page-contacts .intro .img-wrapper,
+.page-template-page-contacts .intro .page-content p,
+.page-template-page-contacts .contact-info-content div,
+.page-template-page-contacts .form-lead,
+.page-template-page-contacts .gallery {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.page-template-page-contacts .intro .page-content .btn {
+  opacity: 0;
+}
+.page-template-page-contacts .reviews-item {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.page-template-page-projects .title,
+.page-template-page-projects .portfolio-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.page-template-page-about-us .intro .page-content p,
+.page-template-page-about-us .gallery,
+.page-template-page-about-us .additional-content p,
+.page-template-page-about-us .form-lead,
+.page-template-page-about-us .product-collection h3,
+.page-template-page-about-us .product-collection .h3,
+.page-template-page-about-us .product-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.page-template-page-about-us .intro .page-content .btn {
+  opacity: 0;
+}
+.page-template-page-about-us .intro .reviews-item {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.page-template-page-custom-furniture .intro .page-content p,
+.page-template-page-custom-furniture .form-lead,
+.page-template-page-custom-furniture .project-collection h3,
+.page-template-page-custom-furniture .project-collection .h3,
+.page-template-page-custom-furniture .project-item,
+.page-template-page-custom-furniture .product-collection h3,
+.page-template-page-custom-furniture .product-collection .h3,
+.page-template-page-custom-furniture .product-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.page-template-page-custom-furniture .intro .page-content .btn {
+  opacity: 0;
+}
+.page-template-page-custom-furniture .intro .reviews-item {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.page-template-page-interior .intro .page-content p,
+.page-template-page-interior .form-lead,
+.page-template-page-interior .project-collection h3,
+.page-template-page-interior .project-collection .h3,
+.page-template-page-interior .project-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.page-template-page-interior .intro .page-content .btn {
+  opacity: 0;
+}
+.page-template-page-interior .intro .reviews-item {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.page-template-page-construction .intro .page-content p,
+.page-template-page-construction .form-lead,
+.page-template-page-construction .pitch p,
+.page-template-page-construction .project-collection h3,
+.page-template-page-construction .project-collection .h3,
+.page-template-page-construction .project-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.page-template-page-construction .intro .page-content .btn {
+  opacity: 0;
+}
+.page-template-page-construction .intro .reviews-item {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.single-project .img-featured,
+.single-project .title,
+.single-project .project-info-item,
+.single-project .wp-block-image,
+.single-project article p:not(.project-info p) {
+  opacity: 0;
+  transform: translateY(20px);
 }
 .site-header a {
   text-decoration: unset;
@@ -10398,9 +10508,6 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 }
 .page-template-page-construction .pitch p {
   font-size: 1.3125rem;
-}
-.page-template-page-home .product-collection-content {
-  padding: 0rem 0 5rem 0;
 }
 .project-template-single-projects .img-featured {
   margin-bottom: 5.625rem;

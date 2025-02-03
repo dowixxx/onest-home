@@ -5046,6 +5046,585 @@ class Toast extends BaseComponent {
 }
 enableDismissTrigger(Toast);
 defineJQueryPlugin(Toast);
+if (document.body.classList.contains("page-template-page-home")) {
+  let animate_initial = function() {
+    anime({
+      targets: [".hero h1", ".hero .btn", ".hero .swiper-pagination"],
+      opacity: [0, 1],
+      // translateY: [20, 0],
+      duration: 300,
+      easing: "easeOutQuad",
+      // complete: () => {
+      //     //
+      //     anime({
+      //         targets: '.hero .btn',
+      //         opacity: [0, 1],
+      //         // translateY: [20, 0],
+      //         duration: 300,
+      //         easing: 'easeOutQuad',
+      //         complete: () => {
+      //             //
+      //             anime({
+      //                 targets: '.hero .swiper-pagination',
+      //                 opacity: [0, 1],
+      //                 // translateY: [20, 0],
+      //                 duration: 300,
+      //                 easing: 'easeOutQuad',
+      complete: () => {
+        anime({
+          targets: ".product-item",
+          opacity: [0, 1],
+          translateY: [20, 0],
+          duration: 300,
+          easing: "easeOutQuad",
+          delay: anime.stagger(150)
+        });
+      }
+      //             });
+      //         }
+      //     });
+      // }
+    });
+  }, animate_scroll = function() {
+    const observerOptions = {
+      root: null,
+      // observes the viewport
+      rootMargin: "0px",
+      threshold: 0.5
+    };
+    const observer = new IntersectionObserver((entries, observer2) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateOnScroll(entry.target);
+          observer2.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    const scrollElements = document.querySelectorAll(".reviews-item");
+    scrollElements.forEach((el) => observer.observe(el));
+  }, animateOnScroll = function(element) {
+    anime({
+      targets: element,
+      opacity: [0, 1],
+      translateY: [20, 0],
+      duration: 300,
+      easing: "easeOutQuad"
+    });
+  };
+  var animate_initial2 = animate_initial, animate_scroll2 = animate_scroll, animateOnScroll2 = animateOnScroll;
+  document.addEventListener("DOMContentLoaded", () => {
+    animate_initial();
+    animate_scroll();
+  });
+}
+if (document.body.classList.contains("page-template-page-contacts")) {
+  let animate_initial = function() {
+    anime({
+      targets: [".intro .img-wrapper"],
+      opacity: [0, 1],
+      translateY: [20, 0],
+      duration: 300,
+      easing: "easeOutQuad",
+      complete: () => {
+        anime({
+          targets: ".intro .page-content p",
+          opacity: [0, 1],
+          translateY: [20, 0],
+          duration: 300,
+          easing: "easeOutQuad",
+          delay: anime.stagger(150),
+          complete: () => {
+            anime({
+              targets: ".intro .page-content .btn",
+              opacity: [0, 1],
+              duration: 300,
+              easing: "easeOutQuad"
+            });
+          }
+        });
+      }
+    });
+  }, animate_scroll = function() {
+    const observerOptions = {
+      root: null,
+      // observes the viewport
+      rootMargin: "0px",
+      threshold: 0.5
+    };
+    const observer = new IntersectionObserver((entries, observer2) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateOnScroll(entry.target);
+          observer2.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    const scrollElements = document.querySelectorAll(".reviews-contact-info-wrapper, .form-lead, .gallery");
+    scrollElements.forEach((el) => observer.observe(el));
+  }, animateOnScroll = function(element) {
+    if (element.matches(".reviews-contact-info-wrapper")) {
+      anime({
+        targets: [".reviews-item"],
+        opacity: [0, 1],
+        translateX: [20, 0],
+        duration: 300,
+        easing: "easeOutQuad",
+        delay: anime.stagger(150),
+        complete: () => {
+          anime({
+            targets: ".contact-info-content div",
+            opacity: [0, 1],
+            translateY: [20, 0],
+            duration: 300,
+            easing: "easeOutQuad",
+            delay: anime.stagger(150)
+          });
+        }
+      });
+    }
+    if (element.matches(".form-lead") || element.matches(".gallery")) {
+      anime({
+        targets: element,
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 600,
+        easing: "easeOutQuad"
+      });
+    }
+  };
+  var animate_initial2 = animate_initial, animate_scroll2 = animate_scroll, animateOnScroll2 = animateOnScroll;
+  document.addEventListener("DOMContentLoaded", () => {
+    animate_initial();
+    animate_scroll();
+  });
+}
+if (document.body.classList.contains("page-template-page-projects")) {
+  let animate_initial = function() {
+    anime({
+      targets: [".title"],
+      opacity: [0, 1],
+      translateY: [20, 0],
+      duration: 300,
+      easing: "easeOutQuad",
+      complete: () => {
+        anime({
+          targets: ".portfolio-item",
+          opacity: [0, 1],
+          translateY: [20, 0],
+          duration: 300,
+          easing: "easeOutQuad",
+          delay: anime.stagger(150)
+        });
+      }
+    });
+  };
+  var animate_initial2 = animate_initial;
+  document.addEventListener("DOMContentLoaded", () => {
+    animate_initial();
+  });
+}
+if (document.body.classList.contains("page-template-page-about-us")) {
+  let animate_initial = function() {
+    anime({
+      targets: [".intro .page-content p"],
+      opacity: [0, 1],
+      translateY: [20, 0],
+      duration: 300,
+      easing: "easeOutQuad",
+      delay: anime.stagger(150),
+      complete: () => {
+        anime({
+          targets: ".reviews-item",
+          opacity: [0, 1],
+          // translateY: [20, 0],
+          translateX: [20, 0],
+          duration: 300,
+          easing: "easeOutQuad",
+          delay: anime.stagger(150),
+          complete: () => {
+            anime({
+              targets: ".intro .page-content .btn",
+              opacity: [0, 1],
+              duration: 300,
+              easing: "easeOutQuad",
+              complete: () => {
+                anime({
+                  targets: ".gallery",
+                  opacity: [0, 1],
+                  translateY: [20, 0],
+                  duration: 300,
+                  easing: "easeOutQuad"
+                });
+              }
+            });
+          }
+        });
+      }
+    });
+  }, animate_scroll = function() {
+    const observerOptions = {
+      root: null,
+      // observes the viewport
+      rootMargin: "0px",
+      threshold: 0.5
+    };
+    const observer = new IntersectionObserver((entries, observer2) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateOnScroll(entry.target);
+          observer2.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    const scrollElements = document.querySelectorAll(".additional-content p, .form-lead, .product-collection h3");
+    scrollElements.forEach((el) => observer.observe(el));
+  }, animateOnScroll = function(element) {
+    if (element.matches(".additional-content p") || element.matches(".form-lead")) {
+      anime({
+        targets: element,
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 600,
+        easing: "easeOutQuad"
+      });
+    }
+    if (element.matches(".product-collection h3")) {
+      anime({
+        targets: element,
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 300,
+        easing: "easeOutQuad",
+        complete: () => {
+          anime({
+            targets: ".product-item",
+            opacity: [0, 1],
+            translateY: [20, 0],
+            duration: 300,
+            easing: "easeOutQuad",
+            delay: anime.stagger(150)
+          });
+        }
+      });
+    }
+  };
+  var animate_initial2 = animate_initial, animate_scroll2 = animate_scroll, animateOnScroll2 = animateOnScroll;
+  document.addEventListener("DOMContentLoaded", () => {
+    animate_initial();
+    animate_scroll();
+  });
+}
+if (document.body.classList.contains("page-template-page-custom-furniture")) {
+  let animate_initial = function() {
+    anime({
+      targets: [".intro .page-content p"],
+      opacity: [0, 1],
+      translateY: [20, 0],
+      duration: 300,
+      easing: "easeOutQuad",
+      delay: anime.stagger(150),
+      complete: () => {
+        anime({
+          targets: ".reviews-item",
+          opacity: [0, 1],
+          // translateY: [20, 0],
+          translateX: [20, 0],
+          duration: 300,
+          easing: "easeOutQuad",
+          delay: anime.stagger(150),
+          complete: () => {
+            anime({
+              targets: ".intro .page-content .btn",
+              opacity: [0, 1],
+              duration: 300,
+              easing: "easeOutQuad"
+              // complete: () => {
+              //     //
+              //     anime({
+              //         targets: ['.project-collection h3', '.project-item'],
+              //         opacity: [0, 1],
+              //         translateY: [20, 0],
+              //         duration: 300,
+              //         easing: 'easeOutQuad',
+              //         delay: anime.stagger(150)
+              //     });
+              // }
+            });
+          }
+        });
+      }
+    });
+  }, animate_scroll = function() {
+    const observerOptions = {
+      root: null,
+      // observes the viewport
+      rootMargin: "0px",
+      threshold: 0.5
+    };
+    const observer = new IntersectionObserver((entries, observer2) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateOnScroll(entry.target);
+          observer2.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    const scrollElements = document.querySelectorAll(".project-item, .form-lead, .product-collection h3");
+    scrollElements.forEach((el) => observer.observe(el));
+  }, animateOnScroll = function(element) {
+    if (element.matches(".project-item")) {
+      anime({
+        targets: [".project-collection h3", ".project-item"],
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 300,
+        easing: "easeOutQuad",
+        delay: anime.stagger(150)
+      });
+    }
+    if (element.matches(".form-lead")) {
+      anime({
+        targets: element,
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 600,
+        easing: "easeOutQuad"
+      });
+    }
+    if (element.matches(".product-collection h3")) {
+      anime({
+        targets: element,
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 300,
+        easing: "easeOutQuad",
+        complete: () => {
+          anime({
+            targets: ".product-item",
+            opacity: [0, 1],
+            translateY: [20, 0],
+            duration: 300,
+            easing: "easeOutQuad",
+            delay: anime.stagger(150)
+          });
+        }
+      });
+    }
+  };
+  var animate_initial2 = animate_initial, animate_scroll2 = animate_scroll, animateOnScroll2 = animateOnScroll;
+  document.addEventListener("DOMContentLoaded", () => {
+    animate_initial();
+    animate_scroll();
+  });
+}
+if (document.body.classList.contains("page-template-page-interior")) {
+  let animate_initial = function() {
+    anime({
+      targets: [".intro .page-content p"],
+      opacity: [0, 1],
+      translateY: [20, 0],
+      duration: 300,
+      easing: "easeOutQuad",
+      delay: anime.stagger(150),
+      complete: () => {
+        anime({
+          targets: ".reviews-item",
+          opacity: [0, 1],
+          // translateY: [20, 0],
+          translateX: [20, 0],
+          duration: 300,
+          easing: "easeOutQuad",
+          delay: anime.stagger(150),
+          complete: () => {
+            anime({
+              targets: ".intro .page-content .btn",
+              opacity: [0, 1],
+              duration: 300,
+              easing: "easeOutQuad"
+            });
+          }
+        });
+      }
+    });
+  }, animate_scroll = function() {
+    const observerOptions = {
+      root: null,
+      // observes the viewport
+      rootMargin: "0px",
+      threshold: 0.5
+    };
+    const observer = new IntersectionObserver((entries, observer2) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateOnScroll(entry.target);
+          observer2.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    const scrollElements = document.querySelectorAll(".project-item, .form-lead");
+    scrollElements.forEach((el) => observer.observe(el));
+  }, animateOnScroll = function(element) {
+    if (element.matches(".project-item")) {
+      anime({
+        targets: [".project-collection h3", ".project-item"],
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 300,
+        easing: "easeOutQuad",
+        delay: anime.stagger(150)
+      });
+    }
+    if (element.matches(".form-lead")) {
+      anime({
+        targets: element,
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 600,
+        easing: "easeOutQuad"
+      });
+    }
+  };
+  var animate_initial2 = animate_initial, animate_scroll2 = animate_scroll, animateOnScroll2 = animateOnScroll;
+  document.addEventListener("DOMContentLoaded", () => {
+    animate_initial();
+    animate_scroll();
+  });
+}
+if (document.body.classList.contains("page-template-page-construction")) {
+  let animate_initial = function() {
+    anime({
+      targets: [".intro .page-content p"],
+      opacity: [0, 1],
+      translateY: [20, 0],
+      duration: 300,
+      easing: "easeOutQuad",
+      delay: anime.stagger(150),
+      complete: () => {
+        anime({
+          targets: ".reviews-item",
+          opacity: [0, 1],
+          // translateY: [20, 0],
+          translateX: [20, 0],
+          duration: 300,
+          easing: "easeOutQuad",
+          delay: anime.stagger(150),
+          complete: () => {
+            anime({
+              targets: ".intro .page-content .btn",
+              opacity: [0, 1],
+              duration: 300,
+              easing: "easeOutQuad"
+            });
+          }
+        });
+      }
+    });
+  }, animate_scroll = function() {
+    const observerOptions = {
+      root: null,
+      // observes the viewport
+      rootMargin: "0px",
+      threshold: 0.5
+    };
+    const observer = new IntersectionObserver((entries, observer2) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateOnScroll(entry.target);
+          observer2.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    const scrollElements = document.querySelectorAll(".project-item, .form-lead, .pitch");
+    scrollElements.forEach((el) => observer.observe(el));
+  }, animateOnScroll = function(element) {
+    if (element.matches(".project-item")) {
+      anime({
+        targets: [".project-collection h3", ".project-item"],
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 300,
+        easing: "easeOutQuad",
+        delay: anime.stagger(150)
+      });
+    }
+    if (element.matches(".form-lead")) {
+      anime({
+        targets: element,
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 600,
+        easing: "easeOutQuad"
+      });
+    }
+    if (element.matches(".pitch")) {
+      anime({
+        targets: ".pitch p",
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 300,
+        easing: "easeOutQuad",
+        delay: anime.stagger(150)
+      });
+    }
+  };
+  var animate_initial2 = animate_initial, animate_scroll2 = animate_scroll, animateOnScroll2 = animateOnScroll;
+  document.addEventListener("DOMContentLoaded", () => {
+    animate_initial();
+    animate_scroll();
+  });
+}
+if (document.body.classList.contains("single-project")) {
+  let animate_initial = function() {
+    anime({
+      targets: [".img-featured"],
+      opacity: [0, 1],
+      translateY: [20, 0],
+      duration: 600,
+      easing: "easeOutQuad"
+    });
+  }, animate_scroll = function() {
+    const observerOptions = {
+      root: null,
+      // observes the viewport
+      rootMargin: "0px",
+      threshold: 0.5
+    };
+    const observer = new IntersectionObserver((entries, observer2) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateOnScroll(entry.target);
+          observer2.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    const scrollElements = document.querySelectorAll(".title, .project-info-item, .wp-block-image, article p:not(.project-info p)");
+    scrollElements.forEach((el) => observer.observe(el));
+  }, animateOnScroll = function(element) {
+    if (element.matches(".title") || element.matches(".project-info-item") || element.matches("article p:not(.project-info p)")) {
+      anime({
+        targets: element,
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 300,
+        easing: "easeOutQuad"
+      });
+    }
+    if (element.matches(".wp-block-image")) {
+      anime({
+        targets: element,
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 600,
+        easing: "easeOutQuad"
+      });
+    }
+  };
+  var animate_initial2 = animate_initial, animate_scroll2 = animate_scroll, animateOnScroll2 = animateOnScroll;
+  document.addEventListener("DOMContentLoaded", () => {
+    animate_initial();
+    animate_scroll();
+  });
+}
 document.addEventListener("DOMContentLoaded", function() {
   new Swiper(".page-template-page-about-us .swiper-gallery", {
     slidesPerView: 1,

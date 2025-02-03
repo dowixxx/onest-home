@@ -41,7 +41,7 @@ get_header();
 
 		<!-- divider -->
 		<div class="container">
-			<div class="divider border-top"></div>
+			<div class="divider"></div>
 		</div>
 
 
