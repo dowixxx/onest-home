@@ -5164,17 +5164,17 @@ if (document.body.classList.contains("page-template-page-contacts")) {
   }, animateOnScroll = function(element) {
     if (element.matches(".reviews-contact-info-wrapper")) {
       anime({
-        targets: [".reviews-item"],
+        targets: ".contact-info-content div",
         opacity: [0, 1],
-        translateX: [20, 0],
+        translateY: [20, 0],
         duration: 300,
         easing: "easeOutQuad",
         delay: anime.stagger(150),
         complete: () => {
           anime({
-            targets: ".contact-info-content div",
+            targets: [".reviews-item"],
             opacity: [0, 1],
-            translateY: [20, 0],
+            translateX: [20, 0],
             duration: 300,
             easing: "easeOutQuad",
             delay: anime.stagger(150)
