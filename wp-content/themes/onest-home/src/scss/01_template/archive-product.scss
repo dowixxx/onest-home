@@ -1,12 +1,11 @@
-.page-template-page-home {
+.post-type-archive-product {
 
-    // .product-collection-content {
-    //     padding: 0rem 0 5rem 0;
-    // }
+    .content-area {
+        margin: 5rem 0;
+    }
 
-    ul.products {
-        padding: 0;
-        list-style: none outside;
+    ul.products li.product .woocommerce-placeholder {
+        border: 0;
     }
 
     ul.products li.product a img {
@@ -26,7 +25,6 @@
     }
 
     ul.products li.product .price {
-        display: block;
         font-size: $fs-14;
         font-weight: $font-weight-medium;
         margin-bottom: 0;
@@ -38,10 +36,11 @@
     }
 
     ul.products li.product a.woocommerce-loop-product__link {
-        text-decoration: none;
 
         &:hover .price {
             color: $gray-dark-liver;
         }
     }
+
+    
 }

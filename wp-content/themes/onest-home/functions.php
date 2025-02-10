@@ -59,6 +59,9 @@ require_once( get_template_directory() . '/functions/performance.php' );
 // Add carbon fields
 require_once( get_template_directory() . '/functions/carbon-fields.php' );
 
+// Add woocommerce support
+require_once( get_template_directory() . '/functions/woocommerce.php' );
+
 
 
 /*

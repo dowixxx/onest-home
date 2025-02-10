@@ -10304,7 +10304,7 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 .page-template-page-home .hero .swiper-pagination {
   opacity: 0;
 }
-.page-template-page-home .product-item,
+.page-template-page-home .product,
 .page-template-page-home .reviews-item {
   opacity: 0;
   transform: translateY(20px);
@@ -10509,6 +10509,41 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 .page-template-page-construction .pitch p {
   font-size: 1.3125rem;
 }
+.page-template-page-home ul.products {
+  padding: 0;
+  list-style: none outside;
+}
+.page-template-page-home ul.products li.product a img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0;
+}
+.page-template-page-home ul.products li.product .woocommerce-loop-category__title,
+.page-template-page-home ul.products li.product .woocommerce-loop-product__title,
+.page-template-page-home ul.products li.product h3,
+.page-template-page-home ul.products li.product .h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0;
+  margin-top: 0.75rem;
+  margin-bottom: 0.625rem;
+}
+.page-template-page-home ul.products li.product .price {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.page-template-page-home ul.products li.product .price {
+  transition: color 0.3s ease;
+  color: #000;
+}
+.page-template-page-home ul.products li.product a.woocommerce-loop-product__link {
+  text-decoration: none;
+}
+.page-template-page-home ul.products li.product a.woocommerce-loop-product__link:hover .price {
+  color: #505050;
+}
 .project-template-single-projects .img-featured {
   margin-bottom: 5.625rem;
 }
@@ -10517,6 +10552,39 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 }
 .project-template-single-projects .project-info-item h5, .project-template-single-projects .project-info-item .h5 {
   font-size: 0.9375rem;
+}
+.post-type-archive-product .content-area {
+  margin: 5rem 0;
+}
+.post-type-archive-product ul.products li.product .woocommerce-placeholder {
+  border: 0;
+}
+.post-type-archive-product ul.products li.product a img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0;
+}
+.post-type-archive-product ul.products li.product .woocommerce-loop-category__title,
+.post-type-archive-product ul.products li.product .woocommerce-loop-product__title,
+.post-type-archive-product ul.products li.product h3,
+.post-type-archive-product ul.products li.product .h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0;
+  margin-top: 0.75rem;
+  margin-bottom: 0.625rem;
+}
+.post-type-archive-product ul.products li.product .price {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.post-type-archive-product ul.products li.product .price {
+  transition: color 0.3s ease;
+  color: #000;
+}
+.post-type-archive-product ul.products li.product a.woocommerce-loop-product__link:hover .price {
+  color: #505050;
 }
 .reviews-item {
   background-color: #FAFAFA;
