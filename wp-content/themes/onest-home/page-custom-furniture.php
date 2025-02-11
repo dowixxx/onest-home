@@ -122,9 +122,9 @@ get_header();
 			<div class="container">
 				<div class="form-lead-content">
 
-					<h3 class="fw-normal">Lead form</h3>
+					<h3 class="fw-normal"><?php _e('Parašykite mums', 'onest-home'); ?></h3>
 
-					<?php include locate_template('partials/form/form-subscribe.php'); ?>
+					<?php if (function_exists('contactformx')) echo contactformx(); ?>
 
 				</div>
 			</div>
@@ -136,7 +136,7 @@ get_header();
 			<div class="container">
 				<div class="product-collection-content">
 
-					<h3 class="fw-normal">Title h3</h3>
+					<h3 class="fw-normal"><?php _e('Mūsų produktai', 'onest-home'); ?></h3>
 
 					<ul class="products columns-4 row g-4 g-lg-5">
 

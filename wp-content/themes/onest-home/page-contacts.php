@@ -111,9 +111,9 @@ get_header();
 			<div class="container">
 				<div class="form-lead-content">
 
-					<h3 class="fw-normal">Lead form</h3>
+					<h3 class="fw-normal"><?php _e('Parašykite mums', 'onest-home'); ?></h3>
 
-					<?php include locate_template('partials/form/form-subscribe.php'); ?>
+					<?php if (function_exists('contactformx')) echo contactformx(); ?>
 
 				</div>
 			</div>

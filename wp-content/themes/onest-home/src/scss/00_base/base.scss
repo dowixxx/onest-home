@@ -521,3 +521,70 @@ a {
         opacity: 0;
     }
 }
+
+
+
+/*
+* contact form x
+*/
+.cfx {
+
+    .cfx-response {
+        margin-bottom: 0.625rem;
+    }
+
+    .cfx-error {
+        color: $danger;
+    }
+
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.625rem;
+    }
+
+    label {
+        text-transform: uppercase;
+        margin-bottom: 0.625rem;
+    }
+
+    input,
+    textarea {
+        display: block;
+        width: 100%;
+        padding: 1rem 1.625rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: $body-color;
+        appearance: none;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: $border-width solid $gray-dark-liver;
+        border-radius: 0;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        outline: none;
+
+        &:focus {
+            box-shadow: 0 0 0 0.25rem rgba($primary, 0.25);
+            border-color: tint-color($primary, 50%);
+        }
+    }
+
+    textarea {
+        height: 10rem;
+    }
+
+    button {
+        background-color: $primary;
+        color: $white;
+        text-transform: uppercase;
+        padding: 0.5rem 1rem;
+        font-size: $fs-18;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+            background-color: rgba($color: $primary, $alpha: 0.8)
+        }
+    }
+}

@@ -38,7 +38,18 @@ if (document.body.classList.contains('page-template-page-construction')) {
                             targets: '.intro .page-content .btn',
                             opacity: [0, 1],
                             duration: 300,
-                            easing: 'easeOutQuad'
+                            easing: 'easeOutQuad',
+                            complete: () => {
+                                //
+                                anime({
+                                    targets: '.pitch p',
+                                    opacity: [0, 1],
+                                    translateY: [20, 0],
+                                    duration: 300,
+                                    easing: 'easeOutQuad',
+                                    delay: anime.stagger(150)
+                                });
+                            }
                         });
                     }
                 });
@@ -58,7 +69,7 @@ if (document.body.classList.contains('page-template-page-construction')) {
         const observerOptions = {
             root: null,       // observes the viewport
             rootMargin: '0px',
-            threshold: 0.5  
+            threshold: 0.25  
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
@@ -71,7 +82,7 @@ if (document.body.classList.contains('page-template-page-construction')) {
         }, observerOptions);
 
         // Grab all elements that need scroll-based animations
-        const scrollElements = document.querySelectorAll('.project-item, .form-lead, .pitch');
+        const scrollElements = document.querySelectorAll('.project-item, .form-lead'); //.pitch commented
         scrollElements.forEach(el => observer.observe(el));
     }
 
@@ -101,16 +112,16 @@ if (document.body.classList.contains('page-template-page-construction')) {
             });
         } 
 
-        if (element.matches('.pitch')) {
-            anime({
-                targets: '.pitch p',
-                opacity: [0, 1],
-                translateY: [20, 0],
-                duration: 300,
-                easing: 'easeOutQuad',
-                delay: anime.stagger(150)
-            });
-        } 
+        // if (element.matches('.pitch')) {
+        //     anime({
+        //         targets: '.pitch p',
+        //         opacity: [0, 1],
+        //         translateY: [20, 0],
+        //         duration: 300,
+        //         easing: 'easeOutQuad',
+        //         delay: anime.stagger(150)
+        //     });
+        // } 
         
     }
 

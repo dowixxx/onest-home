@@ -5149,7 +5149,7 @@ if (document.body.classList.contains("page-template-page-contacts")) {
       root: null,
       // observes the viewport
       rootMargin: "0px",
-      threshold: 0.5
+      threshold: 0.25
     };
     const observer = new IntersectionObserver((entries, observer2) => {
       entries.forEach((entry) => {
@@ -5266,7 +5266,7 @@ if (document.body.classList.contains("page-template-page-about-us")) {
       root: null,
       // observes the viewport
       rootMargin: "0px",
-      threshold: 0.5
+      threshold: 0.25
     };
     const observer = new IntersectionObserver((entries, observer2) => {
       entries.forEach((entry) => {
@@ -5359,7 +5359,7 @@ if (document.body.classList.contains("page-template-page-custom-furniture")) {
       root: null,
       // observes the viewport
       rootMargin: "0px",
-      threshold: 0.5
+      threshold: 0.25
     };
     const observer = new IntersectionObserver((entries, observer2) => {
       entries.forEach((entry) => {
@@ -5451,7 +5451,7 @@ if (document.body.classList.contains("page-template-page-interior")) {
       root: null,
       // observes the viewport
       rootMargin: "0px",
-      threshold: 0.5
+      threshold: 0.25
     };
     const observer = new IntersectionObserver((entries, observer2) => {
       entries.forEach((entry) => {
@@ -5513,7 +5513,17 @@ if (document.body.classList.contains("page-template-page-construction")) {
               targets: ".intro .page-content .btn",
               opacity: [0, 1],
               duration: 300,
-              easing: "easeOutQuad"
+              easing: "easeOutQuad",
+              complete: () => {
+                anime({
+                  targets: ".pitch p",
+                  opacity: [0, 1],
+                  translateY: [20, 0],
+                  duration: 300,
+                  easing: "easeOutQuad",
+                  delay: anime.stagger(150)
+                });
+              }
             });
           }
         });
@@ -5524,7 +5534,7 @@ if (document.body.classList.contains("page-template-page-construction")) {
       root: null,
       // observes the viewport
       rootMargin: "0px",
-      threshold: 0.5
+      threshold: 0.25
     };
     const observer = new IntersectionObserver((entries, observer2) => {
       entries.forEach((entry) => {
@@ -5534,7 +5544,7 @@ if (document.body.classList.contains("page-template-page-construction")) {
         }
       });
     }, observerOptions);
-    const scrollElements = document.querySelectorAll(".project-item, .form-lead, .pitch");
+    const scrollElements = document.querySelectorAll(".project-item, .form-lead");
     scrollElements.forEach((el) => observer.observe(el));
   }, animateOnScroll = function(element) {
     if (element.matches(".project-item")) {
@@ -5554,16 +5564,6 @@ if (document.body.classList.contains("page-template-page-construction")) {
         translateY: [20, 0],
         duration: 600,
         easing: "easeOutQuad"
-      });
-    }
-    if (element.matches(".pitch")) {
-      anime({
-        targets: ".pitch p",
-        opacity: [0, 1],
-        translateY: [20, 0],
-        duration: 300,
-        easing: "easeOutQuad",
-        delay: anime.stagger(150)
       });
     }
   };

@@ -54,9 +54,13 @@ get_header();
 		<section class="pitch border-top border-bottom">
 			<div class="container">
 				<div class="pitch-content d-flex flex-column flex-md-row text-center justify-content-between">
-					<p class="mb-0">Expertise in residential projects</p>
+					<p class="mb-0"><?php _e('Ekspertizė gyvenamuosiuose projektuose', 'onest-home'); ?></p>
+					<p class="mb-0"><?php _e('Personalizuotas požiūris', 'onest-home'); ?></p>
+					<p class="mb-0"><?php _e('Pilni sprendimai nuo pradžios iki pabaigos', 'onest-home'); ?></p>
+
+					<!-- <p class="mb-0">Expertise in residential projects</p>
 					<p class="mb-0">Personalized approach</p>
-					<p class="mb-0">End-to-end solutions</p>
+					<p class="mb-0">End-to-end solutions</p> -->
 				</div>
 			</div>
 		</section>
@@ -134,9 +138,9 @@ get_header();
 			<div class="container">
 				<div class="form-lead-content">
 
-					<h3 class="fw-normal">Lead form</h3>
+					<h3 class="fw-normal"><?php _e('Parašykite mums', 'onest-home'); ?></h3>
 
-					<?php include locate_template('partials/form/form-subscribe.php'); ?>
+					<?php if (function_exists('contactformx')) echo contactformx(); ?>
 
 				</div>
 			</div>

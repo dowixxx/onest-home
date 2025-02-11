@@ -883,7 +883,8 @@ $btn-link-disabled-color:     $secondary;
 $btn-link-focus-shadow-rgb:   to-rgb(mix(color-contrast($link-color), $link-color, 15%)) !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           0.25rem;
+// $btn-border-radius:           0.25rem;
+$btn-border-radius:           0;
 $btn-border-radius-sm:        0.9375rem;
 $btn-border-radius-lg:        var(--#{$prefix}border-radius-lg) !default;
 

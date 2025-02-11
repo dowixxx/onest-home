@@ -56,7 +56,7 @@ if (document.body.classList.contains('page-template-page-contacts')) {
         const observerOptions = {
             root: null,       // observes the viewport
             rootMargin: '0px',
-            threshold: 0.5  
+            threshold: 0.25  
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
