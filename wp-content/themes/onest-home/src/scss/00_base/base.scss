@@ -194,6 +194,18 @@ section {
 
 
 /*
+* content area
+*/
+.post-type-archive-product,
+.single-product {
+
+    .content-area {
+        margin: 5rem 0;
+    }
+}
+
+
+/*
 * container
 */
 .container-full {
