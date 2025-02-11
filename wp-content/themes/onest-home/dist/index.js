@@ -5297,7 +5297,7 @@ if (document.body.classList.contains("page-template-page-about-us")) {
         easing: "easeOutQuad",
         complete: () => {
           anime({
-            targets: ".product-item",
+            targets: ".product",
             opacity: [0, 1],
             translateY: [20, 0],
             duration: 300,
@@ -5400,7 +5400,7 @@ if (document.body.classList.contains("page-template-page-custom-furniture")) {
         easing: "easeOutQuad",
         complete: () => {
           anime({
-            targets: ".product-item",
+            targets: ".product",
             opacity: [0, 1],
             translateY: [20, 0],
             duration: 300,

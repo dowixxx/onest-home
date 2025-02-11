@@ -10342,7 +10342,7 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 .page-template-page-about-us .form-lead,
 .page-template-page-about-us .product-collection h3,
 .page-template-page-about-us .product-collection .h3,
-.page-template-page-about-us .product-item {
+.page-template-page-about-us .product {
   opacity: 0;
   transform: translateY(20px);
 }
@@ -10360,7 +10360,7 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 .page-template-page-custom-furniture .project-item,
 .page-template-page-custom-furniture .product-collection h3,
 .page-template-page-custom-furniture .product-collection .h3,
-.page-template-page-custom-furniture .product-item {
+.page-template-page-custom-furniture .product {
   opacity: 0;
   transform: translateY(20px);
 }
@@ -10964,28 +10964,38 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
   width: 5.875rem;
 }
 .page-template-page-home ul.products,
+.page-template-page-about-us ul.products,
+.page-template-page-custom-furniture ul.products,
 .post-type-archive-product ul.products,
 .single-product ul.products {
   padding: 0;
   list-style: none outside;
 }
 .page-template-page-home ul.products li.product .img-wrapper,
+.page-template-page-about-us ul.products li.product .img-wrapper,
+.page-template-page-custom-furniture ul.products li.product .img-wrapper,
 .post-type-archive-product ul.products li.product .img-wrapper,
 .single-product ul.products li.product .img-wrapper {
   border: 1px solid transparent;
   transition: 0.3s ease-out;
 }
 .page-template-page-home ul.products li.product:hover .img-wrapper,
+.page-template-page-about-us ul.products li.product:hover .img-wrapper,
+.page-template-page-custom-furniture ul.products li.product:hover .img-wrapper,
 .post-type-archive-product ul.products li.product:hover .img-wrapper,
 .single-product ul.products li.product:hover .img-wrapper {
   border-color: #CCCCCC;
 }
 .page-template-page-home ul.products li.product .woocommerce-placeholder,
+.page-template-page-about-us ul.products li.product .woocommerce-placeholder,
+.page-template-page-custom-furniture ul.products li.product .woocommerce-placeholder,
 .post-type-archive-product ul.products li.product .woocommerce-placeholder,
 .single-product ul.products li.product .woocommerce-placeholder {
   border: 0;
 }
 .page-template-page-home ul.products li.product a img,
+.page-template-page-about-us ul.products li.product a img,
+.page-template-page-custom-furniture ul.products li.product a img,
 .post-type-archive-product ul.products li.product a img,
 .single-product ul.products li.product a img {
   max-width: 100%;
@@ -10996,6 +11006,14 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 .page-template-page-home ul.products li.product .woocommerce-loop-product__title,
 .page-template-page-home ul.products li.product h3,
 .page-template-page-home ul.products li.product .h3,
+.page-template-page-about-us ul.products li.product .woocommerce-loop-category__title,
+.page-template-page-about-us ul.products li.product .woocommerce-loop-product__title,
+.page-template-page-about-us ul.products li.product h3,
+.page-template-page-about-us ul.products li.product .h3,
+.page-template-page-custom-furniture ul.products li.product .woocommerce-loop-category__title,
+.page-template-page-custom-furniture ul.products li.product .woocommerce-loop-product__title,
+.page-template-page-custom-furniture ul.products li.product h3,
+.page-template-page-custom-furniture ul.products li.product .h3,
 .post-type-archive-product ul.products li.product .woocommerce-loop-category__title,
 .post-type-archive-product ul.products li.product .woocommerce-loop-product__title,
 .post-type-archive-product ul.products li.product h3,
@@ -11011,6 +11029,8 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
   margin-bottom: 0.625rem;
 }
 .page-template-page-home ul.products li.product .price,
+.page-template-page-about-us ul.products li.product .price,
+.page-template-page-custom-furniture ul.products li.product .price,
 .post-type-archive-product ul.products li.product .price,
 .single-product ul.products li.product .price {
   display: block;
@@ -11019,17 +11039,23 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
   margin-bottom: 0;
 }
 .page-template-page-home ul.products li.product .price,
+.page-template-page-about-us ul.products li.product .price,
+.page-template-page-custom-furniture ul.products li.product .price,
 .post-type-archive-product ul.products li.product .price,
 .single-product ul.products li.product .price {
   transition: color 0.3s ease;
   color: #000;
 }
 .page-template-page-home ul.products li.product a.woocommerce-loop-product__link,
+.page-template-page-about-us ul.products li.product a.woocommerce-loop-product__link,
+.page-template-page-custom-furniture ul.products li.product a.woocommerce-loop-product__link,
 .post-type-archive-product ul.products li.product a.woocommerce-loop-product__link,
 .single-product ul.products li.product a.woocommerce-loop-product__link {
   text-decoration: none;
 }
 .page-template-page-home ul.products li.product a.woocommerce-loop-product__link:hover .price,
+.page-template-page-about-us ul.products li.product a.woocommerce-loop-product__link:hover .price,
+.page-template-page-custom-furniture ul.products li.product a.woocommerce-loop-product__link:hover .price,
 .post-type-archive-product ul.products li.product a.woocommerce-loop-product__link:hover .price,
 .single-product ul.products li.product a.woocommerce-loop-product__link:hover .price {
   color: #505050;

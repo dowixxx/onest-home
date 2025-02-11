@@ -110,7 +110,7 @@ if (document.body.classList.contains('page-template-page-about-us')) {
                 complete: () => {
                     //
                     anime({
-                        targets: '.product-item',
+                        targets: '.product',
                         opacity: [0, 1],
                         translateY: [20, 0],
                         duration: 300,

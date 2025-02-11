@@ -116,26 +116,26 @@ get_header();
 					<!-- <div class="row g-4 g-lg-5"> -->
 					<ul class="products columns-4 row g-4 g-lg-5">
 
-					<?php
-					// WooCommerce Product Query
-					$args = array(
-						'post_type' => 'product',
-						'posts_per_page' => -1, 
-						'orderby' => 'date',
-						'order' => 'ASC'
-					);
+						<?php
+						// WooCommerce Product Query
+						$args = array(
+							'post_type' => 'product',
+							'posts_per_page' => -1, 
+							'orderby' => 'date',
+							'order' => 'ASC'
+						);
 
-					$loop = new WP_Query($args);
+						$loop = new WP_Query($args);
 
-					if ($loop->have_posts()) :
-						while ($loop->have_posts()) : $loop->the_post();
-							wc_get_template_part('content', 'product'); // Uses WooCommerce template
-						endwhile;
-						wp_reset_postdata();
-					else :
-						echo '<p>No products found</p>';
-					endif;
-					?>
+						if ($loop->have_posts()) :
+							while ($loop->have_posts()) : $loop->the_post();
+								wc_get_template_part('content', 'product'); // Uses WooCommerce template
+							endwhile;
+							wp_reset_postdata();
+						else :
+							echo '<p>No products found</p>';
+						endif;
+						?>
 
 					</ul>
 					<!-- </div> -->

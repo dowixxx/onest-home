@@ -25,7 +25,7 @@ if ( ! is_a( $product, WC_Product::class ) || ! $product->is_visible() ) {
 }
 ?>
 <li <?php 
-	$extra_class = is_front_page() ? 'col-6 col-lg-3' : ''; 
+	$extra_class = (is_front_page() || is_page_template(['page-about-us.php', 'page-custom-furniture.php'])) ? 'col-6 col-lg-3' : '';
 	wc_product_class( $extra_class, $product ); ?>>
 	<?php
 	/**
