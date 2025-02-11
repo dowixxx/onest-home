@@ -14,11 +14,18 @@ import './01_template/page-about-us.js';
 import './01_template/page-custom-furniture.js';
 import './01_template/page-interior.js';
 import './01_template/page-construction.js';
+
 import './01_template/single-projects.js';
+import './01_template/single-product.js';
+
+import './01_template/archive-product.js';
+
 
 // Page
 
+
 // Partial
+
 
 // Component
 import './04_component/swiper.js';

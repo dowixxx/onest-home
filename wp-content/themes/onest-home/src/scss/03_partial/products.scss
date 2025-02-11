@@ -7,6 +7,21 @@
         list-style: none outside;
     }
 
+    ul.products li.product {
+        
+        .img-wrapper {
+            border: 1px solid transparent;
+            transition: .3s ease-out;
+        }
+
+        &:hover {
+
+            .img-wrapper {
+                border-color: $silver-chinese;
+            }
+        }
+    }
+
     ul.products li.product .woocommerce-placeholder {
         border: 0;
     }

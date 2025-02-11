@@ -280,7 +280,7 @@
         margin-top: 7.5rem;
     }
 
-    .related.products h2 {
+    .related.products h2:not(.related.products h2.woocommerce-loop-product__title) {
         font-size: $fs-36;
         text-transform: uppercase;
         font-weight: $font-weight-normal;

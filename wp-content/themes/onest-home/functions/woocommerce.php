@@ -121,3 +121,7 @@ add_theme_support('wc-product-gallery-slider');
 
 
 
+/*
+* Remove related products output, single-product.php
+*/
+// remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);

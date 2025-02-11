@@ -5625,6 +5625,39 @@ if (document.body.classList.contains("single-project")) {
     animate_scroll();
   });
 }
+if (document.body.classList.contains("single-product")) {
+  let animate_initial = function() {
+    anime({
+      targets: ".summary",
+      opacity: [0, 1],
+      // translateY: [20, 0],
+      duration: 250,
+      easing: "easeInOutQuad",
+      delay: 250
+      // delay: anime.stagger(150)
+    });
+  };
+  var animate_initial2 = animate_initial;
+  document.addEventListener("DOMContentLoaded", () => {
+    animate_initial();
+  });
+}
+if (document.body.classList.contains("post-type-archive-product")) {
+  let animate_initial = function() {
+    anime({
+      targets: ".product",
+      opacity: [0, 1],
+      translateY: [20, 0],
+      duration: 300,
+      easing: "easeOutQuad",
+      delay: anime.stagger(150)
+    });
+  };
+  var animate_initial2 = animate_initial;
+  document.addEventListener("DOMContentLoaded", () => {
+    animate_initial();
+  });
+}
 document.addEventListener("DOMContentLoaded", function() {
   new Swiper(".page-template-page-about-us .swiper-gallery", {
     slidesPerView: 1,
