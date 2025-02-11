@@ -2,24 +2,33 @@
 @import '00_base/bootstrap';
 @import '00_base/base';
 
+
 // Template
 @import '01_template/header.scss';
 @import '01_template/footer.scss';
+
 @import '01_template/page-about-us.scss';
 @import '01_template/page-contacts.scss';
 @import '01_template/page-construction.scss';
 @import '01_template/page-home.scss';
+
 @import '01_template/single-projects.scss';
+@import '01_template/single-product.scss';
+
 @import '01_template/archive-product.scss';
+
 
 // Page
 // @import '02_page/your-page.scss';
+
 
 // Partial
 @import '03_partial/item-reviews.scss';
 @import '03_partial/item-product.scss';
 @import '03_partial/item-project.scss';
 @import '03_partial/item-portfolio.scss';
+@import '03_partial/products.scss';
+
 
 // Component
 @import '04_component/swiper.scss';

@@ -60,7 +60,7 @@ endif;
 			<div class="site-header-content">
 
 				<div class="header-top-area">
-					<div class="container-full">
+					<div class="container">
 						<div class="header-top-area-content d-flex justify-content-between align-items-center">
 
 							<?php if ( get_locale() == 'en_GB' && ! empty( $notice_en ) ) : ?>
@@ -120,7 +120,7 @@ endif;
 				</div>
 
 				<div class="header-main-area border-top border-bottom">
-					<div class="container-full">
+					<div class="container">
 						<div class="header-main-area-content d-flex align-items-center">
 
 							<a href="<?php echo home_url(); ?>" 
