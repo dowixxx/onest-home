@@ -7,6 +7,11 @@ use Carbon_Fields\Field;
 
 
 
+// grant access to theme options for editor
+add_filter( 'carbon_fields_theme_options_container_admin_only_access', '__return_false' );
+
+
+
 /*
 * theme options
 */
