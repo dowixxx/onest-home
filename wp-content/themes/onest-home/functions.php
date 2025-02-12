@@ -96,11 +96,12 @@ add_filter('upload_mimes', 'cc_mime_types');
 */
 function customize_post_thumbnail_attr( $attr ) {
 	
-	$attr['loading'] = 'lazy'; // Add lazy loading
+	// $attr['loading'] = 'lazy'; // Add lazy loading
+    $attr['loading'] = 'eager'; // Add eager loading
 	
-	if ( isset( $attr['fetchpriority'] ) ) {
-		unset( $attr['fetchpriority'] ); // Remove the fetchpriority attribute
-	}
+	// if ( isset( $attr['fetchpriority'] ) ) {
+	// 	unset( $attr['fetchpriority'] ); // Remove the fetchpriority attribute
+	// }
 
 	return $attr;
 }

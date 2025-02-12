@@ -7,8 +7,9 @@
     .footer-top-area {
         padding-bottom: 6.25rem;
 
-        h6 {
+        .footer-col-header {
             margin-bottom: 1.25rem;
+            font-size: $fs-14;
         }
 
         nav ul {

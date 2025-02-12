@@ -59,7 +59,7 @@ get_header();
 										<img class="" 
 											src="<?php echo esc_url( $slide_image_url ); ?>" 
 											alt="" 
-											fetchpriority="high">
+											fetchpriority="high" loading="eager" decoding="async">
 									</div>
 
 								</div>

@@ -40,7 +40,7 @@ $menu_locations = get_nav_menu_locations();
 					?>
 					
 						<div class="col-6 col-sm-4 col-lg-3">
-							<h6 class="text-uppercase fw-normal"><?php echo $menu_name ?></h6>
+							<p class="footer-col-header text-uppercase fw-normal"><?php echo $menu_name ?></p>
 							<nav>
 								<?php
 								wp_nav_menu([
@@ -59,7 +59,7 @@ $menu_locations = get_nav_menu_locations();
 						$menu_name = wp_get_nav_menu_object( $menu_locations[ 'footer_menu_2' ] )->name;
 					?>
 						<div class="col-6 col-sm-4 col-lg-3">
-							<h6 class="text-uppercase fw-normal"><?php echo $menu_name ?></h6>
+							<p class="footer-col-header text-uppercase fw-normal"><?php echo $menu_name ?></p>
 							<nav>
 								<?php
 								wp_nav_menu([
@@ -78,7 +78,7 @@ $menu_locations = get_nav_menu_locations();
 						$menu_name = wp_get_nav_menu_object( $menu_locations[ 'footer_menu_3' ] )->name;
 					?>
 						<div class="col-6 col-sm-4 col-lg-3">
-							<h6 class="text-uppercase fw-normal"><?php echo $menu_name ?></h6>
+							<p class="footer-col-header text-uppercase fw-normal"><?php echo $menu_name ?></p>
 							<nav>
 								<?php
 								wp_nav_menu([
@@ -97,7 +97,7 @@ $menu_locations = get_nav_menu_locations();
 						$menu_name = wp_get_nav_menu_object( $menu_locations[ 'footer_menu_4' ] )->name;
 					?>
 						<div class="col-6 col-sm-4 col-lg-3">
-							<h6 class="text-uppercase fw-normal"><?php echo $menu_name ?></h6>
+							<p class="footer-col-header text-uppercase fw-normal"><?php echo $menu_name ?></p>
 							<nav>
 								<?php
 								wp_nav_menu([

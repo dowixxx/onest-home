@@ -31,14 +31,34 @@ endif;
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta class="foundation-mq">
 
-	<meta name="description" content="">
+	<meta name="description" content="<?php _e(' „Onest Home“ – ', 'onest-home'); ?>">
+	<meta name="robots" content="index, follow">
+	<meta name="googlebot" content="index, follow">
+	<meta name="google" content="notranslate">
+	<meta name="author" content="DK">
+	<meta name="copyright" content="Copyright owner">
 
 	<!-- If Site Icon isn't set in customizer -->
 	<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
 		<!-- Icons & Favicons -->
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-		<link href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" rel="apple-touch-icon" />	
+		<link rel="icon" type="image/ico" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon/favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon/favicon-16x16.png">
+		<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon/site.webmanifest">
 	<?php } ?>
+
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://onesthome.lt">
+	<meta property="og:title" content="Onest Home">
+	<meta property="og:description" content="<?php _e(' „Onest Home“ –  ', 'onest-home'); ?>">
+	<meta property="og:image" content="">
+	<meta property="og:image:alt" content="Onest Home">
+	<meta property="og:site_name" content="Onest Home">
+	<meta property="og:locale" content="lt_LT">
+
+	<link rel="canonical" href="https://onesthome.lt">
+	<link rel="alternate" hreflang="en" href="https://onesthome.lt/en">
 
 	<title>
         <?php wp_title(); ?>
@@ -89,31 +109,33 @@ endif;
 								</div>
 							<?php endif; ?>
 
-							<div class="header-top-area-menu ms-auto">
-								<li>
-									<a href="<?php echo esc_url($instagram_profile_url) ?>" title="Instagram profile">IG</a>
-								</li>
-								<li>
-									<a href="<?php echo esc_url($facebook_profile_url) ?>" title="Facebook profile">FB</a>
-								</li>
-								<?php
-								$languages = pll_the_languages(array('raw' => 1));
-								if (!empty($languages)) :
-									foreach ($languages as $lang) :
-										if (!$lang['current_lang']) : // Only display non-current language ?>
+							<nav class="header-top-area-menu ms-auto">
+								<ul>
+									<li>
+										<a href="<?php echo esc_url($instagram_profile_url) ?>" title="Instagram profile">IG</a>
+									</li>
+									<li>
+										<a href="<?php echo esc_url($facebook_profile_url) ?>" title="Facebook profile">FB</a>
+									</li>
+									<?php
+									$languages = pll_the_languages(array('raw' => 1));
+									if (!empty($languages)) :
+										foreach ($languages as $lang) :
+											if (!$lang['current_lang']) : // Only display non-current language ?>
 
-											<li>
-												<a href="<?php echo esc_url( $lang[ 'url' ] ) ?>"
-													id="pll-switcher"
-													title="<?php echo esc_attr( $lang[ 'name' ] ) ?>">
-													<?php echo esc_html( $lang[ 'name' ] ) ?>
-												</a>
-											</li>
+												<li>
+													<a href="<?php echo esc_url( $lang[ 'url' ] ) ?>"
+														id="pll-switcher"
+														title="<?php echo esc_attr( $lang[ 'name' ] ) ?>">
+														<?php echo esc_html( $lang[ 'name' ] ) ?>
+													</a>
+												</li>
 
-										<?php endif; ?>
-									<?php endforeach; ?>
-								<?php endif; ?>
-							</div>
+											<?php endif; ?>
+										<?php endforeach; ?>
+									<?php endif; ?>
+								</ul>
+							</nav>
 
 						</div>
 					</div>

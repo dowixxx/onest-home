@@ -92,12 +92,19 @@
     }
 
     .header-top-area-menu {
-        display: flex;
-        align-items: center;
-        gap: 0.625rem;
-        list-style: none;
-        margin-bottom: 0;
-        padding-left: 0;
+
+        ul {
+            display: flex;
+            align-items: center;
+            // gap: 0.625rem;
+            list-style: none;
+            margin-bottom: 0;
+            padding-left: 0;
+
+            a {
+                padding: 0.3125rem;
+            }
+        }
 
         #pll-switcher {
             font-size: $fs-14;

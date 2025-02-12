@@ -10495,13 +10495,15 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
   padding: 0.75rem 0;
   font-size: 0.8125rem;
 }
-.site-header .header-top-area-menu {
+.site-header .header-top-area-menu ul {
   display: flex;
   align-items: center;
-  gap: 0.625rem;
   list-style: none;
   margin-bottom: 0;
   padding-left: 0;
+}
+.site-header .header-top-area-menu ul a {
+  padding: 0.3125rem;
 }
 .site-header .header-top-area-menu #pll-switcher {
   font-size: 0.875rem;
@@ -10521,8 +10523,9 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 .site-footer .footer-top-area {
   padding-bottom: 6.25rem;
 }
-.site-footer .footer-top-area h6, .site-footer .footer-top-area .h6 {
+.site-footer .footer-top-area .footer-col-header {
   margin-bottom: 1.25rem;
+  font-size: 0.875rem;
 }
 .site-footer .footer-top-area nav ul {
   row-gap: 0.625rem;
