@@ -10324,7 +10324,7 @@ strong {
   transform: translateY(20px);
 }
 .page-template-page-contacts .intro .img-wrapper,
-.page-template-page-contacts .intro .page-content p,
+.page-template-page-contacts .intro .page-content,
 .page-template-page-contacts .contact-info-content div,
 .page-template-page-contacts .form-lead,
 .page-template-page-contacts .gallery {
@@ -10343,7 +10343,7 @@ strong {
   opacity: 0;
   transform: translateY(20px);
 }
-.page-template-page-about-us .intro .page-content p,
+.page-template-page-about-us .intro .page-content,
 .page-template-page-about-us .gallery,
 .page-template-page-about-us .additional-content p,
 .page-template-page-about-us .form-lead,
@@ -10360,7 +10360,7 @@ strong {
   opacity: 0;
   transform: translateX(20px);
 }
-.page-template-page-custom-furniture .intro .page-content p,
+.page-template-page-custom-furniture .intro .page-content,
 .page-template-page-custom-furniture .form-lead,
 .page-template-page-custom-furniture .project-collection h3,
 .page-template-page-custom-furniture .project-collection .h3,
@@ -10378,7 +10378,7 @@ strong {
   opacity: 0;
   transform: translateX(20px);
 }
-.page-template-page-interior .intro .page-content p,
+.page-template-page-interior .intro .page-content,
 .page-template-page-interior .form-lead,
 .page-template-page-interior .project-collection h3,
 .page-template-page-interior .project-collection .h3,
@@ -10393,7 +10393,7 @@ strong {
   opacity: 0;
   transform: translateX(20px);
 }
-.page-template-page-construction .intro .page-content p,
+.page-template-page-construction .intro .page-content,
 .page-template-page-construction .form-lead,
 .page-template-page-construction .pitch p,
 .page-template-page-construction .project-collection h3,
@@ -10417,7 +10417,8 @@ strong {
   opacity: 0;
   transform: translateY(20px);
 }
-.post-type-archive-product .product {
+.post-type-archive-product .product,
+.post-type-archive-product .page-description {
   opacity: 0;
   transform: translateY(20px);
 }
@@ -10509,8 +10510,8 @@ strong {
   margin-bottom: 0;
   padding-left: 0;
 }
-.site-header .header-top-area-menu ul a {
-  padding: 0.3125rem;
+.site-header .header-top-area-menu ul li:not(:last-of-type) a {
+  padding: 0.7rem 0.3125rem;
 }
 .site-header .header-top-area-menu #pll-switcher {
   font-size: 0.875rem;

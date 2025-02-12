@@ -16,7 +16,7 @@ if (document.body.classList.contains('page-template-page-interior')) {
 
         // 
         anime({
-            targets: ['.intro .page-content p'],
+            targets: ['.intro .page-content'],
             opacity: [0, 1],
             translateY: [20, 0],
             duration: 300,

@@ -23,14 +23,10 @@ add_action( 'after_setup_theme', 'my_remove_breadcrumbs' );
 
 
 /*
-* Move description to bottom, archive-product.php
+* Move product archive description to bottom, archive-product.php
 */
 function move_woocommerce_products_header() {
-    remove_action('woocommerce_before_main_content', 'woocommerce_output_all_notices', 10); // Example if used there
-    remove_action('woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10);
     remove_action('woocommerce_archive_description', 'woocommerce_product_archive_description', 10);
-
-    add_action('woocommerce_after_shop_loop', 'woocommerce_taxonomy_archive_description', 5);
     add_action('woocommerce_after_shop_loop', 'woocommerce_product_archive_description', 5);
 }
 add_action('wp', 'move_woocommerce_products_header');

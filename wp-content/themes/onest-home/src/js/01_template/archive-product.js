@@ -20,7 +20,17 @@ if (document.body.classList.contains('post-type-archive-product')) {
             translateY: [20, 0],
             duration: 300,
             easing: 'easeOutQuad',
-            delay: anime.stagger(150)
+            delay: anime.stagger(150),
+            complete: () => {
+                // 
+                anime({
+                    targets: '.page-description',
+                    opacity: [0, 1],
+                    translateY: [20, 0],
+                    duration: 300,
+                    easing: 'easeOutQuad',
+                });
+            }
         });
     }
 

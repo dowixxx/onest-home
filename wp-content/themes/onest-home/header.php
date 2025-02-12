@@ -49,7 +49,7 @@ endif;
 	<?php } ?>
 
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://onesthome.lt">
+	<meta property="og:url" content="https://lavender-gerbil-376201.hostingersite.com/">
 	<meta property="og:title" content="Onest Home">
 	<meta property="og:description" content="<?php _e(' „Onest Home“ –  ', 'onest-home'); ?>">
 	<meta property="og:image" content="">
@@ -57,8 +57,8 @@ endif;
 	<meta property="og:site_name" content="Onest Home">
 	<meta property="og:locale" content="lt_LT">
 
-	<link rel="canonical" href="https://onesthome.lt">
-	<link rel="alternate" hreflang="en" href="https://onesthome.lt/en">
+	<link rel="canonical" href="https://lavender-gerbil-376201.hostingersite.com/">
+	<link rel="alternate" hreflang="en" href="https://lavender-gerbil-376201.hostingersite.com/en">
 
 	<title>
         <?php wp_title(); ?>

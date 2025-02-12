@@ -101,8 +101,8 @@
             margin-bottom: 0;
             padding-left: 0;
 
-            a {
-                padding: 0.3125rem;
+            li:not(:last-of-type) a {
+                padding: 0.7rem 0.3125rem;
             }
         }
 

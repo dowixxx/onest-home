@@ -5127,7 +5127,7 @@ if (document.body.classList.contains("page-template-page-contacts")) {
       easing: "easeOutQuad",
       complete: () => {
         anime({
-          targets: ".intro .page-content p",
+          targets: ".intro .page-content",
           opacity: [0, 1],
           translateY: [20, 0],
           duration: 300,
@@ -5226,7 +5226,7 @@ if (document.body.classList.contains("page-template-page-projects")) {
 if (document.body.classList.contains("page-template-page-about-us")) {
   let animate_initial = function() {
     anime({
-      targets: [".intro .page-content p"],
+      targets: [".intro .page-content"],
       opacity: [0, 1],
       translateY: [20, 0],
       duration: 300,
@@ -5317,7 +5317,7 @@ if (document.body.classList.contains("page-template-page-about-us")) {
 if (document.body.classList.contains("page-template-page-custom-furniture")) {
   let animate_initial = function() {
     anime({
-      targets: [".intro .page-content p"],
+      targets: [".intro .page-content"],
       opacity: [0, 1],
       translateY: [20, 0],
       duration: 300,
@@ -5420,7 +5420,7 @@ if (document.body.classList.contains("page-template-page-custom-furniture")) {
 if (document.body.classList.contains("page-template-page-interior")) {
   let animate_initial = function() {
     anime({
-      targets: [".intro .page-content p"],
+      targets: [".intro .page-content"],
       opacity: [0, 1],
       translateY: [20, 0],
       duration: 300,
@@ -5493,7 +5493,7 @@ if (document.body.classList.contains("page-template-page-interior")) {
 if (document.body.classList.contains("page-template-page-construction")) {
   let animate_initial = function() {
     anime({
-      targets: [".intro .page-content p"],
+      targets: [".intro .page-content"],
       opacity: [0, 1],
       translateY: [20, 0],
       duration: 300,
@@ -5650,7 +5650,16 @@ if (document.body.classList.contains("post-type-archive-product")) {
       translateY: [20, 0],
       duration: 300,
       easing: "easeOutQuad",
-      delay: anime.stagger(150)
+      delay: anime.stagger(150),
+      complete: () => {
+        anime({
+          targets: ".page-description",
+          opacity: [0, 1],
+          translateY: [20, 0],
+          duration: 300,
+          easing: "easeOutQuad"
+        });
+      }
     });
   };
   var animate_initial2 = animate_initial;
