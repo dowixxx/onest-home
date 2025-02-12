@@ -142,8 +142,12 @@ add_action( 'carbon_fields_register_fields', function() {
         ) )
         ->add_fields( array(
 
-            Field::make( 'text', 'project_client', 'Client' ),
+            Field::make( 'text', 'project_date', 'Date' ),
             Field::make( 'text', 'project_location', 'Location' ),
+            Field::make( 'text', 'project_building_type', 'Building/apartment type' ),
+            Field::make( 'text', 'project_standart_solutions', 'Adapted standart solutions' ),
+            Field::make( 'text', 'project_non_standart_solutions', 'Adapted non-standart solutions' ),
+            // Field::make( 'text', 'project_result', 'Result' ),
 
         ) );
 });

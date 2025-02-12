@@ -6,7 +6,7 @@
 
     <?php the_content(); ?>
 
-    <button class="btn btn-primary mt-2 text-uppercase">primary</button>
+    <a href="#form-lead " class="btn btn-primary mt-2 text-uppercase"><?php _e('Susisiekite', 'onest-home'); ?></a>
     <!-- <br>
     <button class="btn btn-secondary mt-2 text-uppercase">secondary</button>
     <br>

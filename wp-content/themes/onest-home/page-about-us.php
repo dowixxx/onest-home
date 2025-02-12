@@ -31,8 +31,8 @@ get_header();
 						$loop = new WP_Query( array(
 							'post_type'      => 'review', 
 							'posts_per_page' => -1,       
-							'order'          => 'DESC',    
-							'orderby'        => 'date',   
+							'order'          => 'ASC',    
+							'orderby'        => 'title',   
 						));
 
 						if ( $loop->have_posts() ) : 
@@ -143,7 +143,7 @@ get_header();
 
 
 		<!-- lead form -->
-		<section class="form-lead bg-white-lotion">
+		<section id="form-lead" class="form-lead bg-white-lotion">
 			<div class="container">
 				<div class="form-lead-content">
 

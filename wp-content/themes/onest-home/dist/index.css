@@ -10242,9 +10242,16 @@ a:hover h1, a:hover .h1, a:hover h2, a:hover .h2, a:hover h3, a:hover .h3, a:hov
 * lead
 */
 .lead {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   font-size: 1.3125rem;
   line-height: 1.75rem;
+}
+/*
+* strong
+*/
+b,
+strong {
+  font-weight: 500;
 }
 /*
 * divider

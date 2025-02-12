@@ -160,8 +160,8 @@ get_header();
 					$loop = new WP_Query( array(
 						'post_type'      => 'review', 
 						'posts_per_page' => -1,       
-						'order'          => 'DESC',    
-						'orderby'        => 'date',   
+						'order'          => 'ASC',    
+						'orderby'        => 'title',   
 					));
 
 					if ( $loop->have_posts() ) : 

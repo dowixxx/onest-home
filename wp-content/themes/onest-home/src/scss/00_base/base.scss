@@ -250,9 +250,19 @@ a {
 * lead
 */
 .lead {
-    margin-bottom: 1.25rem;
+    // margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
     font-size: $fs-21;
     line-height: $lh-28;
+}
+
+
+/*
+* strong
+*/
+b,
+strong {
+    font-weight: $font-weight-medium;
 }
 
 
