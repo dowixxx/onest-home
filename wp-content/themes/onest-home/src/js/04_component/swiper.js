@@ -118,6 +118,10 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     },
     loop: true,
+    autoplay: {
+      delay: 7000,
+    },  
+    speed: 800, 
     // navigation: {
     //   nextEl: ".swiper-button-next",
     //   prevEl: ".swiper-button-prev",

@@ -46,7 +46,7 @@ get_header();
 											</h1>
 
 											<a href="<?php echo esc_html( $button_url ) ?>" 
-												class="btn btn-primary bg-transparent border-white text-uppercase" 
+												class="btn text-uppercase" 
 												title="<?php echo esc_html( $button_text ) ?>">
 												<?php echo esc_html( $button_text ) ?>
 											</a>

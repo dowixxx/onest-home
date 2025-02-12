@@ -10588,6 +10588,15 @@ strong {
 .page-template-page-construction .pitch p {
   font-size: 1.3125rem;
 }
+.page-template-page-home .hero .btn {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+.page-template-page-home .hero .btn:hover {
+  color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.8);
+}
 .project-template-single-projects .img-featured {
   margin-bottom: 5.625rem;
 }
