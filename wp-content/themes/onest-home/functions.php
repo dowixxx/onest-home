@@ -128,8 +128,8 @@ add_filter( 'render_block', function( $block_content, $block ) {
 /*
 * Document tab separator.
 */
-add_filter('document_title_separator', 'smp_document_title_separator');
-function smp_document_title_separator($sep)
+add_filter('document_title_separator', 'document_title_separator');
+function document_title_separator($sep)
 {
 	$sep = esc_html('|');
 	return $sep;
@@ -143,18 +143,19 @@ function smp_document_title_separator($sep)
 function custom_wp_title($title, $sep)
 {
     $site_title = get_bloginfo('name');
-	$tagline = get_bloginfo('description');   // Get the site tagline
     $sep = '|';
-    if (is_front_page() || is_home()) {
-        $title = $site_title . ' ' . $sep . ' ' . $tagline;
-    } elseif (is_tax()) {
+    if ( is_front_page() || is_home() ) {
+        $title = $site_title;
+    } elseif ( is_tax() ) {
         $term = single_term_title('', false);
-        $title = $term . ' ' . $sep . ' ' . $site_title . ' ' . $sep . ' ' . $tagline;
-    } elseif (is_search()) {
-        $title = 'Paieška ' . $sep . ' ' . $site_title . ' ' . $sep . ' ' . $tagline;
+        $title = $term . ' ' . $sep . ' ' . $site_title;
+    } 
+    elseif ( is_shop() ) {
+        $shop_title = get_the_title( wc_get_page_id( 'shop' ) );
+        $title = $shop_title . ' ' . $sep . ' ' . $site_title;
     } else {
         $page_title = get_the_title();
-        $title = $page_title . ' ' . $sep . ' ' . $site_title . ' ' . $sep . ' ' . $tagline;
+        $title = $page_title . ' ' . $sep . ' ' . $site_title;
     }
     return $title;
 }
