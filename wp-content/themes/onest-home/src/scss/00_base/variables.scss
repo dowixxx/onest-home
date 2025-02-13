@@ -823,11 +823,11 @@ $table-variants: (
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 // scss-docs-start input-btn-variables
-$input-btn-padding-y:         0.5rem;
+$input-btn-padding-y:         0.42rem;
 $input-btn-padding-x:         1rem;
 $input-btn-font-family:       null !default;
 $input-btn-font-size:         $fs-18;
-$input-btn-line-height:       1.2;
+$input-btn-line-height:       1.375;
 
 $input-btn-focus-width:         $focus-ring-width !default;
 $input-btn-focus-color-opacity: $focus-ring-opacity !default;
@@ -883,8 +883,8 @@ $btn-link-disabled-color:     $secondary;
 $btn-link-focus-shadow-rgb:   to-rgb(mix(color-contrast($link-color), $link-color, 15%)) !default;
 
 // Allows for customizing button radius independently from global border radius
-// $btn-border-radius:           0.25rem;
-$btn-border-radius:           0;
+$btn-border-radius:           0.25rem;
+// $btn-border-radius:           0;
 $btn-border-radius-sm:        0.9375rem;
 $btn-border-radius-lg:        var(--#{$prefix}border-radius-lg) !default;
 

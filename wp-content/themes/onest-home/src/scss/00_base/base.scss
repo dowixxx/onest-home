@@ -536,25 +536,34 @@ strong {
 
 
 /*
-* contact form x
+* fluent form
 */
-.cfx {
+#my-fluentform-wrapper {
 
-    .cfx-response {
-        margin-bottom: 0.625rem;
-    }
-
-    .cfx-error {
+    .fluentform .ff-el-input--label.ff-el-is-required label:after {
         color: $danger;
     }
 
-    fieldset {
+    .fluentform .ff-el-input--label.ff-el-is-required.asterisk-right label:after {
+        margin-left: 0;
+    }
+
+    .fluentform .ff-el-group:not(.fluentform .ff-el-group.ff_submit_btn_wrapper) {
         display: flex;
         flex-direction: column;
         margin-bottom: 1.625rem;
     }
 
+    .fluentform .ff-el-group.ff_submit_btn_wrapper {
+        margin-bottom: 0;
+    }
+
+    .fluentform .ff-el-input--label {
+        margin-bottom: 0;
+    }
+
     label {
+        font-weight: $font-weight-base;
         text-transform: uppercase;
         margin-bottom: 0.625rem;
     }
@@ -575,6 +584,7 @@ strong {
         border-radius: 0;
         transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
         outline: none;
+        font-family: inherit;
 
         &:focus {
             box-shadow: 0 0 0 0.25rem rgba($primary, 0.25);
@@ -582,20 +592,36 @@ strong {
         }
     }
 
-    textarea {
-        height: 10rem;
-    }
-
     button {
         background-color: $primary;
         color: $white;
         text-transform: uppercase;
-        padding: 0.5rem 1rem;
+        padding: 0.42rem 1rem;
         font-size: $fs-18;
         transition: all 0.3s ease-out;
+        border-radius: $btn-border-radius;
 
         &:hover {
             background-color: rgba($color: $primary, $alpha: 0.8)
         }
+    }
+
+    .fluentform .ff-el-is-error .text-danger {
+        margin-top: 0.5rem;
+        font-size: $fs-14;
+    }
+
+    .ff-message-success {
+        margin-top: 1.625rem;
+        padding: 0.9375rem;
+        border: 1px solid $success;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .ff-errors-in-stack .error-clear {
+        display: none;
     }
 }

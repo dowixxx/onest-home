@@ -3,10 +3,9 @@
     a {
         text-decoration: unset;
 
-        &:hover {
-            text-decoration: underline;
-            color: $black;
-        }
+        // &:hover {
+        //     text-decoration: underline;
+        // }
     }
 
     .nav-item {
@@ -102,7 +101,8 @@
             padding-left: 0;
 
             li:not(:last-of-type) a {
-                padding: 0.7rem 0.3125rem;
+                padding: 0.7rem 0;
+                margin: 0 0.3125rem;
             }
         }
 

@@ -12,7 +12,7 @@ msgstr ""
 "<translations@example."
 "com>\n"
 "POT-Creation-Date: "
-"2025-01-10 15:55+0200\n"
+"2025-02-13 11:03+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -53,3 +53,314 @@ msgstr ""
 "X-Poedit-"
 "SearchPathExcluded-0: "
 "node_modules\n"
+
+#: 404.php:27
+msgid ""
+"Ups! Puslapis nerastas."
+msgstr ""
+
+#: 404.php:32
+msgid ""
+"Atrodo, kad šiame adrese "
+"nieko nerasta."
+msgstr ""
+
+#: comments.php:35
+#, php-format
+msgid ""
+"One thought on &ldquo;"
+"%1$s&rdquo;"
+msgstr ""
+
+#: comments.php:41
+#, php-format
+msgctxt "comments title"
+msgid ""
+"%1$s thought on &ldquo;"
+"%2$s&rdquo;"
+msgid_plural ""
+"%1$s thoughts on &ldquo;"
+"%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:68
+msgid ""
+"Comments are closed."
+msgstr ""
+
+#: footer.php:118
+#: header.php:150
+msgid "Į pagrindinį"
+msgstr ""
+
+#: functions/admin.php:35
+msgid ""
+"The RSS Feed is either "
+"empty or unavailable."
+msgstr ""
+
+#: functions/admin.php:39
+msgid "j F Y @ g:i a"
+msgstr ""
+
+#: functions/admin.php:51
+msgid ""
+"Custom RSS Feed "
+"(Customize in admin.php)"
+msgstr ""
+
+#: functions/admin.php:65
+msgid ""
+"<span id=\"footer-"
+"thankyou\">Developed by "
+"<a href=\"#\" "
+"target=\"_blank\">Your "
+"Site Name</a></span>."
+msgstr ""
+
+#: functions/class-wp-bootstrap-navwalker.php:366
+msgid "Add a menu"
+msgstr ""
+
+#: functions/cleanup.php:71
+msgid "Read"
+msgstr ""
+
+#: functions/cleanup.php:71
+msgid ""
+"... Read more &raquo;"
+msgstr ""
+
+#: functions/cleanup.php:93
+#, php-format
+msgid "Posts by %s"
+msgstr ""
+
+#: functions/custom-post-type.php:37
+msgid "Projects"
+msgstr ""
+
+#: functions/custom-post-type.php:38
+msgid "Project"
+msgstr ""
+
+#: functions/custom-post-type.php:39
+msgid "All Projects"
+msgstr ""
+
+#: functions/custom-post-type.php:40
+#: functions/custom-post-type.php:142
+msgid "Add New"
+msgstr ""
+
+#: functions/custom-post-type.php:41
+msgid "Add New Project"
+msgstr ""
+
+#: functions/custom-post-type.php:42
+#: functions/custom-post-type.php:144
+msgid "Edit"
+msgstr ""
+
+#: functions/custom-post-type.php:43
+msgid "Edit Project"
+msgstr ""
+
+#: functions/custom-post-type.php:44
+msgid "New Project"
+msgstr ""
+
+#: functions/custom-post-type.php:45
+msgid "View Project"
+msgstr ""
+
+#: functions/custom-post-type.php:46
+msgid "Search Project"
+msgstr ""
+
+#: functions/custom-post-type.php:47
+#: functions/custom-post-type.php:149
+msgid ""
+"Nothing found in the "
+"Database."
+msgstr ""
+
+#: functions/custom-post-type.php:48
+#: functions/custom-post-type.php:150
+msgid ""
+"Nothing found in Trash"
+msgstr ""
+
+#: functions/custom-post-type.php:51
+#: functions/custom-post-type.php:153
+msgid ""
+"This is the example "
+"custom post type"
+msgstr ""
+
+#: functions/custom-post-type.php:139
+msgid "Reviews"
+msgstr ""
+
+#: functions/custom-post-type.php:140
+msgid "Review"
+msgstr ""
+
+#: functions/custom-post-type.php:141
+msgid "All Reviews"
+msgstr ""
+
+#: functions/custom-post-type.php:143
+msgid "Add New Review"
+msgstr ""
+
+#: functions/custom-post-type.php:145
+msgid "Edit Reviews"
+msgstr ""
+
+#: functions/custom-post-type.php:146
+msgid "New Review"
+msgstr ""
+
+#: functions/custom-post-type.php:147
+msgid "View Review"
+msgstr ""
+
+#: functions/custom-post-type.php:148
+msgid "Search Review"
+msgstr ""
+
+#: functions/page-navi.php:13
+msgid "&laquo;"
+msgstr ""
+
+#: functions/page-navi.php:14
+msgid "&raquo;"
+msgstr ""
+
+#: header.php:34
+msgid " „Onest Home“ – "
+msgstr ""
+
+#: header.php:54
+msgid " „Onest Home“ –  "
+msgstr ""
+
+#: page-about-us.php:150
+#: page-construction.php:137
+#: page-contacts.php:114
+#: page-custom-furniture.php:125
+#: page-interior.php:125
+msgid "Parašykite mums"
+msgstr ""
+
+#: page-about-us.php:164
+#: page-custom-furniture.php:139
+msgid "Mūsų produktai"
+msgstr ""
+
+#: page-construction.php:57
+msgid ""
+"Ekspertizė "
+"gyvenamuosiuose "
+"projektuose"
+msgstr ""
+
+#: page-construction.php:58
+msgid ""
+"Personalizuotas požiūris"
+msgstr ""
+
+#: page-construction.php:59
+msgid ""
+"Pilni sprendimai nuo "
+"pradžios iki pabaigos"
+msgstr ""
+
+#: page-construction.php:70
+#: page-custom-furniture.php:58
+#: page-interior.php:58
+msgid ""
+"Įgyvendinti projektai"
+msgstr ""
+
+#: page-contacts.php:57
+#: partials/content/content-page.php:9
+msgid "Susisiekite"
+msgstr ""
+
+#: page-contacts.php:61
+msgid "Telefonas"
+msgstr ""
+
+#: page-contacts.php:66
+msgid "El. paštas"
+msgstr ""
+
+#: page-contacts.php:71
+msgid "Darbo valandos"
+msgstr ""
+
+#: partials/item/item-portfolio.php:18
+#: partials/item/item-portfolio.php:19
+msgid "Daugiau"
+msgstr ""
+
+#: searchform.php:29
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:30
+msgctxt "jointswp"
+msgid "Search..."
+msgstr ""
+
+#: searchform.php:30
+msgctxt "jointswp"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:32
+msgctxt "jointswp"
+msgid "Search"
+msgstr ""
+
+#: single-projects.php:34
+msgid "Data:"
+msgstr ""
+
+#: single-projects.php:38
+msgid "Vieta:"
+msgstr ""
+
+#: single-projects.php:42
+msgid "Pastato/buto tipas:"
+msgstr ""
+
+#: single-projects.php:46
+msgid ""
+"Pritaikyti standartiniai "
+"sprendimai:"
+msgstr ""
+
+#: single-projects.php:50
+msgid ""
+"pritaikyti "
+"nestandartiniai "
+"sprendimai:"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:24
+#, php-format
+msgid "%s quantity"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:24
+msgid "Quantity"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:52
+msgid "Product quantity"
+msgstr ""

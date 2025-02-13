@@ -113,7 +113,19 @@ get_header();
 
 					<h3 class="fw-normal"><?php _e('Parašykite mums', 'onest-home'); ?></h3>
 
-					<?php if (function_exists('contactformx')) echo contactformx(); ?>
+					<div id="my-fluentform-wrapper">
+						<?php 
+						if ( pll_current_language() === 'lt' ) :
+							echo do_shortcode('[fluentform id="4"]');
+						endif 
+						?>
+
+						<?php 
+						if ( pll_current_language() === 'en' ) :
+							echo do_shortcode('[fluentform id="3"]');
+						endif 
+						?>
+					</div>
 
 				</div>
 			</div>

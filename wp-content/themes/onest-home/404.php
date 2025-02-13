@@ -46,8 +46,3 @@ get_header();
 
 <?php
 get_footer();
-
-
-
-// Oops! That page can’t be found.
-// It looks like nothing was found at this location.
