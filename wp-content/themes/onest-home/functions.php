@@ -2,7 +2,7 @@
 /**
 * onest-home functions and definitions
 * @package onest-home
-* @author Dovydas Krivickas
+* @author DK.
 */
 
 
@@ -20,7 +20,7 @@ require_once( get_template_directory() . '/functions/enqueue-scripts.php' );
 // require_once( get_template_directory() . '/functions/class-wp-bootstrap-navwalker.php' );
 
 // Register multi-level custom navigation walker
-require_once( get_template_directory() . '/functions/class-bs5_Walker.php' );
+// require_once( get_template_directory() . '/functions/class-bs5_Walker.php' );
 
 // Register custom menus and menu walkers
 require_once( get_template_directory() . '/functions/menu.php' ); 
@@ -51,7 +51,7 @@ require_once( get_template_directory() . '/functions/admin-dashboard.php' );
 // require_once( get_template_directory() . '/functions/admin.php' ); 
 
 // Make better load times
-require_once( get_template_directory() . '/functions/performance.php' );
+// require_once( get_template_directory() . '/functions/performance.php' );
 
 // Add shortcodes
 // require_once( get_template_directory() . '/functions/shortcodes.php' );
@@ -162,4 +162,3 @@ function custom_wp_title($title, $sep)
 
 add_filter('wp_title', 'custom_wp_title', 10, 2);
 remove_action('wp_head', '_wp_render_title_tag', 1);
-

@@ -35,9 +35,6 @@ function joints_comments($comment, $args, $depth) {
 }
 
 */ ?>
-
-
-
 <?php
 
 /*
