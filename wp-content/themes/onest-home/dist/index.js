@@ -5234,13 +5234,11 @@ if (document.body.classList.contains("page-template-page-about-us")) {
       delay: anime.stagger(150),
       complete: () => {
         anime({
-          targets: ".reviews-item",
+          targets: [".intro .img-wrapper"],
           opacity: [0, 1],
-          // translateY: [20, 0],
-          translateX: [20, 0],
+          translateY: [20, 0],
           duration: 300,
           easing: "easeOutQuad",
-          delay: anime.stagger(150),
           complete: () => {
             anime({
               targets: ".intro .page-content .btn",
@@ -5249,11 +5247,12 @@ if (document.body.classList.contains("page-template-page-about-us")) {
               easing: "easeOutQuad",
               complete: () => {
                 anime({
-                  targets: ".gallery",
+                  targets: ".reviews-item",
                   opacity: [0, 1],
                   translateY: [20, 0],
                   duration: 300,
-                  easing: "easeOutQuad"
+                  easing: "easeOutQuad",
+                  delay: anime.stagger(150)
                 });
               }
             });
@@ -5276,9 +5275,18 @@ if (document.body.classList.contains("page-template-page-about-us")) {
         }
       });
     }, observerOptions);
-    const scrollElements = document.querySelectorAll(".additional-content p, .form-lead, .product-collection h3");
+    const scrollElements = document.querySelectorAll(".gallery, .additional-content p, .form-lead, .product-collection h3");
     scrollElements.forEach((el) => observer.observe(el));
   }, animateOnScroll = function(element) {
+    if (element.matches(".gallery") || element.matches(".form-lead")) {
+      anime({
+        targets: element,
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 300,
+        easing: "easeOutQuad"
+      });
+    }
     if (element.matches(".additional-content p") || element.matches(".form-lead")) {
       anime({
         targets: element,
@@ -5325,21 +5333,20 @@ if (document.body.classList.contains("page-template-page-custom-furniture")) {
       delay: anime.stagger(150),
       complete: () => {
         anime({
-          targets: ".reviews-item",
+          targets: [".intro .img-wrapper"],
           opacity: [0, 1],
-          // translateY: [20, 0],
-          translateX: [20, 0],
+          translateY: [20, 0],
           duration: 300,
           easing: "easeOutQuad",
-          delay: anime.stagger(150),
           complete: () => {
             anime({
-              targets: ".intro .page-content .btn",
+              targets: ".reviews-item",
               opacity: [0, 1],
+              translateY: [20, 0],
               duration: 300,
-              easing: "easeOutQuad"
+              easing: "easeOutQuad",
+              delay: anime.stagger(150)
               // complete: () => {
-              //     //
               //     anime({
               //         targets: ['.project-collection h3', '.project-item'],
               //         opacity: [0, 1],
@@ -5428,19 +5435,28 @@ if (document.body.classList.contains("page-template-page-interior")) {
       delay: anime.stagger(150),
       complete: () => {
         anime({
-          targets: ".reviews-item",
+          targets: [".intro .img-wrapper"],
           opacity: [0, 1],
-          // translateY: [20, 0],
-          translateX: [20, 0],
+          translateY: [20, 0],
           duration: 300,
           easing: "easeOutQuad",
-          delay: anime.stagger(150),
           complete: () => {
             anime({
-              targets: ".intro .page-content .btn",
+              targets: ".reviews-item",
               opacity: [0, 1],
+              translateY: [20, 0],
               duration: 300,
-              easing: "easeOutQuad"
+              easing: "easeOutQuad",
+              delay: anime.stagger(150)
+              // complete: () => {
+              //     //
+              //     anime({
+              //         targets: '.intro .page-content .btn',
+              //         opacity: [0, 1],
+              //         duration: 300,
+              //         easing: 'easeOutQuad'
+              //     });
+              // }
             });
           }
         });
@@ -5501,29 +5517,19 @@ if (document.body.classList.contains("page-template-page-construction")) {
       delay: anime.stagger(150),
       complete: () => {
         anime({
-          targets: ".reviews-item",
+          targets: [".intro .img-wrapper"],
           opacity: [0, 1],
-          // translateY: [20, 0],
-          translateX: [20, 0],
+          translateY: [20, 0],
           duration: 300,
           easing: "easeOutQuad",
-          delay: anime.stagger(150),
           complete: () => {
             anime({
-              targets: ".intro .page-content .btn",
+              targets: ".pitch p",
               opacity: [0, 1],
+              translateY: [20, 0],
               duration: 300,
               easing: "easeOutQuad",
-              complete: () => {
-                anime({
-                  targets: ".pitch p",
-                  opacity: [0, 1],
-                  translateY: [20, 0],
-                  duration: 300,
-                  easing: "easeOutQuad",
-                  delay: anime.stagger(150)
-                });
-              }
+              delay: anime.stagger(150)
             });
           }
         });
@@ -5544,9 +5550,19 @@ if (document.body.classList.contains("page-template-page-construction")) {
         }
       });
     }, observerOptions);
-    const scrollElements = document.querySelectorAll(".project-item, .form-lead");
+    const scrollElements = document.querySelectorAll(".reviews, .project-item, .form-lead");
     scrollElements.forEach((el) => observer.observe(el));
   }, animateOnScroll = function(element) {
+    if (element.matches(".reviews")) {
+      anime({
+        targets: [".reviews-item"],
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 300,
+        easing: "easeOutQuad",
+        delay: anime.stagger(150)
+      });
+    }
     if (element.matches(".project-item")) {
       anime({
         targets: [".project-collection h3", ".project-item"],

@@ -25,20 +25,29 @@ if (document.body.classList.contains('page-template-page-interior')) {
             complete: () => {
                 //
                 anime({
-                    targets: '.reviews-item',
+                    targets: ['.intro .img-wrapper'],
                     opacity: [0, 1],
-                    // translateY: [20, 0],
-                    translateX: [20, 0],
+                    translateY: [20, 0],
                     duration: 300,
                     easing: 'easeOutQuad',
-                    delay: anime.stagger(150),
                     complete: () => {
                         //
                         anime({
-                            targets: '.intro .page-content .btn',
+                            targets: '.reviews-item',
                             opacity: [0, 1],
+                            translateY: [20, 0],
                             duration: 300,
-                            easing: 'easeOutQuad'
+                            easing: 'easeOutQuad',
+                            delay: anime.stagger(150),
+                            // complete: () => {
+                            //     //
+                            //     anime({
+                            //         targets: '.intro .page-content .btn',
+                            //         opacity: [0, 1],
+                            //         duration: 300,
+                            //         easing: 'easeOutQuad'
+                            //     });
+                            // }
                         });
                     }
                 });

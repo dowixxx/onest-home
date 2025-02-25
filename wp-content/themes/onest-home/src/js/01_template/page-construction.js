@@ -25,31 +25,20 @@ if (document.body.classList.contains('page-template-page-construction')) {
             complete: () => {
                 //
                 anime({
-                    targets: '.reviews-item',
+                    targets: ['.intro .img-wrapper'],
                     opacity: [0, 1],
-                    // translateY: [20, 0],
-                    translateX: [20, 0],
+                    translateY: [20, 0],
                     duration: 300,
                     easing: 'easeOutQuad',
-                    delay: anime.stagger(150),
                     complete: () => {
                         //
                         anime({
-                            targets: '.intro .page-content .btn',
+                            targets: '.pitch p',
                             opacity: [0, 1],
+                            translateY: [20, 0],
                             duration: 300,
                             easing: 'easeOutQuad',
-                            complete: () => {
-                                //
-                                anime({
-                                    targets: '.pitch p',
-                                    opacity: [0, 1],
-                                    translateY: [20, 0],
-                                    duration: 300,
-                                    easing: 'easeOutQuad',
-                                    delay: anime.stagger(150)
-                                });
-                            }
+                            delay: anime.stagger(150),
                         });
                     }
                 });
@@ -82,7 +71,7 @@ if (document.body.classList.contains('page-template-page-construction')) {
         }, observerOptions);
 
         // Grab all elements that need scroll-based animations
-        const scrollElements = document.querySelectorAll('.project-item, .form-lead'); //.pitch commented
+        const scrollElements = document.querySelectorAll('.reviews, .project-item, .form-lead'); //.pitch commented
         scrollElements.forEach(el => observer.observe(el));
     }
 
@@ -90,6 +79,17 @@ if (document.body.classList.contains('page-template-page-construction')) {
      * Anime.js animation for elements that appear on scroll
      */
     function animateOnScroll(element) {
+
+        if (element.matches('.reviews')) {
+            anime({
+                targets: ['.reviews-item'],
+                opacity: [0, 1],
+                translateY: [20, 0],
+                duration: 300,
+                easing: 'easeOutQuad',
+                delay: anime.stagger(150)
+            });
+        } 
 
         if (element.matches('.project-item')) {
             anime({

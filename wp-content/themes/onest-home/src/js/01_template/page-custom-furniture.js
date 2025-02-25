@@ -23,24 +23,23 @@ if (document.body.classList.contains('page-template-page-custom-furniture')) {
             easing: 'easeOutQuad',
             delay: anime.stagger(150),
             complete: () => {
-                //
-                anime({
-                    targets: '.reviews-item',
+                 //
+                 anime({
+                    targets: ['.intro .img-wrapper'],
                     opacity: [0, 1],
-                    // translateY: [20, 0],
-                    translateX: [20, 0],
+                    translateY: [20, 0],
                     duration: 300,
                     easing: 'easeOutQuad',
-                    delay: anime.stagger(150),
                     complete: () => {
                         //
                         anime({
-                            targets: '.intro .page-content .btn',
+                            targets: '.reviews-item',
                             opacity: [0, 1],
+                            translateY: [20, 0],
                             duration: 300,
                             easing: 'easeOutQuad',
+                            delay: anime.stagger(150),
                             // complete: () => {
-                            //     //
                             //     anime({
                             //         targets: ['.project-collection h3', '.project-item'],
                             //         opacity: [0, 1],
@@ -58,7 +57,7 @@ if (document.body.classList.contains('page-template-page-custom-furniture')) {
  
     }
 
-    
+   
 
     /**
      * Set up Intersection Observer to animate .product-item or other

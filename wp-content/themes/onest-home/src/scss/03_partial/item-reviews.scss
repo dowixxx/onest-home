@@ -25,3 +25,31 @@
         margin-bottom: 1.125rem;
     }
 }
+
+
+
+/*
+* page-about-us.php
+*/
+.page-template-page-about-us,
+.page-template-page-custom-furniture,
+.page-template-page-interior,
+.page-template-page-construction {
+
+    .reviews-item {
+        width: 32%;
+        margin-bottom: 0;
+
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+
+            &:not(:last-child) {
+                margin-bottom: 1.5rem; 
+            }
+        }
+    }
+
+    .reviews-item .text p {
+        margin-bottom: 0;
+    }
+}

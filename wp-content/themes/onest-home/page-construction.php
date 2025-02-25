@@ -21,28 +21,11 @@ get_header();
 
 					<?php include locate_template('partials/content/content-page.php'); ?>
 
-					<div class="reviews-content col-12 col-lg-6">
-
-						<?php
-						$loop = new WP_Query( array(
-							'post_type'      => 'review', 
-							'posts_per_page' => -1,       
-							'order'          => 'ASC',    
-							'orderby'        => 'title',     
-						));
-
-						if ( $loop->have_posts() ) : 
-							while ( $loop->have_posts() ) : 
-
-								$loop->the_post();
-								include locate_template('partials/item/item-reviews.php');
-
-							endwhile; 
-						endif; 
-						wp_reset_postdata(); 
-						?>
-						
-					</div>
+					<?php if ( has_post_thumbnail() ) : ?>
+						<div class="img-wrapper col-12 col-lg-6">
+							<?php the_post_thumbnail( 'full-size', array( 'class' => 'img-fluid w-100' ) ); ?>
+						</div>
+					<?php endif; ?>
 
 				</div>
 
@@ -57,6 +40,35 @@ get_header();
 					<p class="mb-0"><?php _e('Ekspertizė gyvenamuosiuose projektuose', 'onest-home'); ?></p>
 					<p class="mb-0"><?php _e('Personalizuotas požiūris', 'onest-home'); ?></p>
 					<p class="mb-0"><?php _e('Pilni sprendimai nuo pradžios iki pabaigos', 'onest-home'); ?></p>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- reviews section -->
+		<section class="reviews">
+			<div class="container">
+				<div class="reviews-content d-flex flex-wrap justify-content-between">
+
+					<?php
+					$loop = new WP_Query( array(
+						'post_type'      => 'review', 
+						'posts_per_page' => -1,       
+						'order'          => 'ASC',    
+						'orderby'        => 'title',   
+					));
+
+					if ( $loop->have_posts() ) : 
+						while ( $loop->have_posts() ) : 
+
+							$loop->the_post();
+							include locate_template('partials/item/item-reviews.php');
+
+						endwhile; 
+					endif; 
+					wp_reset_postdata(); 
+					?>
+					
 				</div>
 			</div>
 		</section>

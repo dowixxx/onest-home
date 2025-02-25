@@ -10344,6 +10344,7 @@ strong {
   transform: translateY(20px);
 }
 .page-template-page-about-us .intro .page-content,
+.page-template-page-about-us .intro .img-wrapper,
 .page-template-page-about-us .gallery,
 .page-template-page-about-us .additional-content p,
 .page-template-page-about-us .form-lead,
@@ -10356,11 +10357,12 @@ strong {
 .page-template-page-about-us .intro .page-content .btn {
   opacity: 0;
 }
-.page-template-page-about-us .intro .reviews-item {
+.page-template-page-about-us .reviews .reviews-item {
   opacity: 0;
-  transform: translateX(20px);
+  transform: translateY(20px);
 }
 .page-template-page-custom-furniture .intro .page-content,
+.page-template-page-custom-furniture .intro .img-wrapper,
 .page-template-page-custom-furniture .form-lead,
 .page-template-page-custom-furniture .project-collection h3,
 .page-template-page-custom-furniture .project-collection .h3,
@@ -10371,14 +10373,12 @@ strong {
   opacity: 0;
   transform: translateY(20px);
 }
-.page-template-page-custom-furniture .intro .page-content .btn {
+.page-template-page-custom-furniture .reviews .reviews-item {
   opacity: 0;
-}
-.page-template-page-custom-furniture .intro .reviews-item {
-  opacity: 0;
-  transform: translateX(20px);
+  transform: translateY(20px);
 }
 .page-template-page-interior .intro .page-content,
+.page-template-page-interior .intro .img-wrapper,
 .page-template-page-interior .form-lead,
 .page-template-page-interior .project-collection h3,
 .page-template-page-interior .project-collection .h3,
@@ -10386,14 +10386,12 @@ strong {
   opacity: 0;
   transform: translateY(20px);
 }
-.page-template-page-interior .intro .page-content .btn {
+.page-template-page-interior .reviews .reviews-item {
   opacity: 0;
-}
-.page-template-page-interior .intro .reviews-item {
-  opacity: 0;
-  transform: translateX(20px);
+  transform: translateY(20px);
 }
 .page-template-page-construction .intro .page-content,
+.page-template-page-construction .intro .img-wrapper,
 .page-template-page-construction .form-lead,
 .page-template-page-construction .pitch p,
 .page-template-page-construction .project-collection h3,
@@ -10402,12 +10400,9 @@ strong {
   opacity: 0;
   transform: translateY(20px);
 }
-.page-template-page-construction .intro .page-content .btn {
+.page-template-page-construction .reviews .reviews-item {
   opacity: 0;
-}
-.page-template-page-construction .intro .reviews-item {
-  opacity: 0;
-  transform: translateX(20px);
+  transform: translateY(20px);
 }
 .single-project .img-featured,
 .single-project .title,
@@ -10575,6 +10570,11 @@ strong {
 }
 .page-template-page-about-us .intro {
   padding-bottom: 2.5rem;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-about-us .intro {
+    padding-bottom: 0;
+  }
 }
 .page-template-page-about-us .intro h1, .page-template-page-about-us .intro .h1 {
   margin-bottom: 1.625rem;
@@ -10887,6 +10887,36 @@ strong {
 }
 .reviews-item .title {
   margin-bottom: 1.125rem;
+}
+/*
+* page-about-us.php
+*/
+.page-template-page-about-us .reviews-item,
+.page-template-page-custom-furniture .reviews-item,
+.page-template-page-interior .reviews-item,
+.page-template-page-construction .reviews-item {
+  width: 32%;
+  margin-bottom: 0;
+}
+@media (max-width: 991.98px) {
+  .page-template-page-about-us .reviews-item,
+  .page-template-page-custom-furniture .reviews-item,
+  .page-template-page-interior .reviews-item,
+  .page-template-page-construction .reviews-item {
+    width: 100%;
+  }
+  .page-template-page-about-us .reviews-item:not(:last-child),
+  .page-template-page-custom-furniture .reviews-item:not(:last-child),
+  .page-template-page-interior .reviews-item:not(:last-child),
+  .page-template-page-construction .reviews-item:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+.page-template-page-about-us .reviews-item .text p,
+.page-template-page-custom-furniture .reviews-item .text p,
+.page-template-page-interior .reviews-item .text p,
+.page-template-page-construction .reviews-item .text p {
+  margin-bottom: 0;
 }
 .product-item .product-title {
   margin-top: 0.75rem;

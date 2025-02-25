@@ -412,6 +412,7 @@ strong {
 .page-template-page-about-us {
 
     .intro .page-content,
+    .intro .img-wrapper,
     .gallery,
     .additional-content p,
     .form-lead,
@@ -426,9 +427,9 @@ strong {
         opacity: 0;
     }
 
-    .intro .reviews-item {
+    .reviews .reviews-item {
         opacity: 0;
-        transform: translateX(20px);
+        transform: translateY(20px);
     }
 }
 
@@ -436,6 +437,7 @@ strong {
 .page-template-page-custom-furniture {
 
     .intro .page-content,
+    .intro .img-wrapper,
     .form-lead,
     .project-collection h3,
     .project-item,
@@ -446,13 +448,13 @@ strong {
         transform: translateY(20px);
     }
     
-    .intro .page-content .btn {
-        opacity: 0;
-    }
+    // .intro .page-content .btn {
+    //     opacity: 0;
+    // }
 
-    .intro .reviews-item {
+    .reviews .reviews-item {
         opacity: 0;
-        transform: translateX(20px);
+        transform: translateY(20px);
     }
 }
 
@@ -460,6 +462,7 @@ strong {
 .page-template-page-interior {
 
     .intro .page-content,
+    .intro .img-wrapper,
     .form-lead,
     .project-collection h3,
     .project-item
@@ -468,13 +471,13 @@ strong {
         transform: translateY(20px);
     }
     
-    .intro .page-content .btn {
-        opacity: 0;
-    }
+    // .intro .page-content .btn {
+    //     opacity: 0;
+    // }
 
-    .intro .reviews-item {
+    .reviews .reviews-item {
         opacity: 0;
-        transform: translateX(20px);
+        transform: translateY(20px);
     }
 }
 
@@ -482,6 +485,7 @@ strong {
 .page-template-page-construction {
 
     .intro .page-content,
+    .intro .img-wrapper,
     .form-lead,
     .pitch p,
     .project-collection h3,
@@ -491,13 +495,13 @@ strong {
         transform: translateY(20px);
     }
     
-    .intro .page-content .btn {
-        opacity: 0;
-    }
+    // .intro .page-content .btn {
+    //     opacity: 0;
+    // }
 
-    .intro .reviews-item {
+    .reviews .reviews-item {
         opacity: 0;
-        transform: translateX(20px);
+        transform: translateY(20px);
     }
 }
 

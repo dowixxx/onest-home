@@ -6,7 +6,16 @@
 
     <?php the_content(); ?>
 
-    <a href="#form-lead" class="btn btn-primary mt-2 text-uppercase"><?php _e('Susisiekite', 'onest-home'); ?></a>
+    <?php if ( 
+        !is_page_template( 'page-custom-furniture.php' ) && 
+        !is_page_template( 'page-interior.php' ) && 
+        !is_page_template( 'page-construction.php' ) 
+        ) : ?>
+        <a href="#form-lead" class="btn btn-primary mt-2 text-uppercase">
+            <?php _e('Susisiekite', 'onest-home'); ?>
+        </a>
+    <?php endif; ?>
+
     <!-- <br>
     <button class="btn btn-secondary mt-2 text-uppercase">secondary</button>
     <br>

@@ -25,13 +25,11 @@ if (document.body.classList.contains('page-template-page-about-us')) {
             complete: () => {
                 //
                 anime({
-                    targets: '.reviews-item',
+                    targets: ['.intro .img-wrapper'],
                     opacity: [0, 1],
-                    // translateY: [20, 0],
-                    translateX: [20, 0],
+                    translateY: [20, 0],
                     duration: 300,
                     easing: 'easeOutQuad',
-                    delay: anime.stagger(150),
                     complete: () => {
                         //
                         anime({
@@ -40,13 +38,13 @@ if (document.body.classList.contains('page-template-page-about-us')) {
                             duration: 300,
                             easing: 'easeOutQuad',
                             complete: () => {
-                                //
                                 anime({
-                                    targets: '.gallery',
+                                    targets: '.reviews-item',
                                     opacity: [0, 1],
                                     translateY: [20, 0],
                                     duration: 300,
                                     easing: 'easeOutQuad',
+                                    delay: anime.stagger(150)
                                 });
                             }
                         });
@@ -57,8 +55,8 @@ if (document.body.classList.contains('page-template-page-about-us')) {
  
     }
 
+ 
     
-
     /**
      * Set up Intersection Observer to animate .product-item or other
      * elements as they enter the viewport
@@ -81,7 +79,7 @@ if (document.body.classList.contains('page-template-page-about-us')) {
         }, observerOptions);
 
         // Grab all elements that need scroll-based animations
-        const scrollElements = document.querySelectorAll('.additional-content p, .form-lead, .product-collection h3');
+        const scrollElements = document.querySelectorAll('.gallery, .additional-content p, .form-lead, .product-collection h3');
         scrollElements.forEach(el => observer.observe(el));
     }
 
@@ -89,6 +87,16 @@ if (document.body.classList.contains('page-template-page-about-us')) {
      * Anime.js animation for elements that appear on scroll
      */
     function animateOnScroll(element) {
+
+        if (element.matches('.gallery') || element.matches('.form-lead')) {
+            anime({
+                targets: element,
+                opacity: [0, 1],
+                translateY: [20, 0],
+                duration: 300,
+                easing: 'easeOutQuad',
+            });
+        } 
 
         if (element.matches('.additional-content p') || element.matches('.form-lead')) {
             anime({

@@ -27,5 +27,7 @@
         </div>
     </div>
     <p class="title fw-medium text-uppercase"><?php the_title() ?></p>
-    <p class="text mb-0"><?php the_content() ?></p>
+    <div class="text">
+        <?php the_content() ?>
+    </div>
 </div>

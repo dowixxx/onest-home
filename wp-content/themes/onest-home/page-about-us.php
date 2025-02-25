@@ -25,29 +25,41 @@ get_header();
 
 					<?php include locate_template('partials/content/content-page.php'); ?>
 
-					<div class="reviews-content col-12 col-lg-6">
+					<?php if ( has_post_thumbnail() ) : ?>
+						<div class="img-wrapper col-12 col-lg-6">
+							<?php the_post_thumbnail( 'full-size', array( 'class' => 'img-fluid w-100' ) ); ?>
+						</div>
+					<?php endif; ?>
 
-						<?php
-						$loop = new WP_Query( array(
-							'post_type'      => 'review', 
-							'posts_per_page' => -1,       
-							'order'          => 'ASC',    
-							'orderby'        => 'title',   
-						));
+				</div>
+			</div>
+		</section>
 
-						if ( $loop->have_posts() ) : 
-							while ( $loop->have_posts() ) : 
 
-								$loop->the_post();
-								include locate_template('partials/item/item-reviews.php');
+		<!-- reviews section -->
+		<section class="reviews">
+			<div class="container">
+				<div class="reviews-content d-flex flex-wrap justify-content-between">
 
-							endwhile; 
-						endif; 
-						wp_reset_postdata(); 
-						?>
-						
-					</div>
+					<?php
+					$loop = new WP_Query( array(
+						'post_type'      => 'review', 
+						'posts_per_page' => -1,       
+						'order'          => 'ASC',    
+						'orderby'        => 'title',   
+					));
 
+					if ( $loop->have_posts() ) : 
+						while ( $loop->have_posts() ) : 
+
+							$loop->the_post();
+							include locate_template('partials/item/item-reviews.php');
+
+						endwhile; 
+					endif; 
+					wp_reset_postdata(); 
+					?>
+					
 				</div>
 			</div>
 		</section>
